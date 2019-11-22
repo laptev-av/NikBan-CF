@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<CommandsVisibility>
+		<Command name="Document.РасчетПремийПоЛичнымПродажам.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПодсистемаПерсоналСотрудники">true</xr:Value>
+				<xr:Value name="Role.ОтчетыПоПерсоналу">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="InformationRegister.ДействующиеПравилаРасчетаПремий.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ОтчетыПоПерсоналу">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ПоложениеОПремировании.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПодсистемаПерсоналСотрудники">true</xr:Value>
+				<xr:Value name="Role.ОтчетыПоПерсоналу">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ПравилаРасчетаПремий.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПодсистемаПерсоналСотрудники">true</xr:Value>
+				<xr:Value name="Role.ОтчетыПоПерсоналу">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="AccumulationRegister.ПремииПоЛичнымПродажам.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ОтчетыПоПерсоналу">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.УсловияНачисленияПремийПоЛичнымПродажам.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПодсистемаПерсоналСотрудники">true</xr:Value>
+				<xr:Value name="Role.ОтчетыПоПерсоналу">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.ПоложениеОПремировании.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ПодсистемаПерсоналСотрудники">true</xr:Value>
+				<xr:Value name="Role.ОтчетыПоПерсоналу">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ПравилаРасчетаПремий.StandardCommand.CreateFolder">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ОтчетыПоПерсоналу">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ПравилаРасчетаПремий.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ОтчетыПоПерсоналу">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Document.РасчетПремийПоЛичнымПродажам.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ПодсистемаПерсоналСотрудники">true</xr:Value>
+				<xr:Value name="Role.ОтчетыПоПерсоналу">true</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.УсловияНачисленияПремийПоЛичнымПродажам.StandardCommand.Create">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ОтчетыПоПерсоналу">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.УсловияНачисленияПремийПоЛичнымПродажам.StandardCommand.CreateFolder">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ОтчетыПоПерсоналу">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.АнализПравилРасчетаПремий.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ОтчетыПоПерсоналу">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.ДействующиеПравилаРасчетаПремий.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ОтчетыПоПерсоналу">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Report.ПремииПоЛичнымПродажам.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ОтчетыПоПерсоналу">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Constant.РассчитыватьПремииВМагазинах.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsPlacement>
+		<Command name="Document.РасчетПремийПоЛичнымПродажам.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+	</CommandsPlacement>
+</CommandInterface>

@@ -1,0 +1,602 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="НастройкаИспользованияСерий" id="31">
+			<DataPath>НастройкаИспользованияСерий</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серия идентифицирует</v8:content>
+				</v8:item>
+			</Title>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.НастройкиИспользованияСерийНоменклатуры.EnumValue.ЭкземплярТовара</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.НастройкиИспользованияСерийНоменклатуры.EnumValue.ПартияТоваров</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<BackColor>style:ФонУправляющегоПоля</BackColor>
+			<ContextMenu name="НастройкаИспользованияСерийКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="НастройкаИспользованияСерийРасширеннаяПодсказка" id="33"/>
+			<Events>
+				<Event name="OnChange">НастройкаИспользованияСерийПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ИспользуемыеРеквизитыСерий" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используемые реквизиты серий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ИспользуемыеРеквизитыСерийРасширеннаяПодсказка" id="22"/>
+			<ChildItems>
+				<CheckBoxField name="ИспользоватьНомерСерии" id="10">
+					<DataPath>ИспользоватьНомерСерии</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьНомерСерииКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ИспользоватьНомерСерииРасширеннаяПодсказка" id="12"/>
+				</CheckBoxField>
+				<UsualGroup name="ГруппаСрокГодности" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа срок годности</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа срок годности</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСрокГодностиРасширеннаяПодсказка" id="20"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьСрокГодностиСерии" id="7">
+							<DataPath>ИспользоватьСрокГодностиСерии</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Срок годности</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьСрокГодностиСерииКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ИспользоватьСрокГодностиСерииРасширеннаяПодсказка" id="9"/>
+							<Events>
+								<Event name="OnChange">ИспользоватьСрокГодностиСерииПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьДатуПроизводстваСерии" id="53">
+							<DataPath>ИспользоватьДатуПроизводстваСерии</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата производства</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьДатуПроизводстваСерииКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ИспользоватьДатуПроизводстваСерииРасширеннаяПодсказка" id="55"/>
+							<Events>
+								<Event name="OnChange">ИспользоватьДатуПроизводстваСерииПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаТочностьУказанияДаты" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа точность указания даты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа точность указания даты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТочностьУказанияДатыРасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияТочностьУказанияДатыОтступ" id="50">
+							<Width>3</Width>
+							<ContextMenu name="ДекорацияТочностьУказанияДатыОтступКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="ДекорацияТочностьУказанияДатыОтступРасширеннаяПодсказка" id="52"/>
+						</LabelDecoration>
+						<InputField name="ТочностьУказанияСрокаГодностиСерии" id="4">
+							<DataPath>ТочностьУказанияСрокаГодностиСерии</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>с точностью</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Left</TitleLocation>
+							<Width>5</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>до дней</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ТочностиУказанияСрокаГодности.EnumValue.СТочностьюДоДней</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>до часов</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ТочностиУказанияСрокаГодности.EnumValue.СТочностьюДоЧасов</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ТочностьУказанияСрокаГодностиСерииКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ТочностьУказанияСрокаГодностиСерииРасширеннаяПодсказка" id="6"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСрокГарантии" id="37">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа срок гарантии</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа срок гарантии</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСрокГарантииРасширеннаяПодсказка" id="38"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьСрокГарантии" id="45">
+							<DataPath>ИспользоватьСрокГарантии</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Срок гарантии</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьСрокГарантииКонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="ИспользоватьСрокГарантииРасширеннаяПодсказка" id="47"/>
+							<Events>
+								<Event name="OnChange">ИспользоватьСрокГарантииПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="СрокГарантии" id="39">
+							<DataPath>СрокГарантии</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTipRepresentation>ShowRight</ToolTipRepresentation>
+							<ContextMenu name="СрокГарантииКонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="СрокГарантииРасширеннаяПодсказка" id="41"/>
+						</InputField>
+						<LabelDecoration name="ДекорацияСрокГарантии" id="42">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>мес.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияСрокГарантииКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="ДекорацияСрокГарантииРасширеннаяПодсказка" id="44"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<CheckBoxField name="ИспользоватьПроизводителяЕГАИССерии" id="56">
+					<DataPath>ИспользоватьПроизводителяЕГАИССерии</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Производитель (ЕГАИС)</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьПроизводителяЕГАИССерииКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ИспользоватьПроизводителяЕГАИССерииРасширеннаяПодсказка" id="58"/>
+				</CheckBoxField>
+				<CheckBoxField name="ИспользоватьСправку2ЕГАИССерии" id="59">
+					<DataPath>ИспользоватьСправку2ЕГАИССерии</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справка 2 (ЕГАИС)</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьСправку2ЕГАИССерииКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ИспользоватьСправку2ЕГАИССерииРасширеннаяПодсказка" id="61"/>
+				</CheckBoxField>
+				<CheckBoxField name="ИспользоватьНомерКИЗГИСМСерии" id="13">
+					<DataPath>ИспользоватьНомерКиЗГИСМСерии</DataPath>
+					<Enabled>false</Enabled>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьНомерКИЗГИСМСерииКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ИспользоватьНомерКИЗГИСМСерииРасширеннаяПодсказка" id="15">
+						<Width>30</Width>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Номер контрольного (идентификационного) знака информационной системы маркировки товаров</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</CheckBoxField>
+				<CheckBoxField name="ИспользоватьВидКИЗГИСМСерии" id="34">
+					<DataPath>ИспользоватьВидКИЗГИСМСерии</DataPath>
+					<Enabled>false</Enabled>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьВидКИЗГИСМСерииКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ИспользоватьВидКИЗГИСМСерииРасширеннаяПодсказка" id="36">
+						<Width>30</Width>
+						<Height>5</Height>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Вид контрольного (идентификационного) знака информационной системы маркировки товаров. Его нужно указывать при регистраци серии при оформлении поступления товаров из стран Таможенного союза.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДополнительно" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительно</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дополнительно</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаДополнительноРасширеннаяПодсказка" id="24"/>
+			<ChildItems>
+				<CheckBoxField name="ИспользоватьRFIDМетки" id="16">
+					<DataPath>ИспользоватьRFIDМеткиСерии</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользоватьRFIDМеткиКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ИспользоватьRFIDМеткиРасширеннаяПодсказка" id="18"/>
+				</CheckBoxField>
+				<CheckBoxField name="АвтоматическиГенерироватьСерии" id="62">
+					<DataPath>АвтоматическиГенерироватьСерии</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="АвтоматическиГенерироватьСерииКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="АвтоматическиГенерироватьСерииРасширеннаяПодсказка" id="64"/>
+					<Events>
+						<Event name="OnChange">АвтоматическиГенерироватьСерииПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<CommandBar name="ГруппаКоманднаяПанельФормы" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель формы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельФормыРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<Button name="ОК" id="27">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.ОК</CommandName>
+					<ExtendedTooltip name="ОКРасширеннаяПодсказка" id="28"/>
+				</Button>
+				<Button name="Отмена" id="29">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.Отмена</CommandName>
+					<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="30"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ИспользоватьНомерСерии" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер серии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьСрокГодностиСерии" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок годности</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТочностьУказанияСрокаГодностиСерии" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>с точностью до</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ТочностиУказанияСрокаГодности</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьНомерКиЗГИСМСерии" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер КиЗ ГИСМ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьRFIDМеткиСерии" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать RFID-метки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаИспользованияСерий" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка использования серий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.НастройкиИспользованияСерийНоменклатуры</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КиЗГИСМ" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КиЗ ГИСМ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПродукцияМаркируемаяДляГИСМ" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продукция маркируемая ВГИСМ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИменаСохраняемыхРеквизитов" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имена сохраняемых реквизитов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьВидКИЗГИСМСерии" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид КиЗ ГИСМ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СрокГарантии" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок гарантии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьСрокГарантии" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать срок гарантии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьДатуПроизводстваСерии" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать дату производства серии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьПроизводителяЕГАИССерии" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать производителя ЕГАИССерии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьСправку2ЕГАИССерии" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать справку2 ЕГАИССерии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтоматическиГенерироватьСерии" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Генерировать серии автоматически</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АлкогольнаяПродукция" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Алкогольная продукция</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Отмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

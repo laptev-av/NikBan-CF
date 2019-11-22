@@ -1,0 +1,1739 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЗаголовок" id="2188">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаголовокExtendedTooltip" id="2252"/>
+			<ChildItems>
+				<LabelDecoration name="ОписаниеРаздела3" id="1549">
+					<Width>78</Width>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Управление настройками номенклатуры, такими как единицы измерения, характеристики, упаковки, и серии товаров.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОписаниеРаздела3КонтекстноеМеню" id="1550"/>
+					<ExtendedTooltip name="ОписаниеРаздела3ExtendedTooltip" id="2253"/>
+				</LabelDecoration>
+				<CommandBar name="ГруппаСправка" id="2191">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа справка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа справка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСправкаExtendedTooltip" id="2255"/>
+					<ChildItems>
+						<Button name="КнопкаСправка" id="2192">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<ExtendedTooltip name="КнопкаСправкаExtendedTooltip" id="2256"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОбщиеПараметры" id="2365">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общие параметры</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<ShowLeftMargin>false</ShowLeftMargin>
+			<ExtendedTooltip name="ГруппаОбщиеПараметрыРасширеннаяПодсказка" id="2366"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЕдиницыИзмерения" id="891">
+					<Group>Horizontal</Group>
+					<Representation>NormalSeparation</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЕдиницыИзмеренияExtendedTooltip" id="2257"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЕдиницаИзмеренияВеса" id="2184">
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЕдиницаИзмеренияВесаExtendedTooltip" id="2258"/>
+							<ChildItems>
+								<InputField name="ЕдиницаИзмеренияВеса" id="467">
+									<DataPath>НаборКонстант.ЕдиницаИзмеренияВеса</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<Width>16</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ChoiceParameters>
+										<app:item name="Отбор.ТипЕдиницыИзмерения">
+											<app:value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">e9aecab4-da2b-4a51-b13c-fb8ca3924bce.9fe5bd6a-0dc3-492a-8124-5d8374b7dc0f</Value>
+											</app:value>
+										</app:item>
+									</ChoiceParameters>
+									<ContextMenu name="ЕдиницаИзмеренияВесаКонтекстноеМеню" id="468"/>
+									<ExtendedTooltip name="ЕдиницаИзмеренияВесаExtendedTooltip" id="2259">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Единица измерения веса, используемая по умолчанию.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ЕдиницаИзмеренияВесаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаЕдиницаИзмеренияОбъема" id="2185">
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЕдиницаИзмеренияОбъемаExtendedTooltip" id="2261"/>
+							<ChildItems>
+								<InputField name="ЕдиницаИзмеренияОбъема" id="473">
+									<DataPath>НаборКонстант.ЕдиницаИзмеренияОбъема</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<Width>16</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ЕдиницаИзмеренияОбъемаКонтекстноеМеню" id="474"/>
+									<ExtendedTooltip name="ЕдиницаИзмеренияОбъемаExtendedTooltip" id="2262">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Единица измерения объема, используемая по умолчанию.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ЕдиницаИзмеренияОбъемаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаХарактеристикиУпаковки" id="2186">
+					<Group>Horizontal</Group>
+					<Representation>NormalSeparation</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаХарактеристикиУпаковкиExtendedTooltip" id="2264"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаИспользоватьХарактеристикиНоменклатуры" id="895">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать характеристики номенклатуры</v8:content>
+								</v8:item>
+							</Title>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИспользоватьХарактеристикиНоменклатурыExtendedTooltip" id="2265"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьХарактеристикиНоменклатуры" id="453">
+									<DataPath>НаборКонстант.ИспользоватьХарактеристикиНоменклатуры</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Характеристики номенклатуры</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+									<WarningOnEdit>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отключать характеристики номенклатуры после начала работы с системой не рекомендуется</v8:content>
+										</v8:item>
+									</WarningOnEdit>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьХарактеристикиНоменклатурыКонтекстноеМеню" id="454"/>
+									<ExtendedTooltip name="ИспользоватьХарактеристикиНоменклатурыExtendedTooltip" id="2266">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Возможность учета части свойств номенклатуры в отдельном справочнике. 
+Например, обувь имеет общую линейку размеров. Размеры можно учитывать с помощью характеристик.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьХарактеристикиНоменклатурыПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаИспользоватьУпаковкиНоменклатуры" id="898">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать упаковки номенклатуры</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать упаковки номенклатуры</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИспользоватьУпаковкиНоменклатурыExtendedTooltip" id="2268"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьУпаковкиНоменклатуры" id="459">
+									<DataPath>НаборКонстант.ИспользоватьУпаковкиНоменклатуры</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Упаковки номенклатуры</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+									<WarningOnEdit>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отключать упаковки после начала работы с системой не рекомендуется</v8:content>
+										</v8:item>
+									</WarningOnEdit>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьУпаковкиНоменклатурыКонтекстноеМеню" id="460"/>
+									<ExtendedTooltip name="ИспользоватьУпаковкиНоменклатурыExtendedTooltip" id="2269">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Возможность указания количества одного и того же товара в разных единицах измерения (в коробках, палетах и т.д.).</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьУпаковкиНоменклатурыПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСерииДробный" id="2187">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа серии дробный</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа серии дробный</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>NormalSeparation</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСерииДробныйРасширеннаяПодсказка" id="2271"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаИспользоватьСерииНоменклатуры" id="901">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать серии номенклатуры</v8:content>
+								</v8:item>
+							</Title>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИспользоватьСерииНоменклатурыExtendedTooltip" id="2272"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьСерииНоменклатуры" id="554">
+									<DataPath>НаборКонстант.ИспользоватьСерииНоменклатуры</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Серии товаров</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+									<WarningOnEdit>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отключать серии номенклатуры после начала работы с системой не рекомендуется</v8:content>
+										</v8:item>
+									</WarningOnEdit>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьСерииНоменклатурыКонтекстноеМеню" id="555"/>
+									<ExtendedTooltip name="ИспользоватьСерииНоменклатурыExtendedTooltip" id="2273">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Учет номеров экземпляров товаров, номеров производственных партий, сроков годности и т.д.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьСерииНоменклатурыПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаИспользоватьВводДробногоКоличества" id="2416">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать ввод дробного количества</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать ввод дробного количества</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИспользоватьВводДробногоКоличестваРасширеннаяПодсказка" id="2417"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьПроверкуНаВводДробногоКоличества" id="2418">
+									<DataPath>НаборКонстант.ИспользоватьПроверкуНаВводДробногоКоличества</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проверять дробное количество</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьПроверкуНаВводДробногоКоличестваКонтекстноеМеню" id="2419"/>
+									<ExtendedTooltip name="ИспользоватьПроверкуНаВводДробногоКоличестваРасширеннаяПодсказка" id="2420">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Использование механизма проверки на ввод дробного количества</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьПроверкуНаВводДробногоКоличестваПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаДополнительнаяКолонкаИПоиск" id="2209">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДополнительнаяКолонкаИПоискРасширеннаяПодсказка" id="2281"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаДополнительнаяКолонка" id="2325">
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДополнительнаяКолонкаРасширеннаяПодсказка" id="2326"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаКолонка" id="2216">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа колонка</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа колонка</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКолонкаРасширеннаяПодсказка" id="2282"/>
+									<ChildItems>
+										<RadioButtonField name="КолонкаДляОтображенияНоменклатуры" id="2362">
+											<DataPath>КолонкаДляОтображенияНоменклатуры</DataPath>
+											<TitleLocation>Top</TitleLocation>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Код</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Код</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Артикул</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Артикул</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Код и артикул</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">КодАртикул</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Нет</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">НеВыводить</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="КолонкаДляОтображенияНоменклатурыКонтекстноеМеню" id="2363"/>
+											<ExtendedTooltip name="КолонкаДляОтображенияНоменклатурыРасширеннаяПодсказка" id="2364">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Дополнительная колонка при отображении номенклатуры в формах документов.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">КолонкаДляОтображенияНоменклатурыПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+										<UsualGroup name="Группа1" id="2327">
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="2328"/>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаИспользоватьПолнотекстовыйПоискПриПодбореТоваров" id="2179">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать полнотекстовый поиск при подборе товаров</v8:content>
+								</v8:item>
+							</Title>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИспользоватьПолнотекстовыйПоискПриПодбореТоваровExtendedTooltip" id="2275"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьПолнотекстовыйПоискПриПодбореТоваров" id="2180">
+									<DataPath>НаборКонстант.ИспользоватьПолнотекстовыйПоискПриПодбореТоваров</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Полнотекстовый поиск при подборе товаров</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьПолнотекстовыйПоискПриПодбореТоваровКонтекстноеМеню" id="2181"/>
+									<ExtendedTooltip name="ИспользоватьПолнотекстовыйПоискПриПодбореТоваровExtendedTooltip" id="2276">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Использование механизма полнотекстового поиска при подборе товаров.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьПолнотекстовыйПоискПриПодбореТоваровПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<PictureDecoration name="ДекорацияКомментарийПолнотекстовыйПоискПриПодбореТоваров" id="2393">
+									<Width>2</Width>
+									<Height>1</Height>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Невозможно использовать полнотекстовый поиск при подборе товаров, потому что выключено использование полнотекстового поиска в разделе «Поддержка и обслуживание».</v8:content>
+										</v8:item>
+									</ToolTip>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.ИнформацияПоНедоступнымПолям</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияКомментарийПолнотекстовыйПоискПриПодбореТоваровКонтекстноеМеню" id="2394"/>
+									<ExtendedTooltip name="ДекорацияКомментарийПолнотекстовыйПоискПриПодбореТоваровРасширеннаяПодсказка" id="2395"/>
+									<Events>
+										<Event name="Click">ДекорацияКомментарийНажатие</Event>
+									</Events>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПравилаИменованияНоменклатуры" id="2438">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа правила именования номенклатуры</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПравилаИменованияНоменклатурыРасширеннаяПодсказка" id="2439"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьПравилаИменованияНоменклатуры" id="2440">
+							<DataPath>НаборКонстант.ИспользоватьПравилаИменованияНоменклатуры</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Правила именования номенклатуры</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьПравилаИменованияНоменклатурыКонтекстноеМеню" id="2441"/>
+							<ExtendedTooltip name="ИспользоватьПравилаИменованияНоменклатурыРасширеннаяПодсказка" id="2442">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Использование механизма именования номенклатуры по правилам.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ИспользоватьПравилаИменованияНоменклатурыПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаАлкоголь" id="2329">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учет алкоголя</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ShowLeftMargin>false</ShowLeftMargin>
+			<ExtendedTooltip name="ГруппаАлкогольРасширеннаяПодсказка" id="2330"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСведенияДляАлкогольныхДеклараций" id="2320">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСведенияДляАлкогольныхДекларацийРасширеннаяПодсказка" id="2321"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаАлкогольнаяПродукция" id="2367">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа алкогольная продукция</v8:content>
+								</v8:item>
+							</Title>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаАлкогольнаяПродукцияРасширеннаяПодсказка" id="2368"/>
+							<ChildItems>
+								<CheckBoxField name="ВестиСведенияДляДекларацийПоАлкогольнойПродукции" id="2317">
+									<DataPath>НаборКонстант.ВестиСведенияДляДекларацийПоАлкогольнойПродукции</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Алкогольная продукция</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВестиСведенияДляДекларацийПоАлкогольнойПродукцииКонтекстноеМеню" id="2318"/>
+									<ExtendedTooltip name="ВестиСведенияДляДекларацийПоАлкогольнойПродукцииРасширеннаяПодсказка" id="2319">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Сведения, необходимые для заполнения деклараций об объемах розничной продажи алкогольной и спиртосодержащей продукции.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ВестиСведенияДляДекларацийПоАлкогольнойПродукцииПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНастройкиОбменаЕГАИС" id="2369">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки обмена ЕГАИС</v8:content>
+								</v8:item>
+							</Title>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкиОбменаЕГАИСРасширеннаяПодсказка" id="2370"/>
+							<ChildItems>
+								<Button name="ОткрытьНастройкиОбменаЕГАИС" id="2351">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьНастройкиОбменаЕГАИС</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьНастройкиОбменаЕГАИСРасширеннаяПодсказка" id="2352">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройка используемых способов подключения к ЕГАИС в разрезе магазинов и организаций.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаДатаНачалаПрименения" id="2331">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дата начала применения</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДатаНачалаПримененияРасширеннаяПодсказка" id="2332"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаДатаНачалаПримененияПриказа164" id="2373">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа дата начала применения приказа164</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа дата начала применения приказа164</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДатаНачалаПримененияПриказа164РасширеннаяПодсказка" id="2374"/>
+							<ChildItems>
+								<InputField name="ДатаНачалаПримененияПриказа164" id="2339">
+									<DataPath>НаборКонстант.ДатаНачалаПримененияПриказа164</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата начала работы с ЕГАИС</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<Width>11</Width>
+									<ContextMenu name="ДатаНачалаПримененияПриказа164КонтекстноеМеню" id="2340"/>
+									<ExtendedTooltip name="ДатаНачалаПримененияПриказа164РасширеннаяПодсказка" id="2341">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Дата начала передачи данных в ЕГАИС и применения новой формы журнала учета объема розничной продажи алкоголя в соответствии с приказом ФСРАР №164.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ДатаНачалаПримененияПриказа164ПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДатаНачалаРегистрацииРозничныхПродажВЕГАИС" id="2375">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа дата начала регистрации розничных продаж ВЕГАИС</v8:content>
+								</v8:item>
+							</Title>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДатаНачалаРегистрацииРозничныхПродажВЕГАИСРасширеннаяПодсказка" id="2376"/>
+							<ChildItems>
+								<InputField name="ДатаНачалаРегистрацииРозничныхПродажВЕГАИС" id="2345">
+									<DataPath>НаборКонстант.ДатаНачалаРегистрацииРозничныхПродажВЕГАИС</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата начала розничных продаж в ЕГАИС</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<Width>11</Width>
+									<ContextMenu name="ДатаНачалаРегистрацииРозничныхПродажВЕГАИСКонтекстноеМеню" id="2346"/>
+									<ExtendedTooltip name="ДатаНачалаРегистрацииРозничныхПродажВЕГАИСРасширеннаяПодсказка" id="2347">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Дата начала регистрации розничных продаж в ЕГАИС.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ДатаНачалаРегистрацииРозничныхПродажВЕГАИСПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВыгружатьПродажиНемаркируемойПродукцииВЕГАИС" id="2371">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа выгружать продажи немаркируемой продукции ВЕГАИС</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВыгружатьПродажиНемаркируемойПродукцииВЕГАИСРасширеннаяПодсказка" id="2372"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВыгрузкаНемаркируемойПродукции" id="2409">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа выгрузка немаркируемой продукции</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа выгрузка немаркируемой продукции</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВыгрузкаНемаркируемойПродукцииРасширеннаяПодсказка" id="2410"/>
+							<ChildItems>
+								<CheckBoxField name="ВыгружатьПродажиНемаркируемойПродукцииВЕГАИС" id="2356">
+									<DataPath>НаборКонстант.ВыгружатьПродажиНемаркируемойПродукцииВЕГАИС</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВыгружатьПродажиНемаркируемойПродукцииВЕГАИСКонтекстноеМеню" id="2357"/>
+									<ExtendedTooltip name="ВыгружатьПродажиНемаркируемойПродукцииВЕГАИСРасширеннаяПодсказка" id="2358">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>В некоторых случаях выгрузка немаркируемой алкогольной продукции в ЕГАИС может не производиться</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ВыгружатьПродажиНемаркируемойПродукцииВЕГАИСПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДатаНачалаРегистрацииРозничныхПродажВЕГАИСВСельскойМестности" id="2411">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа дата начала регистрации розничных продаж ВЕГАИСВСельской местности</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа дата начала регистрации розничных продаж ВЕГАИСВСельской местности</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДатаНачалаРегистрацииРозничныхПродажВЕГАИСВСельскойМестностиРасширеннаяПодсказка" id="2412"/>
+							<ChildItems>
+								<InputField name="ДатаНачалаРегистрацииРозничныхПродажВЕГАИСВСельскойМестности" id="2413">
+									<DataPath>НаборКонстант.ДатаНачалаРегистрацииРозничныхПродажВЕГАИСВСельскойМестности</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата начала розничных продаж в ЕГАИС в сельской местности</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<Width>11</Width>
+									<ContextMenu name="ДатаНачалаРегистрацииРозничныхПродажВЕГАИСВСельскойМестностиКонтекстноеМеню" id="2414"/>
+									<ExtendedTooltip name="ДатаНачалаРегистрацииРозничныхПродажВЕГАИСВСельскойМестностиРасширеннаяПодсказка" id="2415">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Для сельской местности установлена особая дата начала регистрации розничных продаж в ЕГАИС.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ДатаНачалаРегистрацииРозничныхПродажВЕГАИСВСельскойМестностиПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТабак" id="2443">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учет маркируемой табачной продукции</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<ShowLeftMargin>false</ShowLeftMargin>
+			<ExtendedTooltip name="ГруппаТабакРасширеннаяПодсказка" id="2444"/>
+			<ChildItems>
+				<CheckBoxField name="ВестиУчетМаркировкиТабачнойПродукции" id="2445">
+					<DataPath>НаборКонстант.ВестиУчетМаркировкиТабачнойПродукции</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВестиУчетМаркировкиТабачнойПродукцииКонтекстноеМеню" id="2446"/>
+					<ExtendedTooltip name="ВестиУчетМаркировкиТабачнойПродукцииРасширеннаяПодсказка" id="2447">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Передача в ККТ сведений о розничной реализации маркируемой табачной продукции в соответствии с постановлением Правительства Российской Федерации от 27 ноября 2017 г. № 1433 «О проведении эксперимента по маркировке табачной продукции средствами идентификации и мониторингу оборота табачной продукции»</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<Events>
+						<Event name="OnChange">ВестиУчетМаркировкиТабачнойПродукцииПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОбувь" id="2448">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учет маркируемой обувной продукции</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<ShowLeftMargin>false</ShowLeftMargin>
+			<ExtendedTooltip name="ГруппаОбувьРасширеннаяПодсказка" id="2449"/>
+			<ChildItems>
+				<CheckBoxField name="ВестиУчетМаркировкиОбувнойПродукции" id="2450">
+					<DataPath>НаборКонстант.ВестиУчетМаркировкиОбувнойПродукции</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВестиУчетМаркировкиОбувнойПродукцииКонтекстноеМеню" id="2451"/>
+					<ExtendedTooltip name="ВестиУчетМаркировкиОбувнойПродукцииРасширеннаяПодсказка" id="2452">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Передача в ККТ сведений о розничной реализации маркируемой обувной продукции.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<Events>
+						<Event name="OnChange">ВестиУчетМаркировкиОбувнойПродукцииПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастройкиШтрихкодирования" id="2198">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штрихкодирование</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ShowLeftMargin>false</ShowLeftMargin>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="ГруппаНастройкиШтрихкодированияExtendedTooltip" id="2287"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИспользоватьНеуникальныеШтрихкоды" id="2199">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа использовать неуникальные штрихкоды</v8:content>
+						</v8:item>
+					</Title>
+					<Width>39</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИспользоватьНеуникальныеШтрихкодыExtendedTooltip" id="2288"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьНеуникальныеШтрихкоды" id="2201">
+							<DataPath>НаборКонстант.ИспользоватьНеуникальныеШтрихкоды</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Использовать неуникальные штрихкоды товаров</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьНеуникальныеШтрихкодыКонтекстноеМеню" id="2202"/>
+							<ExtendedTooltip name="ИспользоватьНеуникальныеШтрихкодыExtendedTooltip" id="2289">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Отключение контроля уникальности штрихкодов товаров.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ИспользоватьНеуникальныеШтрихкодыПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПрефиксШтрихкодаУзлаРИБ" id="2200">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа префикс штрихкода узла РИБ</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПрефиксШтрихкодаУзлаРИБExtendedTooltip" id="2291"/>
+					<ChildItems>
+						<UsualGroup name="Группа4" id="2381">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="2382"/>
+							<ChildItems>
+								<UsualGroup name="Группа2" id="2377">
+									<Width>39</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="2378"/>
+									<ChildItems>
+										<InputField name="ПрефиксВнутреннегоШтрихкодаШтучногоТовара" id="2219">
+											<DataPath>НаборКонстант.ПрефиксВнутреннегоШтрихкодаШтучногоТовара</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Префикс внутреннего штрихкода штучного товара (H)</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Top</TitleLocation>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<Width>5</Width>
+											<ContextMenu name="ПрефиксВнутреннегоШтрихкодаШтучногоТовараКонтекстноеМеню" id="2220"/>
+											<ExtendedTooltip name="ПрефиксВнутреннегоШтрихкодаШтучногоТовараExtendedTooltip" id="2292">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Шаблон формирования внутреннего штрихкода штучного товара 2HOONNNNNNNNZ; где H - префикс внутреннего штрихкода штучного товара, OO - префикс штрихкода узла РИБ, N - символ внутреннего кода в информационной базе, Z - контрольная сумма.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">ПрефиксВнутреннегоШтрихкодаШтучногоТовараПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа3" id="2379">
+									<Width>39</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="2380"/>
+									<ChildItems>
+										<InputField name="ПрефиксШтрихкодаУзлаРИБ" id="2205">
+											<DataPath>НаборКонстант.ПрефиксШтрихкодаУзлаРИБ</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Префикс штрихкода узла РИБ (OO)</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Top</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Шаблон формирования внутреннего штрихкода штучного товара 2HOONNNNNNNNZ; где H-префикс внутреннего штрихкода штучного товара, OO-Префикс штрихкода узла РИБ, N-символ внутреннего кода в информационной базе, Z-контрольная сумма.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Width>5</Width>
+											<ContextMenu name="ПрефиксШтрихкодаУзлаРИБКонтекстноеМеню" id="2206"/>
+											<ExtendedTooltip name="ПрефиксШтрихкодаУзлаРИБExtendedTooltip" id="2293"/>
+											<Events>
+												<Event name="OnChange">ПрефиксШтрихкодаУзлаРИБПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаШтрихкодированиеТоваровНаВесах" id="2315">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штрихкодирование товаров на весах</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ShowLeftMargin>false</ShowLeftMargin>
+			<ExtendedTooltip name="ГруппаШтрихкодированиеТоваровНаВесахРасширеннаяПодсказка" id="2316"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаУправлениеОбменомСПодключаемымОборудованием3" id="2221">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа управление обменом с подключаемым оборудованием</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>NormalSeparation</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаУправлениеОбменомСПодключаемымОборудованием3ExtendedTooltip" id="2298"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПрефиксВнутреннегоШтрихкодаВесовогоТовара" id="2222">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа префикс внутреннего штрихкода весового товара</v8:content>
+								</v8:item>
+							</Title>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПрефиксВнутреннегоШтрихкодаВесовогоТовараExtendedTooltip" id="2299"/>
+							<ChildItems>
+								<InputField name="ПрефиксВнутреннегоШтрихкодаВесовогоТовара" id="2223">
+									<DataPath>НаборКонстант.ПрефиксВнутреннегоШтрихкодаВесовогоТовара</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Префикс штрихкода весового товара (2Х)</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Префикс штрихкода весового товара на весах (2Х)</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>5</Width>
+									<ContextMenu name="ПрефиксВнутреннегоШтрихкодаВесовогоТовараКонтекстноеМеню" id="2224"/>
+									<ExtendedTooltip name="ПрефиксВнутреннегоШтрихкодаВесовогоТовараExtendedTooltip" id="2300">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Шаблон формирования внутреннего штрихкода на весах 2ХSSSSSWWWWWZ; где Х-префикс штрихкода, S- символ кода SKU, W-символ веса, Z-контрольная сумма.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ПрефиксВнутреннегоШтрихкодаВесовогоТовараПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПрефиксВнутреннегоШтрихкодаШтучногоФасованногоТовара" id="2227">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа префикс внутреннего штрихкода штучного фасованного товара</v8:content>
+								</v8:item>
+							</Title>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПрефиксВнутреннегоШтрихкодаШтучногоФасованногоТовараExtendedTooltip" id="2302"/>
+							<ChildItems>
+								<InputField name="ПрефиксВнутреннегоШтрихкодаШтучногоФасованногоТовара" id="2228">
+									<DataPath>НаборКонстант.ПрефиксВнутреннегоШтрихкодаШтучногоФасованногоТовара</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Префикс штучного фасованного товара (2Y)</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Префикс штрихкода штучного фасованного товара на весах (2Y)</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<Width>5</Width>
+									<ContextMenu name="ПрефиксВнутреннегоШтрихкодаШтучногоФасованногоТовараКонтекстноеМеню" id="2229"/>
+									<ExtendedTooltip name="ПрефиксВнутреннегоШтрихкодаШтучногоФасованногоТовараExtendedTooltip" id="2303">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Шаблон формирования внутреннего штрихкода на весах 2YSSSSSKKKKKZ; где Y-префикс штрихкода, S-символ кода SKU, K-символ количества, Z-контрольная сумма.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ПрефиксВнутреннегоШтрихкодаШтучногоФасованногоТовараПриИзменении</Event>
+									</Events>
+								</InputField>
+								<PictureDecoration name="ДекорацияКомментарийШтрихкодированиеТоваровНаВесах" id="2387">
+									<Width>2</Width>
+									<Height>1</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация комментарий штрихкодирование товаров на весах</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.ИнформацияПоНедоступнымПолям</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияКомментарийШтрихкодированиеТоваровНаВесахКонтекстноеМеню" id="2388"/>
+									<ExtendedTooltip name="ДекорацияКомментарийШтрихкодированиеТоваровНаВесахРасширеннаяПодсказка" id="2389"/>
+									<Events>
+										<Event name="Click">ДекорацияКомментарийНажатие</Event>
+									</Events>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКодыSKU" id="2383">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коды SKU</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ShowLeftMargin>false</ShowLeftMargin>
+			<ExtendedTooltip name="ГруппаКодыSKUРасширеннаяПодсказка" id="2384"/>
+			<ChildItems>
+				<UsualGroup name="Группа5" id="2385">
+					<Group>Horizontal</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="2386"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаSKUУстанавливаетсяВГлавномУзлеРИБ" id="2238">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа SKU устанавливается в главном узле РИБ</v8:content>
+								</v8:item>
+							</Title>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаSKUУстанавливаетсяВГлавномУзлеРИБРасширеннаяПодсказка" id="2306"/>
+							<ChildItems>
+								<CheckBoxField name="SKUУстанавливаетсяВГлавномУзлеРИБ" id="2239">
+									<DataPath>НаборКонстант.SKUУстанавливаетсяВГлавномУзлеРИБ</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Коды товаров SKU назначаются в главном узле РИБ</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="SKUУстанавливаетсяВГлавномУзлеРИБКонтекстноеМеню" id="2240"/>
+									<ExtendedTooltip name="SKUУстанавливаетсяВГлавномУзлеРИБExtendedTooltip" id="2307">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>SKU - идентификатор товарной позиции в разрезе номенклатуры, характеристики и упаковки, используемый при генерации штрихкодов на весах и идентификации товаров в кассах ККМ.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">SKUУстанавливаетсяВГлавномУзлеРИБПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<PictureDecoration name="ДекорацияКомментарийSKUУстанавливаетсяВГлавномУзлеРИБ" id="2396">
+									<Width>2</Width>
+									<Height>1</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация комментарий SKUУстанавливается в главном узле РИБ</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Невозможно включение назначения SKU в главном узле РИБ, потому что выключена "Синхронизация данных" в разделе "Синхронизация данных".</v8:content>
+										</v8:item>
+									</ToolTip>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.ИнформацияПоНедоступнымПолям</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияКомментарийSKUУстанавливаетсяВГлавномУзлеРИБКонтекстноеМеню" id="2397"/>
+									<ExtendedTooltip name="ДекорацияКомментарийSKUУстанавливаетсяВГлавномУзлеРИБРасширеннаяПодсказка" id="2398"/>
+									<Events>
+										<Event name="Click">ДекорацияКомментарийНажатие</Event>
+									</Events>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДиапазонГенерацииSKU" id="2248">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа диапазон генерации SKU</v8:content>
+								</v8:item>
+							</Title>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДиапазонГенерацииSKUExtendedTooltip" id="2312"/>
+							<ChildItems>
+								<Button name="ОткрытьДиапазонГенерацииSKU" id="2249">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьДиапазонГенерацииSKU</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Диапазон генерации SKU для весового товара</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьДиапазонГенерацииSKUExtendedTooltip" id="2313">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Нижняя и верхняя границы диапазона при генерации SKU.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+								<PictureDecoration name="ДекорацияКомментарийКодыSKU" id="2390">
+									<Width>2</Width>
+									<Height>1</Height>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.ИнформацияПоНедоступнымПолям</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияКомментарийКодыSKUКонтекстноеМеню" id="2391"/>
+									<ExtendedTooltip name="ДекорацияКомментарийКодыSKUРасширеннаяПодсказка" id="2392"/>
+									<Events>
+										<Event name="Click">ДекорацияКомментарийНажатие</Event>
+									</Events>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКодыSKU1" id="2399">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа коды SKU1</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКодыSKU1РасширеннаяПодсказка" id="2400"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаАвтоматическиГенерироватьSKU" id="2401">
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаАвтоматическиГенерироватьSKUРасширеннаяПодсказка" id="2402"/>
+							<ChildItems>
+								<CheckBoxField name="АвтоматическиГенерироватьSKU" id="2403">
+									<DataPath>НаборКонстант.АвтоматическиГенерироватьSKU</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Автоматически генерировать SKU</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="АвтоматическиГенерироватьSKUКонтекстноеМеню" id="2404"/>
+									<ExtendedTooltip name="АвтоматическиГенерироватьSKUРасширеннаяПодсказка" id="2405">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Автоматически генерировать коды SKU при выгрузке товарных позиций на подключаемое оборудование.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">АвтоматическиГенерироватьSKUПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<PictureDecoration name="ДекорацияКомментарийАвтоматическиГенерироватьSKU" id="2406">
+									<Width>2</Width>
+									<Height>1</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация комментарий SKUУстанавливается в главном узле РИБ</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Коды SKU назначаются в главном узле РИБ. Значение флага игнорируется.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.ИнформацияПоНедоступнымПолям</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияКомментарийАвтоматическиГенерироватьSKUКонтекстноеМеню" id="2407"/>
+									<ExtendedTooltip name="ДекорацияКомментарийАвтоматическиГенерироватьSKUРасширеннаяПодсказка" id="2408"/>
+									<Events>
+										<Event name="Click">ДекорацияКомментарийНажатие</Event>
+									</Events>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКомиссионнаяТорговля" id="2421">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комиссионная торговля</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комиссионная торговля</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Collapsible</Behavior>
+			<CollapsedRepresentationTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комиссионная торговля</v8:content>
+				</v8:item>
+			</CollapsedRepresentationTitle>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаКомиссионнаяТорговляРасширеннаяПодсказка" id="2422"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКомиссионнаяТорговляЛево" id="2423">
+					<Width>35</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКомиссионнаяТорговляЛевоРасширеннаяПодсказка" id="2424"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьКомиссионнуюТорговлю" id="2425">
+							<DataPath>НаборКонстант.ИспользоватьКомиссионнуюТорговлю</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьКомиссионнуюТорговлюКонтекстноеМеню" id="2426"/>
+							<ExtendedTooltip name="ИспользоватьКомиссионнуюТорговлюРасширеннаяПодсказка" id="2427">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Настройка позволяет использовать комиссионную схему торговли</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ИспользоватьКомиссионнуюТорговлюПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="ПриоритетыРеализацииТоваров" id="2428">
+							<DataPath>НаборКонстант.ПриоритетыРеализацииТоваров</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Width>35</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>35</MaxWidth>
+							<ContextMenu name="ПриоритетыРеализацииТоваровКонтекстноеМеню" id="2429"/>
+							<ExtendedTooltip name="ПриоритетыРеализацииТоваровРасширеннаяПодсказка" id="2430">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Режим определяет в какой последовательности будут продаваться товары</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ПриоритетыРеализацииТоваровПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаУчетИмпортныхТоваров" id="2431">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учет импортных товаров</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа учет импортных товаров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаУчетИмпортныхТоваровРасширеннаяПодсказка" id="2432"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаУчетИмпортныхТоваровЛево" id="2433">
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаУчетИмпортныхТоваровЛевоРасширеннаяПодсказка" id="2434"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьУчетИмпортныхТоваров" id="2435">
+							<DataPath>НаборКонстант.ИспользоватьУчетИмпортныхТоваров</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Импортные товары</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Позволяет вести учет импортных товаров</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+							<WarningOnEdit>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Редактирование поля "Импортные товары" не рекомендуется</v8:content>
+								</v8:item>
+							</WarningOnEdit>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьУчетИмпортныхТоваровКонтекстноеМеню" id="2436"/>
+							<ExtendedTooltip name="ИспользоватьУчетИмпортныхТоваровРасширеннаяПодсказка" id="2437"/>
+							<Events>
+								<Event name="OnChange">ИспользоватьУчетИмпортныхТоваровПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>НаборКонстант.SKUУстанавливаетсяВГлавномУзлеРИБ</Field>
+				<Field>НаборКонстант.ВестиСведенияДляДекларацийПоАлкогольнойПродукции</Field>
+				<Field>НаборКонстант.ВестиУчетМаркировкиПродукцииВГИСМ</Field>
+				<Field>НаборКонстант.ВестиУчетМаркировкиТабачнойПродукции</Field>
+				<Field>НаборКонстант.ВыгружатьПродажиНемаркируемойПродукцииВЕГАИС</Field>
+				<Field>НаборКонстант.ДатаНачалаПримененияПриказа164</Field>
+				<Field>НаборКонстант.ДатаНачалаРегистрацииРозничныхПродажВЕГАИС</Field>
+				<Field>НаборКонстант.ДополнительнаяКолонкаПечатныхФормДокументов</Field>
+				<Field>НаборКонстант.ДополнительнаяКолонкаПриОтображенииНоменклатуры</Field>
+				<Field>НаборКонстант.ЕдиницаИзмеренияВеса</Field>
+				<Field>НаборКонстант.ЕдиницаИзмеренияОбъема</Field>
+				<Field>НаборКонстант.ИспользоватьДополнительныеОтчеты</Field>
+				<Field>НаборКонстант.ИспользоватьКомиссионнуюТорговлю</Field>
+				<Field>НаборКонстант.ИспользоватьОбменСПодключаемымОборудованием</Field>
+				<Field>НаборКонстант.ИспользоватьОплатуБанковскимиКредитами</Field>
+				<Field>НаборКонстант.ИспользоватьОплатуПлатежнымиКартами</Field>
+				<Field>НаборКонстант.ИспользоватьПодключаемоеОборудование</Field>
+				<Field>НаборКонстант.ИспользоватьПолнотекстовыйПоиск</Field>
+				<Field>НаборКонстант.ИспользоватьПравилаИменованияНоменклатуры</Field>
+				<Field>НаборКонстант.ИспользоватьСинхронизациюДанных</Field>
+				<Field>НаборКонстант.ИспользоватьУчетИмпортныхТоваров</Field>
+				<Field>НаборКонстант.ПрефиксВнутреннегоШтрихкодаВесовогоТовара</Field>
+				<Field>НаборКонстант.ПрефиксВнутреннегоШтрихкодаШтучногоТовара</Field>
+				<Field>НаборКонстант.ПрефиксШтрихкодаУзлаРИБ</Field>
+				<Field>НаборКонстант.СебестоимостьВключаетНДС</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="РежимРаботы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="КолонкаДляОтображенияНоменклатуры" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Колонка для отображения номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НижняяГраницаSKUВесовыхТоваров</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НаборКонстант.НижняяГраницаДиапазонаSKUВесовогоТовара</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">99999</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ВерхняяГраницаSKUВесовыхТоваров</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НаборКонстант.ВерхняяГраницаДиапазонаSKUВесовогоТовара</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">99999</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьДиапазонГенерацииSKU" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть диапазон генерации SKU</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть диапазон генерации SKU</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьДиапазонГенерацииSKU</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьНастройкиОбменаЕГАИС" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки обмена с ЕГАИС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть настройки обмена ЕГАИС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьНастройкиОбменаЕГАИС</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

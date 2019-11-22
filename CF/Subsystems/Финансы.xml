@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Subsystem uuid="d8b9a519-db76-400a-88f2-3f0021d00561">
+		<Properties>
+			<Name>Финансы</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Финансы</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.РазделФинансы</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьОплатуБанковскимиКредитами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьОплатуПлатежнымиКартами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ОтчетыПоФинансам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеОбработкиФинансы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеОтчетыФинансы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПомощникЗачетаОплат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СтатьиДвиженияДенежныхСредств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПодборДокументовВзаимозачета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПодборНеоплаченныхДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ФинансыКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьУчетСебестоимости</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.СведенияОВзаимозачете</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ДатаНачалаПримененияПостановления1137</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.ПФ_MXL_ПриходныйКассовыйОрдер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.ПФ_MXL_РасходныйКассовыйОрдер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПечатьФискальныхЧеков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ФинансыСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭквайрингВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеОплатОтПокупателяПлатежнойКартой</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ОтчетыИОбработкиКассираОперационнойКассы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПодсистемаФинансы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПодсистемаФинансы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЗакрытиеКассовойСмены</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ОткрытиеКассовойСмены</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РазделФинансы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.РасчетыСКлиентами</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>ДенежныеСредства</Subsystem>
+			<Subsystem>ПланированиеИКонтрольДС</Subsystem>
+			<Subsystem>ПодарочныеСертификаты</Subsystem>
+			<Subsystem>ПоступлениеОплаты</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

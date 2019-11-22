@@ -1,0 +1,973 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЗаголовок" id="2109">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаголовокExtendedTooltip" id="2128"/>
+			<ChildItems>
+				<LabelDecoration name="ОписаниеРаздела4" id="1551">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Управление настройками цен, скидок и наценок, использования ассортиментной политики.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОписаниеРаздела4КонтекстноеМеню" id="1552"/>
+					<ExtendedTooltip name="ОписаниеРаздела4ExtendedTooltip" id="2129"/>
+				</LabelDecoration>
+				<CommandBar name="ГруппаСправка" id="2112">
+					<ExtendedTooltip name="ГруппаСправкаExtendedTooltip" id="2131"/>
+					<ChildItems>
+						<Button name="Справка" id="2113">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<ExtendedTooltip name="СправкаExtendedTooltip" id="2132"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЦеновыеГруппыПрименениеЦен" id="2114">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ценообразование</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ShowLeftMargin>false</ShowLeftMargin>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="ГруппаЦеновыеГруппыПрименениеЦенExtendedTooltip" id="2133"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИспользоватьЦеновыеГруппы" id="1186">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа использовать ценовые группы</v8:content>
+						</v8:item>
+					</Title>
+					<Width>39</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИспользоватьЦеновыеГруппыExtendedTooltip" id="2134"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьЦеновыеГруппы" id="56">
+							<DataPath>НаборКонстант.ИспользоватьЦеновыеГруппы</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ценовые группы</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьЦеновыеГруппыКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ИспользоватьЦеновыеГруппыExtendedTooltip" id="2135">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Ведение перечня групп номенклатуры, объединяющих товарные позиции, для которых применяются одинаковые правила расчета цены и расчета скидок.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ИспользоватьЦеновыеГруппыПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПрименениеЦен" id="2094">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа применение цен</v8:content>
+						</v8:item>
+					</Title>
+					<Width>39</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПрименениеЦенExtendedTooltip" id="2137"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьПрименениеЦен" id="2097">
+							<DataPath>НаборКонстант.ИспользоватьПрименениеЦен</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Применение цен</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьПрименениеЦенКонтекстноеМеню" id="2098"/>
+							<ExtendedTooltip name="ИспользоватьПрименениеЦенExtendedTooltip" id="2138">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Возможность отложенного применения цен (перерыв между установкой цен и началом действия установленных цен).</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ИспользоватьПрименениеЦенПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаУправлениеСкидками" id="1189">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скидки, наценки, ограничения</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ShowLeftMargin>false</ShowLeftMargin>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="ГруппаУправлениеСкидкамиExtendedTooltip" id="2140"/>
+			<ChildItems>
+				<UsualGroup name="Группа1" id="2246">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="2247"/>
+					<ChildItems>
+						<UsualGroup name="Группа5" id="2269">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="2270"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаИспользоватьРучныеСкидкиВПродажах" id="1192">
+									<Width>39</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИспользоватьРучныеСкидкиВПродажахExtendedTooltip" id="2141"/>
+									<ChildItems>
+										<CheckBoxField name="ИспользоватьРучныеСкидкиВПродажах" id="238">
+											<DataPath>НаборКонстант.ИспользоватьРучныеСкидкиВПродажах</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ручные скидки в продажах</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьРучныеСкидкиВПродажахКонтекстноеМеню" id="239"/>
+											<ExtendedTooltip name="ИспользоватьРучныеСкидкиВПродажахExtendedTooltip" id="2142">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Возможность назначения ручных скидок при оформлении продаж.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">ИспользоватьРучныеСкидкиВПродажахПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаИспользоватьАвтоматическиеСкидкиВПродажах" id="1195">
+									<HorizontalStretch>false</HorizontalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИспользоватьАвтоматическиеСкидкиВПродажахExtendedTooltip" id="2144"/>
+									<ChildItems>
+										<UsualGroup name="Группа3" id="2253">
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="2254"/>
+											<ChildItems>
+												<UsualGroup name="Группа7" id="2275">
+													<Width>39</Width>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="2276"/>
+													<ChildItems>
+														<UsualGroup name="Группа8" id="2277">
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="2278"/>
+															<ChildItems>
+																<CheckBoxField name="ИспользоватьАвтоматическиеСкидкиВПродажах" id="236">
+																	<DataPath>НаборКонстант.ИспользоватьАвтоматическиеСкидкиВПродажах</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Скидки, наценки и ограничения продаж</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Невозможно отключить использование автоматических скидок,
+потому что включено подключение к дисконтному серверу.</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ИспользоватьАвтоматическиеСкидкиВПродажахКонтекстноеМеню" id="237"/>
+																	<ExtendedTooltip name="ИспользоватьАвтоматическиеСкидкиВПродажахExtendedTooltip" id="2145">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Условия для автоматического расчета и назначения скидок, наценок и ограничений продаж.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																	<Events>
+																		<Event name="OnChange">ИспользоватьАвтоматическиеСкидкиВПродажахПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+																<PictureDecoration name="ДекорацияКомментарийАвтоматическиеСкидкиВПродажах" id="2255">
+																	<Width>2</Width>
+																	<Height>1</Height>
+																	<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+																	<Hyperlink>true</Hyperlink>
+																	<Picture>
+																		<xr:Ref>CommonPicture.ИнформацияПоНедоступнымПолям</xr:Ref>
+																		<xr:LoadTransparent>false</xr:LoadTransparent>
+																	</Picture>
+																	<FileDragMode>AsFile</FileDragMode>
+																	<ContextMenu name="ДекорацияКомментарийАвтоматическиеСкидкиВПродажахКонтекстноеМеню" id="2256"/>
+																	<ExtendedTooltip name="ДекорацияКомментарийАвтоматическиеСкидкиВПродажахРасширеннаяПодсказка" id="2257"/>
+																	<Events>
+																		<Event name="Click">ДекорацияКомментарийНажатие</Event>
+																	</Events>
+																</PictureDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="Группа2" id="2248">
+															<Width>39</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="2249"/>
+															<ChildItems>
+																<CheckBoxField name="ИспользоватьБонусныеПрограммыЛояльности" id="2218">
+																	<DataPath>НаборКонстант.ИспользоватьБонусныеПрограммыЛояльности</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Бонусные программы лояльности</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ИспользоватьБонусныеПрограммыЛояльностиКонтекстноеМеню" id="2219"/>
+																	<ExtendedTooltip name="ИспользоватьБонусныеПрограммыЛояльностиРасширеннаяПодсказка" id="2220">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Учет, начисление и списание бонусных баллов.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																	<Events>
+																		<Event name="OnChange">ИспользоватьБонусныеПрограммыЛояльностиПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+																<PictureDecoration name="ДекорацияКомментарийБонусныеПрограммыЛояльности" id="2250">
+																	<Width>2</Width>
+																	<Height>1</Height>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Декорация комментарий бонусные программы лояльности</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Невозможно использовать бонусные программы, потому
+что выключены "Скидки, наценки и ограничения продаж".</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+																	<Hyperlink>true</Hyperlink>
+																	<Picture>
+																		<xr:Ref>CommonPicture.ИнформацияПоНедоступнымПолям</xr:Ref>
+																		<xr:LoadTransparent>false</xr:LoadTransparent>
+																	</Picture>
+																	<FileDragMode>AsFile</FileDragMode>
+																	<ContextMenu name="ДекорацияКомментарийБонусныеПрограммыЛояльностиКонтекстноеМеню" id="2251"/>
+																	<ExtendedTooltip name="ДекорацияКомментарийБонусныеПрограммыЛояльностиРасширеннаяПодсказка" id="2252"/>
+																	<Events>
+																		<Event name="Click">ДекорацияКомментарийНажатие</Event>
+																	</Events>
+																</PictureDecoration>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="Группа6" id="2273">
+													<Width>39</Width>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="2274"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаЗапретРозничнойПродажиАлкоголя1" id="2122">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа запрет розничной продажи алкоголя</v8:content>
+																</v8:item>
+															</Title>
+															<Width>39</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаЗапретРозничнойПродажиАлкоголя1ExtendedTooltip" id="2148"/>
+															<ChildItems>
+																<CheckBoxField name="ИспользоватьЗапретРозничнойПродажиАлкоголя" id="2117">
+																	<DataPath>НаборКонстант.ИспользоватьЗапретРозничнойПродажиАлкоголя</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Использовать запрет розничной продажи</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Невозможно использовать запрет продажи, потому
+что выключены скидки, наценки и ограничения продаж</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ИспользоватьЗапретРозничнойПродажиАлкоголяКонтекстноеМеню" id="2118"/>
+																	<ExtendedTooltip name="ИспользоватьЗапретРозничнойПродажиАлкоголяExtendedTooltip" id="2149">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Включается возможность установки запретов продаж по времени и сегментам номенклатуры, в том числе и для алкоголя, для документов розничной продажи (Чек и РМК).</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																	<Events>
+																		<Event name="OnChange">ИспользоватьЗапретРозничнойПродажиАлкоголяПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+																<PictureDecoration name="ДекорацияКомментарийЗапретРозничнойПродажиАлкоголя" id="2258">
+																	<Width>2</Width>
+																	<Height>1</Height>
+																	<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+																	<Hyperlink>true</Hyperlink>
+																	<Picture>
+																		<xr:Ref>CommonPicture.ИнформацияПоНедоступнымПолям</xr:Ref>
+																		<xr:LoadTransparent>false</xr:LoadTransparent>
+																	</Picture>
+																	<FileDragMode>AsFile</FileDragMode>
+																	<ContextMenu name="ДекорацияКомментарийЗапретРозничнойПродажиАлкоголяКонтекстноеМеню" id="2259"/>
+																	<ExtendedTooltip name="ДекорацияКомментарийЗапретРозничнойПродажиАлкоголяРасширеннаяПодсказка" id="2260"/>
+																	<Events>
+																		<Event name="Click">ДекорацияКомментарийНажатие</Event>
+																	</Events>
+																</PictureDecoration>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЗапретИНеУникальность" id="2121">
+					<Group>Horizontal</Group>
+					<Representation>NormalSeparation</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЗапретИНеУникальностьExtendedTooltip" id="2147"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаИспользоватьНеуникальныеКодыИнформационныхКарт" id="2123">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать неуникальные коды информационных карт</v8:content>
+								</v8:item>
+							</Title>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИспользоватьНеуникальныеКодыИнформационныхКартExtendedTooltip" id="2151"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьНеуникальныеКодыИнформационныхКарт" id="2124">
+									<DataPath>НаборКонстант.ИспользоватьНеуникальныеКодыИнформационныхКарт</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьНеуникальныеКодыИнформационныхКартКонтекстноеМеню" id="2125"/>
+									<ExtendedTooltip name="ИспользоватьНеуникальныеКодыИнформационныхКартExtendedTooltip" id="2152">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отключение контроля уникальности кодов магнитных карт и штрихкодов информационных карт.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьНеуникальныеКодыИнформационныхКартПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДисконтныйСервер" id="2161">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дисконтный сервер</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ShowLeftMargin>false</ShowLeftMargin>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="ГруппаДисконтныйСерверРасширеннаяПодсказка" id="2162"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИспользоватьДисконтныйСервер" id="2163">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа использовать дисконтный сервер</v8:content>
+						</v8:item>
+					</Title>
+					<Width>39</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИспользоватьДисконтныйСерверРасширеннаяПодсказка" id="2164"/>
+					<ChildItems>
+						<UsualGroup name="Группа4" id="2261">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="2262"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьДисконтныйСервер" id="2165">
+									<DataPath>НаборКонстант.ИспользоватьДисконтныйСервер</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подключаться к дисконтному серверу</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Невозможно использовать дисконтный сервер, потому что выключена синхронизация данных в разделе «Синхронизация данных».</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьДисконтныйСерверКонтекстноеМеню" id="2166"/>
+									<ExtendedTooltip name="ИспользоватьДисконтныйСерверРасширеннаяПодсказка" id="2167">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Возможность получения данных о накоплениях по дисконтным картам on-line из главного узла РИБ.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьДисконтныйСерверПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<PictureDecoration name="ДекорацияКомментарийДисконтныйСервер" id="2263">
+									<Width>2</Width>
+									<Height>1</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация комментарий дисконтный сервер</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.ИнформацияПоНедоступнымПолям</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияКомментарийДисконтныйСерверКонтекстноеМеню" id="2264"/>
+									<ExtendedTooltip name="ДекорацияКомментарийДисконтныйСерверРасширеннаяПодсказка" id="2265"/>
+									<Events>
+										<Event name="Click">ДекорацияКомментарийНажатие</Event>
+									</Events>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаВключенияОчередиДисконтногоСервера" id="2216">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа включения очереди дисконтного сервера</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВключенияОчередиДисконтногоСервераРасширеннаяПодсказка" id="2217"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьОчередьДляПередачиДокументовДисконтномуСерверу" id="2197">
+									<DataPath>НаборКонстант.ИспользоватьОчередьДляПередачиДокументовДисконтномуСерверу</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Использовать очередь передачи дисконтному серверу</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьОчередьДляПередачиДокументовДисконтномуСерверуКонтекстноеМеню" id="2198"/>
+									<ExtendedTooltip name="ИспользоватьОчередьДляПередачиДокументовДисконтномуСерверуРасширеннаяПодсказка" id="2199">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Определяет режим отправки данных для обновления базы дисконтного сервера: немедленная или отложенная отправка</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьОчередьДляПередачиДокументовДисконтномуСерверуПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНастройкиДисконтногоСервера" id="2171">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки дисконтного сервера</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки дисконтного сервера</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>39</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкиДисконтногоСервераРасширеннаяПодсказка" id="2172"/>
+					<ChildItems>
+						<Button name="НастройкаПодключенияКДисконтномуСерверу" id="2224">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.НастройкаПодключенияКДисконтномуСерверу</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="НастройкаПодключенияКДисконтномуСерверуРасширеннаяПодсказка" id="2225">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Настройка адреса web-сервиса дисконтного сервера, указание имени пользователя и пароля для подключения к БД.
+</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+						<Button name="ПротоколПередачиПродажДисконтномуСерверу" id="2211">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ПротоколПередачиПродажДисконтномуСерверу</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ПротоколПередачиПродажДисконтномуСерверуРасширеннаяПодсказка" id="2212">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Сведения обо всех документах, отправленных или ожидающих отправки дисконтному серверу.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаУправлениеАссортиментом" id="2099">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ассортимент</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ShowLeftMargin>false</ShowLeftMargin>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="ГруппаУправлениеАссортиментомExtendedTooltip" id="2154"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаУправлениеАссортиментомНачало" id="2238">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаУправлениеАссортиментомНачалоРасширеннаяПодсказка" id="2239"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаУправлениеАссортиментомГлавное" id="2105">
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУправлениеАссортиментомГлавноеРасширеннаяПодсказка" id="2155"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьАссортимент" id="2100">
+									<DataPath>НаборКонстант.ИспользоватьАссортимент</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Управление ассортиментом</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьАссортиментКонтекстноеМеню" id="2101"/>
+									<ExtendedTooltip name="ИспользоватьАссортиментExtendedTooltip" id="2156">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Управление ассортиментной политикой магазинов сети, 
+ведение форматов магазинов, товарных категорий, 
+марок (брендов).</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьАссортиментПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<PictureDecoration name="ДекорацияКомментарийАссортимент" id="2266">
+									<Width>2</Width>
+									<Height>1</Height>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.ИнформацияПоНедоступнымПолям</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияКомментарийАссортиментКонтекстноеМеню" id="2267"/>
+									<ExtendedTooltip name="ДекорацияКомментарийАссортиментРасширеннаяПодсказка" id="2268"/>
+									<Events>
+										<Event name="Click">ДекорацияКомментарийНажатие</Event>
+									</Events>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУправлениеАссортиментомПомощник" id="2106">
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУправлениеАссортиментомПомощникРасширеннаяПодсказка" id="2158"/>
+							<ChildItems>
+								<Button name="НастройкиУправленияАссортиментом" id="2104">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.НастройкиУправленияАссортиментом</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Помощник начального формирования ассортимента</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="НастройкиУправленияАссортиментомExtendedTooltip" id="2159">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Создание форматов магазинов, документов ввода в ассортимент.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаУправлениеАссортиментомДополнительно" id="2226">
+					<Group>Horizontal</Group>
+					<Representation>NormalSeparation</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаУправлениеАссортиментомДополнительноРасширеннаяПодсказка" id="2227"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаУправлениеАссортиментомКвоты" id="2228">
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУправлениеАссортиментомКвотыРасширеннаяПодсказка" id="2229"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьТоварныеКатегорииИКвотыАссортимента" id="2232">
+									<DataPath>НаборКонстант.ИспользоватьТоварныеКатегорииИКвотыАссортимента</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Квоты ассортимента и товарные категории</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьТоварныеКатегорииИКвотыАссортиментаКонтекстноеМеню" id="2233"/>
+									<ExtendedTooltip name="ИспользоватьТоварныеКатегорииИКвотыАссортиментаРасширеннаяПодсказка" id="2234">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Использование товарных категорий. Установка квот ассортимента и анализ исполнения ассортимента по категориям. Дополнительные отчеты по продажам.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьТоварныеКатегорииИКвотыАссортиментаПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУправлениеАссортиментомЦены" id="2230">
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУправлениеАссортиментомЦеныРасширеннаяПодсказка" id="2231"/>
+							<ChildItems>
+								<CheckBoxField name="УстанавливатьВидыЦенВАссортименте" id="2235">
+									<DataPath>НаборКонстант.УстанавливатьВидыЦенВАссортименте</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="УстанавливатьВидыЦенВАссортиментеКонтекстноеМеню" id="2236"/>
+									<ExtendedTooltip name="УстанавливатьВидыЦенВАссортиментеРасширеннаяПодсказка" id="2237">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Определение вида цен розничной продажи в документе изменения ассортимента. Правила ценообразования не действуют.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">УстанавливатьВидыЦенВАссортиментеПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>НаборКонстант.АдресДисконтногоСервера</Field>
+				<Field>НаборКонстант.ДополнительнаяКолонкаПечатныхФормДокументов</Field>
+				<Field>НаборКонстант.ЕдиницаИзмеренияВеса</Field>
+				<Field>НаборКонстант.ЕдиницаИзмеренияОбъема</Field>
+				<Field>НаборКонстант.ИспользоватьАвтоматическиеСкидкиВПродажах</Field>
+				<Field>НаборКонстант.ИспользоватьАссортимент</Field>
+				<Field>НаборКонстант.ИспользоватьБонусныеПрограммыЛояльности</Field>
+				<Field>НаборКонстант.ИспользоватьДисконтныйСервер</Field>
+				<Field>НаборКонстант.ИспользоватьДополнительныеОтчеты</Field>
+				<Field>НаборКонстант.ИспользоватьЗапретРозничнойПродажиАлкоголя</Field>
+				<Field>НаборКонстант.ИспользоватьНеуникальныеКодыИнформационныхКарт</Field>
+				<Field>НаборКонстант.ИспользоватьОплатуБанковскимиКредитами</Field>
+				<Field>НаборКонстант.ИспользоватьОплатуПлатежнымиКартами</Field>
+				<Field>НаборКонстант.ИспользоватьОчередьДляПередачиДокументовДисконтномуСерверу</Field>
+				<Field>НаборКонстант.ИспользоватьПрименениеЦен</Field>
+				<Field>НаборКонстант.ИспользоватьРучныеСкидкиВПродажах</Field>
+				<Field>НаборКонстант.ИспользоватьСинхронизациюДанных</Field>
+				<Field>НаборКонстант.ИспользоватьТоварныеКатегорииИКвотыАссортимента</Field>
+				<Field>НаборКонстант.ИспользоватьЦеновыеГруппы</Field>
+				<Field>НаборКонстант.ПрефиксВнутреннегоШтрихкодаВесовогоТовара</Field>
+				<Field>НаборКонстант.ПрефиксВнутреннегоШтрихкодаШтучногоТовара</Field>
+				<Field>НаборКонстант.ПрефиксШтрихкодаУзлаРИБ</Field>
+				<Field>НаборКонстант.СебестоимостьВключаетНДС</Field>
+				<Field>НаборКонстант.УстанавливатьВидыЦенВАссортименте</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="РежимРаботы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НижняяГраницаSKUВесовыхТоваров</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НаборКонстант.НижняяГраницаДиапазонаSKUВесовогоТовара</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">99999</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ВерхняяГраницаSKUВесовыхТоваров</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НаборКонстант.ВерхняяГраницаДиапазонаSKUВесовогоТовара</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">99999</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="НастройкиУправленияАссортиментом" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки управления ассортиментом</v8:content>
+				</v8:item>
+			</Title>
+			<Action>НастройкиУправленияАссортиментом</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПротоколПередачиПродажДисконтномуСерверу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Протокол передачи продаж дисконтному серверу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Протокол передачи продаж дисконтному серверу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПротоколПередачиПродажДисконтномуСерверу</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НастройкаПодключенияКДисконтномуСерверу" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка подключения к дисконтному серверу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка подключения к дисконтному серверу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкаПодключенияКДисконтномуСерверу</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,673 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="5">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="7"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="8">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="9"/>
+			</Button>
+			<Popup name="ПодменюПечать" id="10">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Печать</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Печать</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Picture>
+					<xr:Ref>StdPicture.Print</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Representation>Picture</Representation>
+				<ExtendedTooltip name="ПодменюПечатьРасширеннаяПодсказка" id="11"/>
+			</Popup>
+			<Popup name="ПодменюСоздатьНаОсновании" id="14">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Создать на основании</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Создать на основании</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Picture>
+					<xr:Ref>CommonPicture.ЗаполнитьПоШаблону</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Representation>Picture</Representation>
+				<ExtendedTooltip name="ПодменюСоздатьНаОснованииРасширеннаяПодсказка" id="15"/>
+				<ChildItems>
+					<Button name="ФормаОбщаяКомандаСозданиеСвязанныхОбъектов" id="16">
+						<Type>CommandBarButton</Type>
+						<CommandName>CommonCommand.СозданиеСвязанныхОбъектов</CommandName>
+						<DataPath>Объект.Ref</DataPath>
+						<ExtendedTooltip name="ФормаОбщаяКомандаСозданиеСвязанныхОбъектовРасширеннаяПодсказка" id="-12"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+			<ButtonGroup name="ГруппаКомандыФормы" id="28">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды формы</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды формы</v8:content>
+					</v8:item>
+				</ToolTip>
+				<CommandSource>Form</CommandSource>
+				<ExtendedTooltip name="ГруппаКомандыФормыРасширеннаяПодсказка" id="29"/>
+			</ButtonGroup>
+			<Button name="ФормаСправка" id="32">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="33"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="8f42e083-be92-4102-b1f0-fa58452c1a63">ПередЗаписьюНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="267">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаExtendedTooltip" id="464"/>
+			<ChildItems>
+				<InputField name="Наименование" id="335">
+					<DataPath>Объект.Description</DataPath>
+					<Width>28</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Wrap>false</Wrap>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="336"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="466"/>
+				</InputField>
+				<UsualGroup name="ГруппаШапкаЛево" id="269">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шапка лево</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шапка лево</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаЛевоExtendedTooltip" id="465"/>
+					<ChildItems>
+						<InputField name="ВидЦен" id="458">
+							<DataPath>Объект.ВидЦен</DataPath>
+							<Width>28</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<OpenButton>false</OpenButton>
+							<QuickChoice>false</QuickChoice>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ВидЦенКонтекстноеМеню" id="459"/>
+							<ExtendedTooltip name="ВидЦенExtendedTooltip" id="467"/>
+							<Events>
+								<Event name="OnChange">ВидЦенПриИзменении</Event>
+							</Events>
+						</InputField>
+						<CheckBoxField name="ЦенаВключаетНДС" id="301">
+							<DataPath>Объект.ЦенаВключаетНДС</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+							<WarningOnEdit>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Все виды цен будут очищены</v8:content>
+								</v8:item>
+							</WarningOnEdit>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЦенаВключаетНДСКонтекстноеМеню" id="302"/>
+							<ExtendedTooltip name="ЦенаВключаетНДСExtendedTooltip" id="470"/>
+							<Events>
+								<Event name="OnChange">ЦенаВключаетНДСПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницыExtendedTooltip" id="472"/>
+			<ChildItems>
+				<Page name="ЦеныПоЦеновымГруппам" id="350">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уточнение по ценовым группам</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уточнение по ценовым группам</v8:content>
+						</v8:item>
+					</ToolTip>
+					<TitleDataPath>Объект.ЦеновыеГруппы.RowsCount</TitleDataPath>
+					<ExtendedTooltip name="ЦеныПоЦеновымГруппамExtendedTooltip" id="473"/>
+					<ChildItems>
+						<Table name="ЦеновыеГруппы" id="43">
+							<Representation>List</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<HorizontalScrollBar>DontUse</HorizontalScrollBar>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ЦеновыеГруппы</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЦеновыеГруппыКонтекстноеМеню" id="44"/>
+							<AutoCommandBar name="ЦеновыеГруппыКоманднаяПанель" id="45">
+								<ChildItems>
+									<Button name="ЦеновыеГруппыЗаполнитьВидЦенВыделенныхСтрокЦеновыеГруппы" id="398">
+										<Type>CommandBarButton</Type>
+										<SkipOnInput>false</SkipOnInput>
+										<CommandName>Form.Command.ЗаполнитьВидЦенВыделенныхСтрокЦеновыеГруппы</CommandName>
+										<ExtendedTooltip name="ЦеновыеГруппыЗаполнитьВидЦенВыделенныхСтрокЦеновыеГруппыExtendedTooltip" id="474"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЦеновыеГруппыExtendedTooltip" id="475"/>
+							<SearchStringAddition name="ЦеновыеГруппыСтрокаПоиска" id="480">
+								<AdditionSource>
+									<Item>ЦеновыеГруппы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЦеновыеГруппыСтрокаПоискаКонтекстноеМеню" id="481"/>
+								<ExtendedTooltip name="ЦеновыеГруппыСтрокаПоискаРасширеннаяПодсказка" id="482"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЦеновыеГруппыСостояниеПросмотра" id="483">
+								<AdditionSource>
+									<Item>ЦеновыеГруппы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЦеновыеГруппыСостояниеПросмотраКонтекстноеМеню" id="484"/>
+								<ExtendedTooltip name="ЦеновыеГруппыСостояниеПросмотраРасширеннаяПодсказка" id="485"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЦеновыеГруппыУправлениеПоиском" id="486">
+								<AdditionSource>
+									<Item>ЦеновыеГруппы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЦеновыеГруппыУправлениеПоискомКонтекстноеМеню" id="487"/>
+								<ExtendedTooltip name="ЦеновыеГруппыУправлениеПоискомРасширеннаяПодсказка" id="488"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="AfterDeleteRow">ЦеновыеГруппыПослеУдаления</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ЦеновыеГруппыНомерСтроки" id="46">
+									<DataPath>Объект.ЦеновыеГруппы.LineNumber</DataPath>
+									<Width>3</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Wrap>false</Wrap>
+									<ContextMenu name="ЦеновыеГруппыНомерСтрокиКонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="ЦеновыеГруппыНомерСтрокиExtendedTooltip" id="476"/>
+								</InputField>
+								<InputField name="ЦеновыеГруппыЦеноваяГруппа" id="48">
+									<DataPath>Объект.ЦеновыеГруппы.ЦеноваяГруппа</DataPath>
+									<Width>20</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Wrap>false</Wrap>
+									<QuickChoice>true</QuickChoice>
+									<ContextMenu name="ЦеновыеГруппыЦеноваяГруппаКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="ЦеновыеГруппыЦеноваяГруппаExtendedTooltip" id="477"/>
+								</InputField>
+								<InputField name="ЦеновыеГруппыВидЦен" id="50">
+									<DataPath>Объект.ЦеновыеГруппы.ВидЦен</DataPath>
+									<Width>16</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Wrap>false</Wrap>
+									<QuickChoice>true</QuickChoice>
+									<ContextMenu name="ЦеновыеГруппыВидЦенКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="ЦеновыеГруппыВидЦенExtendedTooltip" id="478"/>
+									<Events>
+										<Event name="OnChange">ЦеновыеГруппыВидЦенПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<LabelDecoration name="ПояснениеЦеновыхГрупп" id="462">
+							<Visible>false</Visible>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Уточнение по ценовым группам действует только для магазинов с отключенным контролем ассортимента</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПояснениеЦеновыхГруппКонтекстноеМеню" id="463"/>
+							<ExtendedTooltip name="ПояснениеЦеновыхГруппExtendedTooltip" id="479"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаДополнительныеВидыЦен" id="489">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные виды цен</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница дополнительные виды цен</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаДополнительныеВидыЦенРасширеннаяПодсказка" id="490"/>
+					<ChildItems>
+						<Table name="ДополнительныеВидыЦен" id="491">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ДополнительныеВидыЦен</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДополнительныеВидыЦенКонтекстноеМеню" id="492"/>
+							<AutoCommandBar name="ДополнительныеВидыЦенКоманднаяПанель" id="493">
+								<ChildItems>
+									<Popup name="ДополнительныеВидыЦенЗаполнить" id="512">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Дополнительные виды цен заполнить</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ДополнительныеВидыЦенЗаполнитьРасширеннаяПодсказка" id="513"/>
+										<ChildItems>
+											<Button name="ДополнительныеВидыЦенЗаполнитьВсеВлияющиеИЗависимые" id="510">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДополнитьВсемиВлияющими</CommandName>
+												<ExtendedTooltip name="ДополнительныеВидыЦенЗаполнитьВсеВлияющиеИЗависимыеРасширеннаяПодсказка" id="511"/>
+											</Button>
+											<Button name="ДополнительныеВидыЦенДополнитьВсемиЗависимыми" id="514">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДополнитьВсемиЗависимыми</CommandName>
+												<ExtendedTooltip name="ДополнительныеВидыЦенДополнитьВсемиЗависимымиРасширеннаяПодсказка" id="515"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДополнительныеВидыЦенРасширеннаяПодсказка" id="494"/>
+							<SearchStringAddition name="ДополнительныеВидыЦенСтрокаПоиска" id="495">
+								<AdditionSource>
+									<Item>ДополнительныеВидыЦен</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДополнительныеВидыЦенСтрокаПоискаКонтекстноеМеню" id="496"/>
+								<ExtendedTooltip name="ДополнительныеВидыЦенСтрокаПоискаРасширеннаяПодсказка" id="497"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДополнительныеВидыЦенСостояниеПросмотра" id="498">
+								<AdditionSource>
+									<Item>ДополнительныеВидыЦен</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДополнительныеВидыЦенСостояниеПросмотраКонтекстноеМеню" id="499"/>
+								<ExtendedTooltip name="ДополнительныеВидыЦенСостояниеПросмотраРасширеннаяПодсказка" id="500"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДополнительныеВидыЦенУправлениеПоиском" id="501">
+								<AdditionSource>
+									<Item>ДополнительныеВидыЦен</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДополнительныеВидыЦенУправлениеПоискомКонтекстноеМеню" id="502"/>
+								<ExtendedTooltip name="ДополнительныеВидыЦенУправлениеПоискомРасширеннаяПодсказка" id="503"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ДополнительныеВидыЦенНомерСтроки" id="504">
+									<DataPath>Объект.ДополнительныеВидыЦен.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДополнительныеВидыЦенНомерСтрокиКонтекстноеМеню" id="505"/>
+									<ExtendedTooltip name="ДополнительныеВидыЦенНомерСтрокиРасширеннаяПодсказка" id="506"/>
+								</LabelField>
+								<InputField name="ДополнительныеВидыЦенВидЦен" id="507">
+									<DataPath>Объект.ДополнительныеВидыЦен.ВидЦен</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДополнительныеВидыЦенВидЦенКонтекстноеМеню" id="508"/>
+									<ExtendedTooltip name="ДополнительныеВидыЦенВидЦенРасширеннаяПодсказка" id="509"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ПравилаЦенообразования</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.Ref</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ИспользуютсяВалюты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используются валюты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВалютаУчета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта учета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользуютсяЦеновыеГруппы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используются ценовые группы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьВидЦенВыделенныхСтрокЦеновыеГруппы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить вид цен...</v8:content>
+				</v8:item>
+			</Title>
+			<Use>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="c4d67026-2c97-4126-b8be-49aa6f567e2d">false</xr:Value>
+				<xr:Value name="Role.БазовыеПраваБСП">false</xr:Value>
+				<xr:Value name="Role.ЗапускAutomation">false</xr:Value>
+				<xr:Value name="Role.ЗапускВебКлиента">false</xr:Value>
+				<xr:Value name="Role.ЗапускВнешнегоСоединения">false</xr:Value>
+				<xr:Value name="Role.ЗапускТолстогоКлиента">false</xr:Value>
+				<xr:Value name="Role.ЗапускТонкогоКлиента">false</xr:Value>
+			</Use>
+			<Action>ЗаполнитьВидЦенВыделенныхСтрокЦеновыеГруппы</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДополнитьВсемиВлияющими" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнить всеми влияющими</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнить всеми влияющими</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДополнитьВсемиВлияющими</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДополнитьВсемиЗависимыми" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнить всеми зависимыми</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнить всеми зависимыми</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДополнитьВсемиЗависимыми</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>0</Command>
+				<Type>Added</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<Index>1</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<Index>2</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<Index>2</Index>
+			</Item>
+			<Item>
+				<Command>CommonCommand.СтруктураПодчиненности</Command>
+				<Type>Auto</Type>
+			</Item>
+			<Item>
+				<Command>CommonCommand.ЗадачиПоПредмету</Command>
+				<Type>Auto</Type>
+				<Index>3</Index>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<Index>1</Index>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
+				<Index>1</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.ИсторияИзменений</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelSeeAlso</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Report.УсловияПравилЦенообразования.Command.УсловияПравилаЦенообразования</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
+				<Index>2</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+		<CommandBar>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>2:1b586b37-d819-4280-a3ee-62906b4c580c</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<Index>2</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+			</Item>
+			<Item>
+				<Command>BusinessProcess.Задание.StandardCommand.CreateBasedOn</Command>
+				<Type>Auto</Type>
+				<Index>1</Index>
+			</Item>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<CommandGroup>CommandGroup.Печать</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.СозданиеСвязанныхОбъектов</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarCreateBasedOn</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>CommonCommand.ИсторияИзменений</Command>
+				<Type>Auto</Type>
+				<CommandGroup>CommandGroup.Отчеты</CommandGroup>
+				<Index>1</Index>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Report.УсловияПравилЦенообразования.Command.УсловияПравилаЦенообразования</Command>
+				<Type>Auto</Type>
+				<CommandGroup>CommandGroup.Отчеты</CommandGroup>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Графики работы магазинов</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКнопкаСоздать" id="10">
+				<Type>CommandBarButton</Type>
+				<UserVisible>
+					<xr:Common>false</xr:Common>
+					<xr:Value name="Role.ДобавлениеИзменениеИнформацииПоРаботеПерсонала">true</xr:Value>
+					<xr:Value name="Role.НастройкаНормативноСправочнойИнформации">true</xr:Value>
+					<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				</UserVisible>
+				<CommandName>Form.Item.ТаблицаСписка.StandardCommand.Add</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Создать</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКнопкаСоздатьExtendedTooltip" id="19"/>
+			</Button>
+			<Button name="ФормаКнопкаКопировать" id="14">
+				<Type>CommandBarButton</Type>
+				<UserVisible>
+					<xr:Common>false</xr:Common>
+					<xr:Value name="Role.ДобавлениеИзменениеИнформацииПоРаботеПерсонала">true</xr:Value>
+					<xr:Value name="Role.НастройкаНормативноСправочнойИнформации">true</xr:Value>
+					<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				</UserVisible>
+				<CommandName>Form.Item.ТаблицаСписка.StandardCommand.Copy</CommandName>
+				<ExtendedTooltip name="ФормаКнопкаКопироватьExtendedTooltip" id="20"/>
+			</Button>
+			<Button name="ФормаКнопкаИзменить" id="13">
+				<Type>CommandBarButton</Type>
+				<UserVisible>
+					<xr:Common>false</xr:Common>
+					<xr:Value name="Role.ДобавлениеИзменениеИнформацииПоРаботеПерсонала">true</xr:Value>
+					<xr:Value name="Role.НастройкаНормативноСправочнойИнформации">true</xr:Value>
+					<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				</UserVisible>
+				<CommandName>Form.Item.ТаблицаСписка.StandardCommand.Change</CommandName>
+				<ExtendedTooltip name="ФормаКнопкаИзменитьExtendedTooltip" id="21"/>
+			</Button>
+			<Button name="ФормаКнопкаУдалить" id="11">
+				<Type>CommandBarButton</Type>
+				<UserVisible>
+					<xr:Common>false</xr:Common>
+					<xr:Value name="Role.ДобавлениеИзменениеИнформацииПоРаботеПерсонала">true</xr:Value>
+					<xr:Value name="Role.НастройкаНормативноСправочнойИнформации">true</xr:Value>
+					<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				</UserVisible>
+				<CommandName>Form.Item.ТаблицаСписка.StandardCommand.Delete</CommandName>
+				<ExtendedTooltip name="ФормаКнопкаУдалитьExtendedTooltip" id="22"/>
+			</Button>
+			<Button name="ФормаКнопкаНайти" id="17">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Item.ТаблицаСписка.StandardCommand.Find</CommandName>
+				<ExtendedTooltip name="ФормаКнопкаНайтиExtendedTooltip" id="23"/>
+			</Button>
+			<Button name="ФормаКнопкаОтменитьПоиск" id="18">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Item.ТаблицаСписка.StandardCommand.CancelSearch</CommandName>
+				<ExtendedTooltip name="ФормаКнопкаОтменитьПоискExtendedTooltip" id="24"/>
+			</Button>
+			<Button name="ФормаПечатьГрафикаРаботыМагазина" id="16">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.НапечататьГрафикРаботыМагазина</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.Print</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаПечатьГрафикаРаботыМагазинаExtendedTooltip" id="25"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ТаблицаСписка" id="52">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<HeightInTableRows>15</HeightInTableRows>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ТаблицаСписка</DataPath>
+			<CommandSet>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>OutputList</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаСпискаКонтекстноеМеню" id="53"/>
+			<AutoCommandBar name="ТаблицаСпискаКоманднаяПанель" id="54">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаСпискаРасширеннаяПодсказка" id="55"/>
+			<SearchStringAddition name="ТаблицаСпискаСтрокаПоиска" id="62">
+				<AdditionSource>
+					<Item>ТаблицаСписка</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаСпискаСтрокаПоискаКонтекстноеМеню" id="63"/>
+				<ExtendedTooltip name="ТаблицаСпискаСтрокаПоискаРасширеннаяПодсказка" id="64"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаСпискаСостояниеПросмотра" id="65">
+				<AdditionSource>
+					<Item>ТаблицаСписка</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаСпискаСостояниеПросмотраКонтекстноеМеню" id="66"/>
+				<ExtendedTooltip name="ТаблицаСпискаСостояниеПросмотраРасширеннаяПодсказка" id="67"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаСпискаУправлениеПоиском" id="68">
+				<AdditionSource>
+					<Item>ТаблицаСписка</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаСпискаУправлениеПоискомКонтекстноеМеню" id="69"/>
+				<ExtendedTooltip name="ТаблицаСпискаУправлениеПоискомРасширеннаяПодсказка" id="70"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ТаблицаСпискаВыбор</Event>
+				<Event name="BeforeAddRow">ТаблицаСпискаПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">ТаблицаСпискаПередУдалением</Event>
+				<Event name="BeforeRowChange">ТаблицаСпискаПередНачаломИзменения</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ТаблицаСпискаГод" id="56">
+					<DataPath>ТаблицаСписка.Год</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧГ=0</v8:content>
+						</v8:item>
+					</Format>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧГ=0</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ТаблицаСпискаГодКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ТаблицаСпискаГодРасширеннаяПодсказка" id="58"/>
+				</InputField>
+				<InputField name="ТаблицаСпискаМагазин" id="59">
+					<DataPath>ТаблицаСписка.Магазин</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаСпискаМагазинКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ТаблицаСпискаМагазинРасширеннаяПодсказка" id="61"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	РегистрСведенийГрафикРаботы.Магазин,
+	РегистрСведенийГрафикРаботы.Год
+ИЗ
+	РегистрСведений.ГрафикиРаботыМагазинов КАК РегистрСведенийГрафикРаботы</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ТаблицаСписка" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица списка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Год" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Год</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>4</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Магазин" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Магазин</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Магазины</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Магазин" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Магазин</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Магазины</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НапечататьГрафикРаботыМагазина" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>График работы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать графика работы магазина</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НапечататьГрафикРаботыМагазина</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>Form.Command.НапечататьГрафикРаботыМагазина</Command>
+				<Type>Added</Type>
+				<CommandGroup>CommandGroup.Печать</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

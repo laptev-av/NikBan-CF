@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="24">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="25"/>
+			<ChildItems>
+				<InputField name="Период" id="1">
+					<DataPath>Запись.Period</DataPath>
+					<Width>9</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ПериодExtendedTooltip" id="9"/>
+				</InputField>
+				<CheckBoxField name="ОбновлятьРегламентнымЗаданием" id="7">
+					<DataPath>Запись.РассчитыватьСебестоимостьРегламентнымЗаданием</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОбновлятьРегламентнымЗаданиемКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ОбновлятьРегламентнымЗаданиемРасширеннаяПодсказка" id="12"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="СпособУчета" id="16">
+			<DataPath>Запись.СпособУчета</DataPath>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ChooseType>false</ChooseType>
+			<TextEdit>false</TextEdit>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.СпособыУчетаСебестоимости.EnumValue.АвтономныйУчет</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.СпособыУчетаСебестоимости.EnumValue.АвтономныйУчетСредняяВзвешенная</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.СпособыУчетаСебестоимости.EnumValue.ПриниматьИзУправляющейСистемы</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<DropListWidth>50</DropListWidth>
+			<ContextMenu name="СпособУчетаКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="СпособУчетаРасширеннаяПодсказка" id="18"/>
+			<Events>
+				<Event name="OnChange">СпособУчетаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<LabelDecoration name="ПояснениеСпособОценки" id="13">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<TextColor>style:ПоясняющийТекст</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступные способы:
+Упрощенный (Автономный учет) - себестоимость товаров приравнивается к цене последней поставки,
+Средняя взвешенная оценка (Автономный учет) - расчет по средней взвешенной оценке,
+Принимать из управляющей системы - синхронизация с системой УТ.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПояснениеСпособОценкиКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ПояснениеСпособОценкиРасширеннаяПодсказка" id="15"/>
+		</LabelDecoration>
+		<UsualGroup name="Группа2" id="35">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<CheckBoxField name="РаспределятьСтоимостьУслуг" id="29">
+					<DataPath>Запись.РаспределятьСтоимостьУслуг</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РаспределятьСтоимостьУслугКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="РаспределятьСтоимостьУслугРасширеннаяПодсказка" id="31"/>
+					<Events>
+						<Event name="OnChange">РаспределятьСтоимостьУслугПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="ПравилоРаспределения" id="32">
+					<DataPath>Запись.ПравилоРаспределения</DataPath>
+					<ContextMenu name="ПравилоРаспределенияКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ПравилоРаспределенияРасширеннаяПодсказка" id="34"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="ПояснениеПравилоРаспределения" id="37">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<TextColor>style:ПоясняющийТекст</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распределение стоимости услуг на себестоимость товаров указанных в одной табличной части с услугой 
+(в документах Поступление товаров, Перемещение товаров, Сборка товаров).</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПояснениеПравилоРаспределенияКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="ПояснениеПравилоРаспределенияРасширеннаяПодсказка" id="39"/>
+		</LabelDecoration>
+		<LabelDecoration name="ДекорацияПодсказка" id="26">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<TextColor>#B22222</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Внимание. Не рекомендуется изменять способ учета текущего периода.
+</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияПодсказкаКонтекстноеМеню" id="27"/>
+			<ExtendedTooltip name="ДекорацияПодсказкаРасширеннаяПодсказка" id="28"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.НастройкаСпособаУчетаСебестоимости</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПравилоРаспределения</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Запись.РаспределятьСтоимостьУслуг</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+</Form>

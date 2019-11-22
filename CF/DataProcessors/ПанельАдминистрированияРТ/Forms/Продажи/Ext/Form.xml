@@ -1,0 +1,1254 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЗаголовок" id="2140">
+			<Group>Horizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаголовокExtendedTooltip" id="2186"/>
+			<ChildItems>
+				<LabelDecoration name="ОписаниеРаздела5" id="1553">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Управление параметрами отражения операций продаж.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОписаниеРаздела5КонтекстноеМеню" id="1554"/>
+					<ExtendedTooltip name="ОписаниеРаздела5ExtendedTooltip" id="2187"/>
+				</LabelDecoration>
+				<CommandBar name="ГруппаСправка" id="2143">
+					<ExtendedTooltip name="ГруппаСправкаExtendedTooltip" id="2189"/>
+					<ChildItems>
+						<Button name="Справка" id="2144">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<ExtendedTooltip name="СправкаExtendedTooltip" id="2190"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="2265">
+			<Width>78</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="2266"/>
+			<ChildItems>
+				<Button name="ПомощникНастройка" id="2263">
+					<Type>Hyperlink</Type>
+					<CommandName>DataProcessor.ПомощникНастройкиКассовогоМеста.StandardCommand.Open</CommandName>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ExtendedTooltip name="ПомощникНастройкаРасширеннаяПодсказка" id="2264">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<MaxWidth>78</MaxWidth>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Помощник организует работу администратора по настройке кассового места. При работе с помощником будут последовательно созданы записи в нужных справочниках, рабочее место для выбранного пользователя, подключено оборудование, настроены виды платежей, принимаемых на данном кассовом месте. До начала работы помощника необходимо создать магазин и войти в операционную систему под учетной записью пользователя, для которого настраивается рабочее место. Помощник может использоваться также для редактирования уже выполненных настроек.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПрочее" id="2258">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа прочее</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПрочееРасширеннаяПодсказка" id="2259"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКонтрагентРозничныйПокупатель" id="2130">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа контрагент розничный покупатель</v8:content>
+						</v8:item>
+					</Title>
+					<Width>39</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКонтрагентРозничныйПокупательExtendedTooltip" id="2215"/>
+					<ChildItems>
+						<InputField name="КонтрагентРозничныйПокупатель" id="2132">
+							<DataPath>НаборКонстант.КонтрагентРозничныйПокупатель</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Розничный покупатель (контрагент)</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Top</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="КонтрагентРозничныйПокупательКонтекстноеМеню" id="2133"/>
+							<ExtendedTooltip name="КонтрагентРозничныйПокупательExtendedTooltip" id="2216">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Значение по умолчанию, подставляемое в обработку 
+«Возврат от розничного покупателя».</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">КонтрагентРозничныйПокупательПриИзменении</Event>
+							</Events>
+						</InputField>
+						<CheckBoxField name="ИспользоватьРасчетыСКлиентами" id="2306">
+							<DataPath>НаборКонстант.ИспользоватьРасчетыСКлиентами</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расчеты с клиентами</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьРасчетыСКлиентамиКонтекстноеМеню" id="2307"/>
+							<ExtendedTooltip name="ИспользоватьРасчетыСКлиентамиРасширеннаяПодсказка" id="2308">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Расчеты с клиентами используются в мелкооптовой торговле, при продаже в рассрочку и при приеме авансов от покупателя.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ИспользоватьРасчетыСКлиентамиПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаФиксироватьПопыткиПродажПревышающихОстаток" id="2131">
+					<Width>39</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаФиксироватьПопыткиПродажПревышающихОстатокExtendedTooltip" id="2201"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКоличествоДнейХраненияОтложенныхЧеков" id="2309">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа количество дней хранения отложенных чеков</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа количество дней хранения отложенных чеков</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКоличествоДнейХраненияОтложенныхЧековРасширеннаяПодсказка" id="2310">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Хранение отложенных чеков в течение указанного количества дней после истечения срока ожидания покупки.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<InputField name="КоличествоДнейХраненияОтложенныхЧеков" id="2311">
+									<DataPath>НаборКонстант.КоличествоДнейХраненияОтложенныхЧеков</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Хранить отложенные чеки</v8:content>
+										</v8:item>
+									</Title>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="КоличествоДнейХраненияОтложенныхЧековКонтекстноеМеню" id="2312"/>
+									<ExtendedTooltip name="КоличествоДнейХраненияОтложенныхЧековExtendedTooltip" id="2313"/>
+									<Events>
+										<Event name="OnChange">КоличествоДнейХраненияОтложенныхЧековПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="НадписьДней" id="2314">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>дн.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьДнейКонтекстноеМеню" id="2315"/>
+									<ExtendedTooltip name="НадписьДнейExtendedTooltip" id="2316"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<CheckBoxField name="ФиксироватьПопыткиПродажПревышающихОстаток" id="2134">
+							<DataPath>НаборКонстант.ФиксироватьПопыткиПродажПревышающихОстаток</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ФиксироватьПопыткиПродажПревышающихОстатокКонтекстноеМеню" id="2135"/>
+							<ExtendedTooltip name="ФиксироватьПопыткиПродажПревышающихОстатокExtendedTooltip" id="2202">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<MaxWidth>39</MaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Регистрация попыток продаж товаров, превышающих остаток.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ФиксироватьПопыткиПродажПревышающихОстатокПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОплата" id="2254">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплата</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ShowLeftMargin>false</ShowLeftMargin>
+			<ExtendedTooltip name="ГруппаОплатаРасширеннаяПодсказка" id="2255"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаОплатаПлатежнымиКартами" id="2154">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа оплата платежными картами</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОплатаПлатежнымиКартамиExtendedTooltip" id="2191"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаИспользоватьОплатуПлатежнымиКартами" id="2164">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать оплату платежными картами</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать оплату платежными картами</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИспользоватьОплатуПлатежнымиКартамиExtendedTooltip" id="2192"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьОплатуПлатежнымиКартами" id="2155">
+									<DataPath>НаборКонстант.ИспользоватьОплатуПлатежнымиКартами</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Оплаты платежными картами</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьОплатуПлатежнымиКартамиКонтекстноеМеню" id="2156"/>
+									<ExtendedTooltip name="ИспользоватьОплатуПлатежнымиКартамиExtendedTooltip" id="2193"/>
+									<Events>
+										<Event name="OnChange">ИспользоватьОплатуПлатежнымиКартамиПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<LabelDecoration name="ПояснениеИспользоватьОплатуПлатежнымиКартами" id="2157">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Поддержка эквайринговых операций.</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="ПояснениеИспользоватьОплатуПлатежнымиКартамиКонтекстноеМеню" id="2158"/>
+									<ExtendedTooltip name="ПояснениеИспользоватьОплатуПлатежнымиКартамиExtendedTooltip" id="2194"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаЭквайринговыеТерминалы" id="2165">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа эквайринговые терминалы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа эквайринговые терминалы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЭквайринговыеТерминалыРасширеннаяПодсказка" id="2195"/>
+							<ChildItems>
+								<Button name="ОткрытьЭквайринговыеТерминалы" id="2166">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьЭквайринговыеТерминалы</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьЭквайринговыеТерминалыРасширеннаяПодсказка" id="2196">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>39</MaxWidth>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Справочник используется для регистрации возможных видов платежей и условий оплаты услуг банка.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа1" id="2252">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="2253"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаИспользоватьОплатуБанковскимиКредитами" id="2159">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать оплату банковскими кредитами</v8:content>
+								</v8:item>
+							</Title>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИспользоватьОплатуБанковскимиКредитамиExtendedTooltip" id="2198"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьОплатуБанковскимиКредитами" id="2160">
+									<DataPath>НаборКонстант.ИспользоватьОплатуБанковскимиКредитами</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Оплаты банковскими кредитами</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьОплатуБанковскимиКредитамиКонтекстноеМеню" id="2161"/>
+									<ExtendedTooltip name="ИспользоватьОплатуБанковскимиКредитамиExtendedTooltip" id="2199">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>39</MaxWidth>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Поддержка зачета оплаты банковскими кредитами.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьОплатуБанковскимиКредитамиПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаВидыОплатЧекаККМ" id="2149">
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВидыОплатЧекаККМExtendedTooltip" id="2221"/>
+							<ChildItems>
+								<Button name="ВидыОплатЧекаККМ" id="2147">
+									<Type>Hyperlink</Type>
+									<CommandName>Catalog.ВидыОплатЧекаККМ.StandardCommand.OpenList</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ВидыОплатЧекаККМExtendedTooltip" id="2222">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>39</MaxWidth>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Справочник предназначен для хранения информации 
+о различных видах оплаты документов продажи.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРМК" id="2256">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рабочее место кассира (РМК)</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ShowLeftMargin>false</ShowLeftMargin>
+			<ExtendedTooltip name="ГруппаРМКРасширеннаяПодсказка" id="2257"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНастройкиРМКИПалитраБыстрахТоваров" id="2267">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки РМК и палитра быстрах товаров</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкиРМКИПалитраБыстрахТоваровРасширеннаяПодсказка" id="2268"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНастройкиРМК" id="2148">
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкиРМКExtendedTooltip" id="2218"/>
+							<ChildItems>
+								<Button name="НастройкиРМК" id="2146">
+									<Type>Hyperlink</Type>
+									<CommandName>Catalog.НастройкиРМК.StandardCommand.OpenList</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="НастройкиРМКExtendedTooltip" id="2219">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>39</MaxWidth>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>В этом справочнике хранятся настройки рабочего места кассира (РМК). </v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПалитраБыстрахТоваров" id="2269">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа палитра быстрах товаров</v8:content>
+								</v8:item>
+							</Title>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПалитраБыстрахТоваровРасширеннаяПодсказка" id="2270"/>
+							<ChildItems>
+								<Button name="СправочникПалитраБыстрыхТоваровОткрытьСписок" id="2271">
+									<Type>Hyperlink</Type>
+									<CommandName>Catalog.ПалитраБыстрыхТоваров.StandardCommand.OpenList</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="СправочникПалитраБыстрыхТоваровОткрытьСписокРасширеннаяПодсказка" id="2272">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройки вывода быстрых товаров.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЛогированиеДействийКассираВРМК" id="2235">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа логирование действий кассира в РМК</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛогированиеДействийКассираВРМКРасширеннаяПодсказка" id="2236"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаИспользоватьЛогированиеДействийКассираВРМК" id="2237">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать логирование действий кассира в РМК</v8:content>
+								</v8:item>
+							</Title>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИспользоватьЛогированиеДействийКассираВРМКРасширеннаяПодсказка" id="2238"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьЛогированиеДействийКассираВРМК" id="2241">
+									<DataPath>НаборКонстант.ИспользоватьЛогированиеДействийКассираВРМК</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Логирование действий кассира в РМК</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьЛогированиеДействийКассираВРМККонтекстноеМеню" id="2242"/>
+									<ExtendedTooltip name="ИспользоватьЛогированиеДействийКассираВРМКРасширеннаяПодсказка" id="2243">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>39</MaxWidth>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Ведение лога действий кассира в РМК. При включении константы необходимо настроить виды логируемых операций и элементы справочника "Настройки РМК".</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьЛогированиеДействийКассираВРМКПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНастройкиЛогированияПоВидамОперацийКассираВРМК" id="2239">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки логирования по видам операций кассира в РМК</v8:content>
+								</v8:item>
+							</Title>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкиЛогированияПоВидамОперацийКассираВРМКРасширеннаяПодсказка" id="2240"/>
+							<ChildItems>
+								<Button name="ОткрытьНастройкиЛогированияПоВидамДействийКассираВРМК" id="2247">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьНастройкиЛогированияПоВидамДействийКассираВРМК</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьНастройкиЛогированияПоВидамДействийКассираВРМКРасширеннаяПодсказка" id="2248">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>39</MaxWidth>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Выбор видов операций логирования, определение действий под подозрением и исправляющих действий</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЗаказыПокупателя" id="2169">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказы покупателей</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ShowLeftMargin>false</ShowLeftMargin>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="ГруппаЗаказыПокупателяExtendedTooltip" id="2204"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЗаказыПокупателейРезервирование" id="2226">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа заказы покупателей резервирование</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЗаказыПокупателейРезервированиеРасширеннаяПодсказка" id="2227"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаИспользоватьЗаказыПокупателей" id="2170">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать заказы покупателей</v8:content>
+								</v8:item>
+							</Title>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИспользоватьЗаказыПокупателейРасширеннаяПодсказка" id="2205"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьЗаказыПокупателей" id="2172">
+									<DataPath>НаборКонстант.ИспользоватьЗаказыПокупателей</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заказы покупателей</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьЗаказыПокупателейКонтекстноеМеню" id="2173"/>
+									<ExtendedTooltip name="ИспользоватьЗаказыПокупателейExtendedTooltip" id="2206">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Учет по заказам покупателей.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьЗаказыПокупателейПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаИспользоватьРезервированиеПоЗаказамПокупателей" id="2171">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать резервирование по заказам покупателей</v8:content>
+								</v8:item>
+							</Title>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИспользоватьРезервированиеПоЗаказамПокупателейExtendedTooltip" id="2209"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьРезервированиеПоЗаказамПокупателей" id="2174">
+									<DataPath>НаборКонстант.ИспользоватьРезервированиеПоЗаказамПокупателей</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Резервирование по заказам покупателей</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьРезервированиеПоЗаказамПокупателейКонтекстноеМеню" id="2175"/>
+									<ExtendedTooltip name="ИспользоватьРезервированиеПоЗаказамПокупателейExtendedTooltip" id="2210">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>39</MaxWidth>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Контроль резерва номенклатуры на складе при контроле остатков на складе.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьРезервированиеПоЗаказамПокупателейПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЗаказыПокупателейДополнительно" id="2182">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказы покупателей дополнительно</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЗаказыПокупателейДополнительноExtendedTooltip" id="2208"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаИспользоватьПричиныОтменыЗаказовПокупателей" id="2183">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать причины отмены заказов покупателей</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа использовать причины отмены заказов покупателей</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИспользоватьПричиныОтменыЗаказовПокупателейExtendedTooltip" id="2212"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьПричиныОтменыЗаказовПокупателей" id="2180">
+									<DataPath>НаборКонстант.ИспользоватьПричиныОтменыЗаказовПокупателей</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьПричиныОтменыЗаказовПокупателейКонтекстноеМеню" id="2181"/>
+									<ExtendedTooltip name="ИспользоватьПричиныОтменыЗаказовПокупателейExtendedTooltip" id="2213">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Ведение списка причин отмены заказов покупателей.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьПричиныОтменыЗаказовПокупателейПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПричиныОтменыЗаказовПокупателей" id="2228">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа причины отмены заказов покупателей</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа причины отмены заказов покупателей</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПричиныОтменыЗаказовПокупателейРасширеннаяПодсказка" id="2229"/>
+							<ChildItems>
+								<Button name="ПричиныОтменыЗаказовПокупателей" id="2230">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьПричиныОтменыЗаказовПокупателей</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Причины отмены заказов покупателей</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ПричиныОтменыЗаказовПокупателейРасширеннаяПодсказка" id="2231">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>39</MaxWidth>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Справочник используется для классификации причин отмены заказов покупателей.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа54ФЗ" id="2273">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закон №54-ФЗ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа54 ФЗ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ShowLeftMargin>false</ShowLeftMargin>
+			<ExtendedTooltip name="Группа54ФЗРасширеннаяПодсказка" id="2274"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаРассылка" id="2282">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа рассылка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа рассылка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРассылкаРасширеннаяПодсказка" id="2283"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаРассылкаЭлектронныхЧековИспользование" id="2284">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа рассылка электронных чеков использование</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа рассылка электронных чеков использование</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРассылкаЭлектронныхЧековИспользованиеРасширеннаяПодсказка" id="2285"/>
+							<ChildItems>
+								<CheckBoxField name="РассылкаЭлектронныхЧековИспользование" id="2286">
+									<DataPath>РассылкаЭлектронныхЧековИспользование</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отправлять электронные чеки по расписанию</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="РассылкаЭлектронныхЧековИспользованиеКонтекстноеМеню" id="2287"/>
+									<ExtendedTooltip name="РассылкаЭлектронныхЧековИспользованиеРасширеннаяПодсказка" id="2288">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Рассылка электронных чеков представление расписания</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">РассылкаЭлектронныхЧековИспользованиеПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<LabelDecoration name="РассылкаЭлектронныхЧековПредставлениеРасписания" id="2289">
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Рассылка электронных чеков представление расписания</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="РассылкаЭлектронныхЧековПредставлениеРасписанияКонтекстноеМеню" id="2290"/>
+									<ExtendedTooltip name="РассылкаЭлектронныхЧековПредставлениеРасписанияРасширеннаяПодсказка" id="2291"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРассылкаПраво" id="2292">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа рассылка право</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа рассылка право</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРассылкаПравоРасширеннаяПодсказка" id="2293"/>
+							<ChildItems>
+								<Button name="РассылкаЭлектронныхЧековНастроитьРасписание" id="2294">
+									<Type>Hyperlink</Type>
+									<Width>39</Width>
+									<CommandName>Form.Command.РассылкаЭлектронныхЧековНастроитьРасписание</CommandName>
+									<ExtendedTooltip name="РассылкаЭлектронныхЧековНастроитьРасписаниеРасширеннаяПодсказка" id="2295"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаРассылкаЭлектронныхЧеки" id="2280">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа рассылка электронных чеки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа рассылка электронных чеки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРассылкаЭлектронныхЧекиРасширеннаяПодсказка" id="2281"/>
+					<ChildItems>
+						<UsualGroup name="Группа3" id="2298">
+							<Width>39</Width>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="2299"/>
+							<ChildItems>
+								<Button name="ОткрытьОчередьЭлектронныхЧеков" id="2296">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьОчередьЭлектронныхЧеков</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьОчередьЭлектронныхЧековРасширеннаяПодсказка" id="2297">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Очередь неотравленных электронных чеков.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВводОстатковРасчетовСКлиентами" id="2300">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ввод остатков расчетов с клиентами</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ввод остатков расчетов с клиентами</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВводОстатковРасчетовСКлиентамиРасширеннаяПодсказка" id="2301"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВводОстатковРасчетовСКлиентамиЛево" id="2302">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ввод остатков расчетов с клиентами лево</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ввод остатков расчетов с клиентами лево</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>39</Width>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВводОстатковРасчетовСКлиентамиЛевоРасширеннаяПодсказка" id="2303"/>
+							<ChildItems>
+								<Button name="ДокументВводОстатковРасчетовСКлиентамиОткрытьСписок" id="2304">
+									<Type>Hyperlink</Type>
+									<CommandName>Document.ВводОстатковРасчетовСКлиентами.StandardCommand.OpenList</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ввод остатков расчетов с покупателями</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ДокументВводОстатковРасчетовСКлиентамиОткрытьСписокРасширеннаяПодсказка" id="2305">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>При необходимости вводятся остатки при начале ведения расчетов с покупателями.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>НаборКонстант.ДополнительнаяКолонкаПечатныхФормДокументов</Field>
+				<Field>НаборКонстант.ЕдиницаИзмеренияВеса</Field>
+				<Field>НаборКонстант.ЕдиницаИзмеренияОбъема</Field>
+				<Field>НаборКонстант.ИспользоватьДополнительныеОтчеты</Field>
+				<Field>НаборКонстант.ИспользоватьОплатуБанковскимиКредитами</Field>
+				<Field>НаборКонстант.ИспользоватьОплатуПлатежнымиКартами</Field>
+				<Field>НаборКонстант.ПрефиксВнутреннегоШтрихкодаВесовогоТовара</Field>
+				<Field>НаборКонстант.ПрефиксВнутреннегоШтрихкодаШтучногоТовара</Field>
+				<Field>НаборКонстант.ПрефиксШтрихкодаУзлаРИБ</Field>
+				<Field>НаборКонстант.СебестоимостьВключаетНДС</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="РежимРаботы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="РассылкаЭлектронныхЧековИдентификатор" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассылка электронных чеков идентификатор</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="РассылкаЭлектронныхЧековИспользование" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассылка электронных чеков использование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РассылкаЭлектронныхЧековРасписание" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассылка электронных чеков расписание</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ОтправкаЭлектронныхЧеков" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправка электронных чеков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НижняяГраницаSKUВесовыхТоваров</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НаборКонстант.НижняяГраницаДиапазонаSKUВесовогоТовара</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">99999</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ВерхняяГраницаSKUВесовыхТоваров</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НаборКонстант.ВерхняяГраницаДиапазонаSKUВесовогоТовара</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">99999</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьЭквайринговыеТерминалы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Эквайринговые терминалы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть эквайринговые терминалы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьЭквайринговыеТерминалы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьПричиныОтменыЗаказовПокупателей" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть причины отмены заказов покупателей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть причины отмены заказов покупателей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьПричиныОтменыЗаказовПокупателей</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьНастройкиЛогированияПоВидамДействийКассираВРМК" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки логирования по видам действий кассира в РМК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть настройки логирования по видам операций кассира в РМК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьНастройкиЛогированияПоВидамДействийКассираВРМК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="РассылкаЭлектронныхЧековНастроитьРасписание" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить расписание передачи чеков, стоящих в очереди</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить расписание для автоматической отправки электронных Чеков в регламентном задании.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РассылкаЭлектронныхЧековНастроитьРасписание</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьОчередьЭлектронныхЧеков" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть очередь электронных чеков</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть очередь электронных писем</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьОчередьЭлектронныхЧеков</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

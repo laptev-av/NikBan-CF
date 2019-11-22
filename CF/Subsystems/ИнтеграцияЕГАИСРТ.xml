@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Subsystem uuid="0f0d9961-86c2-40f5-b4e0-bdc583d556b9">
+		<Properties>
+			<Name>ИнтеграцияЕГАИСРТ</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интеграция ЕГАИС РТ</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УдалитьСоответствиеНоменклатурыЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.СопоставлениеОрганизацийЕГАИСРТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.СопоставлениеНоменклатурыЕГАИСРТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УдалитьВскрытиеТарыЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияЕГАИСРТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияЕГАИСРТКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияЕГАИСРТВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияЕГАИСРТКлиентПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияЕГАИСРТПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.СопоставлениеНоменклатурыЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.СопоставлениеОрганизацийЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ВестиСведенияДляДекларацийПоАлкогольнойПродукцииРТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ФормаВводаАкцизнойМарки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ФормаВводаАкцизныхМарок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПроверятьНеобходимостьСозданияДокументовЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыОбработкиВскрытияТарыЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ДанныеОбработкиПомощникИсправленияЕдиницИзмерения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УдалитьСоответствиеОрганизацийЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ИнтеграцияЕГАИСРТКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеДокументовЕГАИСРТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеПередачВРегистр2ЕГАИСРТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеДокументовЕГАИСРТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеАктовЕГАИСРТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеЧековЕГАИСРТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.АкцизныеМаркиЕГАИСКлиентПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.КорректировкаОстатковЕГАИСКлиентПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.КорректировкаОстатковЕГАИСПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПриСозданииТТНВходящаяНаОснованииПеремещенеТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DefinedType.ДокументПоступленияЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.МаркируемаяАлкогольнаяПродукцияШапкаТЧ</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

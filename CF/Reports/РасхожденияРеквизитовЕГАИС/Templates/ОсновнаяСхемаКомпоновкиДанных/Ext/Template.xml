@@ -1,0 +1,831 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>А_Импортер</dataPath>
+			<field>А_Импортер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Алкогольная продукция</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Н_Импортер</dataPath>
+			<field>Н_Импортер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АлкогольнаяПродукция</dataPath>
+			<field>АлкогольнаяПродукция</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>А_Производитель</dataPath>
+			<field>А_Производитель</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Алкогольная продукция</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Н_Производитель</dataPath>
+			<field>Н_Производитель</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Н_ВидПродукции</dataPath>
+			<field>Н_ВидПродукции</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>А_ВидПродукции</dataPath>
+			<field>А_ВидПродукции</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Алкогольная продукция</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>А_Крепость</dataPath>
+			<field>А_Крепость</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Алкогольная продукция</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Н_Крепость</dataPath>
+			<field>Н_Крепость</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>А_Объем</dataPath>
+			<field>А_Объем</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Алкогольная продукция</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Н_Объем</dataPath>
+			<field>Н_Объем</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>А_Импортер_Контрагент</dataPath>
+			<field>А_Импортер_Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>А_Производитель_Контрагент</dataPath>
+			<field>А_Производитель_Контрагент</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СоответствиеНоменклатурыЕГАИС.Номенклатура КАК Номенклатура,
+	СоответствиеНоменклатурыЕГАИС.Номенклатура.СтранаПроисхождения КАК Н_Страна,
+	СоответствиеНоменклатурыЕГАИС.АлкогольнаяПродукция КАК АлкогольнаяПродукция,
+	СоответствиеНоменклатурыЕГАИС.АлкогольнаяПродукция.Крепость КАК А_Крепость,
+	СоответствиеНоменклатурыЕГАИС.Номенклатура.Крепость КАК Н_Крепость,
+	СоответствиеНоменклатурыЕГАИС.АлкогольнаяПродукция.Объем КАК А_Объем,
+	СоответствиеНоменклатурыЕГАИС.Номенклатура.ОбъемДАЛ КАК Н_Объем,
+	СоответствиеНоменклатурыЕГАИС.АлкогольнаяПродукция.ВидПродукции КАК А_ВидПродукции,
+	СоответствиеНоменклатурыЕГАИС.Номенклатура.ВидАлкогольнойПродукцииЕГАИС КАК Н_ВидПродукции,
+	СоответствиеНоменклатурыЕГАИС.Номенклатура.Производитель КАК Н_Производитель,
+	СоответствиеНоменклатурыЕГАИС.АлкогольнаяПродукция.Производитель КАК А_Производитель,
+	СоответствиеНоменклатурыЕГАИС.Номенклатура.ПроизводительИмпортерАлкогольнойПродукции КАК Н_Импортер,
+	СоответствиеНоменклатурыЕГАИС.АлкогольнаяПродукция.Импортер КАК А_Импортер
+ПОМЕСТИТЬ ТаблицаНоменклатуры
+ИЗ
+	РегистрСведений.СоответствиеНоменклатурыЕГАИС КАК СоответствиеНоменклатурыЕГАИС
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ТаблицаНоменклатуры.Номенклатура КАК Номенклатура,
+	ТаблицаНоменклатуры.АлкогольнаяПродукция КАК АлкогольнаяПродукция,
+	ТаблицаНоменклатуры.А_Крепость КАК А_Крепость,
+	ТаблицаНоменклатуры.Н_Крепость КАК Н_Крепость,
+	ВЫРАЗИТЬ(ТаблицаНоменклатуры.А_Объем / 10 КАК ЧИСЛО(18, 6)) КАК А_Объем,
+	ВЫРАЗИТЬ(ТаблицаНоменклатуры.Н_Объем КАК ЧИСЛО(18, 6)) КАК Н_Объем,
+	ТаблицаНоменклатуры.А_ВидПродукции КАК А_ВидПродукции,
+	ТаблицаНоменклатуры.Н_ВидПродукции КАК Н_ВидПродукции,
+	ТаблицаНоменклатуры.Н_Производитель КАК Н_Производитель,
+	ТаблицаНоменклатуры.А_Производитель КАК А_Производитель,
+	ТаблицаНоменклатуры.Н_Импортер КАК Н_Импортер,
+	ТаблицаНоменклатуры.А_Импортер КАК А_Импортер,
+	Null КАК А_Производитель_Контрагент,
+	Null КАК А_Импортер_Контрагент
+ИЗ
+	ТаблицаНоменклатуры КАК ТаблицаНоменклатуры
+ГДЕ
+	(ТаблицаНоменклатуры.А_Крепость &lt;&gt; ТаблицаНоменклатуры.Н_Крепость
+			ИЛИ (ВЫРАЗИТЬ(ТаблицаНоменклатуры.А_Объем / 10 КАК ЧИСЛО(18, 6))) &lt;&gt; (ВЫРАЗИТЬ(ТаблицаНоменклатуры.Н_Объем КАК ЧИСЛО(18, 6)))
+			ИЛИ ТаблицаНоменклатуры.А_ВидПродукции &lt;&gt; ТаблицаНоменклатуры.Н_ВидПродукции)
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ТаблицаНоменклатуры.Номенклатура,
+	ТаблицаНоменклатуры.АлкогольнаяПродукция,
+	ТаблицаНоменклатуры.А_Крепость,
+	ТаблицаНоменклатуры.Н_Крепость,
+	ВЫРАЗИТЬ(ТаблицаНоменклатуры.А_Объем / 10 КАК ЧИСЛО(18, 6)),
+	ВЫРАЗИТЬ(ТаблицаНоменклатуры.Н_Объем КАК ЧИСЛО(18, 6)),
+	ТаблицаНоменклатуры.А_ВидПродукции,
+	ТаблицаНоменклатуры.Н_ВидПродукции,
+	ТаблицаНоменклатуры.Н_Производитель,
+	ТаблицаНоменклатуры.А_Производитель,
+	ТаблицаНоменклатуры.Н_Импортер,
+	ТаблицаНоменклатуры.А_Импортер,
+	ТаблицаНоменклатуры.А_Производитель.Контрагент,
+	Null
+ИЗ
+	ТаблицаНоменклатуры КАК ТаблицаНоменклатуры
+ГДЕ
+	ВЫБОР
+			КОГДА ТаблицаНоменклатуры.А_Производитель.Контрагент ССЫЛКА Справочник.Организации
+				ТОГДА ЛОЖЬ
+			КОГДА ТаблицаНоменклатуры.Н_Страна = ЗНАЧЕНИЕ(Справочник.СтраныМира.РОССИЯ)
+					ИЛИ ТаблицаНоменклатуры.Н_Страна = ЗНАЧЕНИЕ(Справочник.СтраныМира.ПустаяСсылка)
+				ТОГДА ТаблицаНоменклатуры.Н_Импортер &lt;&gt; ТаблицаНоменклатуры.А_Производитель.Контрагент
+			ИНАЧЕ ТаблицаНоменклатуры.Н_Производитель &lt;&gt; ТаблицаНоменклатуры.А_Производитель.Контрагент
+		КОНЕЦ
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ
+	ТаблицаНоменклатуры.Номенклатура,
+	ТаблицаНоменклатуры.АлкогольнаяПродукция,
+	ТаблицаНоменклатуры.А_Крепость,
+	ТаблицаНоменклатуры.Н_Крепость,
+	ВЫРАЗИТЬ(ТаблицаНоменклатуры.А_Объем / 10 КАК ЧИСЛО(18, 6)),
+	ВЫРАЗИТЬ(ТаблицаНоменклатуры.Н_Объем КАК ЧИСЛО(18, 6)),
+	ТаблицаНоменклатуры.А_ВидПродукции,
+	ТаблицаНоменклатуры.Н_ВидПродукции,
+	ТаблицаНоменклатуры.Н_Производитель,
+	ТаблицаНоменклатуры.А_Производитель,
+	ТаблицаНоменклатуры.Н_Импортер,
+	ТаблицаНоменклатуры.А_Импортер,
+	Null,
+	ТаблицаНоменклатуры.А_Импортер.Контрагент
+ИЗ
+	ТаблицаНоменклатуры КАК ТаблицаНоменклатуры
+ГДЕ
+	ВЫБОР
+			КОГДА ТаблицаНоменклатуры.Н_Страна = ЗНАЧЕНИЕ(Справочник.СтраныМира.РОССИЯ)
+					ИЛИ ТаблицаНоменклатуры.Н_Страна = ЗНАЧЕНИЕ(Справочник.СтраныМира.ПустаяСсылка)
+					ИЛИ ТаблицаНоменклатуры.А_Импортер.Контрагент ССЫЛКА Справочник.Организации
+				ТОГДА ЛОЖЬ
+			ИНАЧЕ ТаблицаНоменклатуры.Н_Импортер &lt;&gt; ТаблицаНоменклатуры.А_Импортер.Контрагент
+		КОНЕЦ</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>РасхождениеВОбъеме</dataPath>
+		<expression>Н_Объем &lt;&gt; А_Объем И (А_Производитель_Контрагент ЕСТЬ NULL И А_Импортер_Контрагент ЕСТЬ NULL)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расхождение в объеме</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>РасхождениеВКрепости</dataPath>
+		<expression>Н_Крепость &lt;&gt; А_Крепость И (А_Производитель_Контрагент ЕСТЬ NULL И А_Импортер_Контрагент ЕСТЬ NULL)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расхождение в крепости</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>РасхождениеВидаПродукции</dataPath>
+		<expression>Н_ВидПродукции &lt;&gt; А_ВидПродукции И (А_Производитель_Контрагент ЕСТЬ NULL И А_Импортер_Контрагент ЕСТЬ NULL)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расхождение вида продукции</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>РасхождениеВПроизводителе</dataPath>
+		<expression>Выбор Когда Номенклатура.СтранаПроисхождения = Значение(Справочник.СтраныМира.РОССИЯ) ИЛИ Номенклатура.СтранаПроисхождения = ЗНАЧЕНИЕ(Справочник.СтраныМира.ПустаяСсылка) Тогда Н_Импортер &lt;&gt; А_Производитель_Контрагент ИНАЧЕ Н_Производитель &lt;&gt; А_Производитель_Контрагент Конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расхождение в производителе</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>РасхождениеВИмпортере</dataPath>
+		<expression>Выбор Когда Номенклатура.СтранаПроисхождения = Значение(Справочник.СтраныМира.РОССИЯ) ИЛИ Номенклатура.СтранаПроисхождения = ЗНАЧЕНИЕ(Справочник.СтраныМира.ПустаяСсылка) Тогда Ложь Иначе Н_Импортер &lt;&gt; А_Импортер_Контрагент Конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расхождение в импортере</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>Н_ПроизводительВычисляемоеПоле</dataPath>
+		<expression>Выбор Когда Номенклатура.СтранаПроисхождения = Значение(Справочник.СтраныМира.РОССИЯ) ИЛИ Номенклатура.СтранаПроисхождения = ЗНАЧЕНИЕ(Справочник.СтраныМира.ПустаяСсылка) Тогда Н_Импортер Иначе Н_Производитель Конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Номенклатура</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>А_ВидПродукции</dataPath>
+		<expression>А_ВидПродукции</expression>
+	</totalField>
+	<totalField>
+		<dataPath>А_Крепость</dataPath>
+		<expression>А_Крепость</expression>
+	</totalField>
+	<totalField>
+		<dataPath>А_Производитель</dataPath>
+		<expression>А_Производитель</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Н_ВидПродукции</dataPath>
+		<expression>Н_ВидПродукции</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Н_Крепость</dataPath>
+		<expression>Н_Крепость</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Н_Производитель</dataPath>
+		<expression>Н_Производитель</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Н_ПроизводительВычисляемоеПоле</dataPath>
+		<expression>Н_ПроизводительВычисляемоеПоле</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Н_Объем</dataPath>
+		<expression>Н_Объем</expression>
+	</totalField>
+	<totalField>
+		<dataPath>А_Объем</dataPath>
+		<expression>А_Объем</expression>
+	</totalField>
+	<totalField>
+		<dataPath>А_Импортер</dataPath>
+		<expression>А_Импортер</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Н_Импортер</dataPath>
+		<expression>Н_Импортер</expression>
+	</totalField>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отчет по расхождениям реквизитов ЕГАИС</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АлкогольнаяПродукция</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>InHierarchy</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string">00000000-0000-0000-0000-000000000000</dcsset:right>
+					<dcsset:userSettingID>899dae64-2479-43c9-9d77-b4e9e3c4bc07</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>РасхождениеВидаПродукции</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>РасхождениеВИмпортере</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>РасхождениеВКрепости</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>РасхождениеВОбъеме</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>РасхождениеВПроизводителе</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">web:LightGray</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;есть расхождение&gt;</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчет по расхождениям реквизитов ЕГАИС</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>РасхождениеВидаПродукции</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">РасхождениеВидаПродукции</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>РасхождениеВидаПродукции</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Н_ВидПродукции</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>А_ВидПродукции</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+						<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Расхождение вида алкогольной продукции</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+				<dcsset:userSettingID>b88c7f4e-bf3f-4bce-bbf8-ecc70a4e52a9</dcsset:userSettingID>
+				<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Расхождение вида продукции</v8:content>
+					</v8:item>
+				</dcsset:userSettingPresentation>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>РасхождениеВОбъеме</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">РасхождениеВОбъеме</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>РасхождениеВОбъеме</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Н_Объем</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>А_Объем</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+						<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Расхождение в объеме в декалитрах</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+				<dcsset:userSettingID>b0857fbe-4656-4c98-b97e-a9c7892ef577</dcsset:userSettingID>
+				<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Расхождение в объеме в декалитрах</v8:content>
+					</v8:item>
+				</dcsset:userSettingPresentation>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>РасхождениеВКрепости</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">РасхождениеВКрепости</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>РасхождениеВКрепости</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Н_Крепость</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>А_Крепость</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+						<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Расхождение в крепости</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+				<dcsset:userSettingID>0e8d2cb4-a907-4bae-9657-bacc3f369c92</dcsset:userSettingID>
+				<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Расхождение в крепости</v8:content>
+					</v8:item>
+				</dcsset:userSettingPresentation>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>РасхождениеВПроизводителе</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">РасхождениеВПроизводителе</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>РасхождениеВПроизводителе</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Н_ПроизводительВычисляемоеПоле</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>А_Производитель</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+						<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Расхождение в производителе</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+				<dcsset:userSettingID>39dcff59-78f3-4a49-b346-e9264e9fe8ec</dcsset:userSettingID>
+				<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Расхождение в производителе</v8:content>
+					</v8:item>
+				</dcsset:userSettingPresentation>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>РасхождениеВИмпортере</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">РасхождениеВИмпортере</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>РасхождениеВИмпортере</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Н_Импортер</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>А_Импортер</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+						<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Расхождение в импортере</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+				<dcsset:userSettingID>8163e0df-e74c-44f8-9616-6f674b4c7af7</dcsset:userSettingID>
+				<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Расхождение в импортере</v8:content>
+					</v8:item>
+				</dcsset:userSettingPresentation>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<FunctionalOption uuid="aa07fa63-44c3-4f69-9fcd-2a32bfa423c9">
+		<Properties>
+			<Name>ИспользоватьАгентскиеПлатежиИРазделениеВыручки</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать агентские платежи и разделение выручки</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Location>Constant.ИспользоватьАгентскиеПлатежиИРазделениеВыручки</Location>
+			<PrivilegedGetMode>true</PrivilegedGetMode>
+			<Content>
+				<xr:Object>Catalog.ДоговорыПлатежныхАгентов</xr:Object>
+				<xr:Object>AccumulationRegister.ДенежныеСредстваНаличные.Dimension.ДоговорПлатежногоАгента</xr:Object>
+				<xr:Object>Document.ВводНачальныхОстатковУзла.TabularSection.ДенежныеСредстваККМ.Attribute.ДоговорПлатежногоАгента</xr:Object>
+				<xr:Object>Document.ВводНачальныхОстатковУзла.TabularSection.ДенежныеСредстваНаличные.Attribute.ДоговорПлатежногоАгента</xr:Object>
+				<xr:Object>AccumulationRegister.ДенежныеСредстваККМ.Dimension.ДоговорПлатежногоАгента</xr:Object>
+				<xr:Object>Catalog.Номенклатура.Attribute.ДоговорПлатежногоАгента</xr:Object>
+				<xr:Object>Document.ЧекККМ.TabularSection.Оплата.Attribute.ДоговорПлатежногоАгента</xr:Object>
+				<xr:Object>Document.ОтчетОРозничныхПродажах.TabularSection.ОплатаНаличнымиАгентскихПлатежей</xr:Object>
+				<xr:Object>Document.ОтчетОРозничныхПродажах.TabularSection.ОплатаПлатежнымиКартами.Attribute.ДоговорПлатежногоАгента</xr:Object>
+				<xr:Object>Document.ОтчетОРозничныхПродажах.TabularSection.ОплатаБанковскимиКредитами.Attribute.ДоговорПлатежногоАгента</xr:Object>
+				<xr:Object>Document.ВыемкаДенежныхСредствИзКассыККМ.Attribute.ДоговорПлатежногоАгента</xr:Object>
+				<xr:Object>Document.ВнесениеДенежныхСредствВКассуККМ.Attribute.ДоговорПлатежногоАгента</xr:Object>
+				<xr:Object>Document.РасходныйКассовыйОрдер.Attribute.ДоговорПлатежногоАгента</xr:Object>
+				<xr:Object>Document.ПриходныйКассовыйОрдер.Attribute.ДоговорПлатежногоАгента</xr:Object>
+				<xr:Object>Document.ВводОстатковДенежныхСредств.Attribute.ДоговорПлатежногоАгента</xr:Object>
+				<xr:Object>Enum.ТипыДоговоровПлатежныхАгентов</xr:Object>
+				<xr:Object>Report.ОстаткиИДвиженияДенежныхСредствПоВидамВыручки</xr:Object>
+				<xr:Object>Report.ОстаткиИДвиженияДенежныхСредствВКассахККМПоВидамВыручки</xr:Object>
+				<xr:Object>Catalog.НастройкиРаспределенияВыручкиПоСекциямФР.TabularSection.СоответствиеДоговоровПлатежныхАгентовСекциям</xr:Object>
+				<xr:Object>Document.ОплатаОтПокупателяПлатежнойКартой.TabularSection.РасшифровкаПлатежа.Attribute.ДоговорПлатежногоАгента</xr:Object>
+				<xr:Object>Document.РасходныйКассовыйОрдер.TabularSection.РасшифровкаПлатежа.Attribute.ДоговорПлатежногоАгента</xr:Object>
+				<xr:Object>Catalog.ВидыНоменклатуры.Attribute.АгентскиеУслуги</xr:Object>
+				<xr:Object>Document.КассоваяКнига.Attribute.ДоговорПлатежногоАгента</xr:Object>
+				<xr:Object>Document.ВозвратТоваровОтПокупателя.Attribute.ДоговорПлатежногоАгента</xr:Object>
+				<xr:Object>Document.ОплатаОтПокупателяПлатежнойКартой.Attribute.ДоговорПлатежногоАгента</xr:Object>
+				<xr:Object>Document.РеализацияТоваров.Attribute.ДоговорПлатежногоАгента</xr:Object>
+				<xr:Object>Document.РегистрацияБезналичнойОплаты.Attribute.ДоговорПлатежногоАгента</xr:Object>
+				<xr:Object>Document.ЧекККМ.Attribute.ДоговорПлатежногоАгента</xr:Object>
+			</Content>
+		</Properties>
+	</FunctionalOption>
+</MetaDataObject>

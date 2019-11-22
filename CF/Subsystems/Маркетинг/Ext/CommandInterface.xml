@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<CommandsVisibility>
+		<Command name="CommonCommand.ОтчетыПоМаркетингу">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.Номенклатура.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.ABCXYZАнализПродаж.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsPlacement>
+		<Command name="CommonCommand.ОтчетыПоМаркетингу">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Catalog.Номенклатура.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+	</CommandsPlacement>
+	<CommandsOrder>
+		<Command name="CommonCommand.ОтчетыПоМаркетингу">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Catalog.Номенклатура.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+	</CommandsOrder>
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.Маркетинг.Subsystem.МаркетинговыеАкции</Subsystem>
+		<Subsystem>Subsystem.Маркетинг.Subsystem.Ценообразование</Subsystem>
+		<Subsystem>Subsystem.Маркетинг.Subsystem.ПрименениеЦен</Subsystem>
+		<Subsystem>Subsystem.Маркетинг.Subsystem.Сегментация</Subsystem>
+		<Subsystem>Subsystem.Маркетинг.Subsystem.Ассортимент</Subsystem>
+		<Subsystem>Subsystem.Маркетинг.Subsystem.Посетители</Subsystem>
+		<Subsystem>Subsystem.Маркетинг.Subsystem.ПодарочныеСертификаты</Subsystem>
+		<Subsystem>Subsystem.Маркетинг.Subsystem.Мерчандайзинг</Subsystem>
+	</SubsystemsOrder>
+	<GroupsOrder>
+		<Group>NavigationPanelImportant</Group>
+		<Group>NavigationPanelSeeAlso</Group>
+	</GroupsOrder>
+</CommandInterface>

@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>График работы</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>SwitchActivity</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="169">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="170"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="171">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="172"/>
+			</Button>
+			<Button name="ПервоначальноеЗаполнение" id="72">
+				<Type>CommandBarButton</Type>
+				<UserVisible>
+					<xr:Common>false</xr:Common>
+					<xr:Value name="Role.ДобавлениеИзменениеИнформацииПоРаботеПерсонала">true</xr:Value>
+					<xr:Value name="Role.НастройкаНормативноСправочнойИнформации">true</xr:Value>
+					<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				</UserVisible>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.ЗаполнитьГрафикРаботыМагазинаДаннымиПоУмолчанию</CommandName>
+				<ExtendedTooltip name="ПервоначальноеЗаполнениеExtendedTooltip" id="159"/>
+			</Button>
+			<Popup name="Печать" id="157">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Печать</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Печать</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Picture>
+					<xr:Ref>StdPicture.Print</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Representation>Picture</Representation>
+				<ExtendedTooltip name="ПечатьExtendedTooltip" id="160"/>
+				<ChildItems>
+					<Button name="ФормаПечатьГрафикаРаботыМагазина" id="158">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.НапечататьГрафикРаботыМагазина</CommandName>
+						<ExtendedTooltip name="ФормаПечатьГрафикаРаботыМагазинаExtendedTooltip" id="161"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа" id="75">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаExtendedTooltip" id="162"/>
+			<ChildItems>
+				<InputField name="ОтборМагазин" id="153">
+					<DataPath>ОтборМагазин</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="ОтборМагазинКонтекстноеМеню" id="154"/>
+					<ExtendedTooltip name="ОтборМагазинExtendedTooltip" id="163"/>
+					<Events>
+						<Event name="OnChange">ОтборМагазинПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВидГрафикаРаботы" id="155">
+					<DataPath>ВидГрафикаРаботы</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид графика</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ClearButton>false</ClearButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<AutoChoiceIncomplete>false</AutoChoiceIncomplete>
+					<TextEdit>false</TextEdit>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Пятидневка</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ВидыГрафиковРаботы.EnumValue.Пятидневка</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Шестидневка</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ВидыГрафиковРаботы.EnumValue.Шестидневка</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Полный</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ВидыГрафиковРаботы.EnumValue.Полный</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВидГрафикаРаботыКонтекстноеМеню" id="156"/>
+					<ExtendedTooltip name="ВидГрафикаРаботыExtendedTooltip" id="164"/>
+					<Events>
+						<Event name="OnChange">ОтборВидГрафикаПриИзменении</Event>
+						<Event name="Clearing">ВидГрафикаРаботыОчистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="Наименование" id="1">
+					<Width>42</Width>
+					<Wrap>false</Wrap>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="165"/>
+				</InputField>
+				<InputField name="НомерТекущегоГода" id="73">
+					<DataPath>НомерТекущегоГода</DataPath>
+					<Wrap>false</Wrap>
+					<ClearButton>false</ClearButton>
+					<SpinButton>true</SpinButton>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧГ=0</v8:content>
+						</v8:item>
+					</EditFormat>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="НомерТекущегоГодаКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="НомерТекущегоГодаExtendedTooltip" id="166"/>
+					<Events>
+						<Event name="OnChange">НомерТекущегоГодаПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<CalendarField name="Календарь" id="148">
+			<DataPath>Календарь</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<Height>21</Height>
+			<ShowCurrentDate>false</ShowCurrentDate>
+			<WidthInMonths>4</WidthInMonths>
+			<HeightInMonths>3</HeightInMonths>
+			<ContextMenu name="КалендарьКонтекстноеМеню" id="149"/>
+			<ExtendedTooltip name="КалендарьExtendedTooltip" id="167"/>
+			<Events>
+				<Event name="OnPeriodOutput">КалендарьПриВыводеПериода</Event>
+				<Event name="Selection">КалендарьВыбор</Event>
+			</Events>
+		</CalendarField>
+		<LabelDecoration name="Декорация" id="151">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<SkipOnInput>false</SkipOnInput>
+			<TextColor>#2F5AAF</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для редактирования рабочих и выходных дней календаря используйте двойной щелчок левой кнопкой мыши</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияКонтекстноеМеню" id="152"/>
+			<ExtendedTooltip name="ДекорацияExtendedTooltip" id="168"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НомерТекущегоГода" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Год</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Edit>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеИнформацииПоРаботеПерсонала">true</xr:Value>
+				<xr:Value name="Role.НастройкаНормативноСправочнойИнформации">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Edit>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="Календарь" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Календарь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<Edit>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеИнформацииПоРаботеПерсонала">true</xr:Value>
+				<xr:Value name="Role.НастройкаНормативноСправочнойИнформации">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Edit>
+		</Attribute>
+		<Attribute name="НомерПредыдущегоГода" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер предыдущего года</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтборМагазин" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Магазин</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Магазины</v8:Type>
+			</Type>
+			<Edit>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеИнформацииПоРаботеПерсонала">true</xr:Value>
+				<xr:Value name="Role.НастройкаНормативноСправочнойИнформации">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Edit>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ВидГрафикаРаботы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид графика работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыГрафиковРаботы</v8:Type>
+			</Type>
+			<Edit>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеИнформацииПоРаботеПерсонала">true</xr:Value>
+				<xr:Value name="Role.НастройкаНормативноСправочнойИнформации">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Edit>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ТаблицаРегистра" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица регистра</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ДатаКалендаря" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата календаря</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВидДня" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид дня</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВидыДнейПроизводственногоКалендаря</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Магазин" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Магазин</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Магазины</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидГрафикаРаботы" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид графика работы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВидыГрафиковРаботы</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Объект" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ГрафикиРаботыМагазинов</v8:Type>
+			</Type>
+			<Edit>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеИнформацииПоРаботеПерсонала">true</xr:Value>
+				<xr:Value name="Role.НастройкаНормативноСправочнойИнформации">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Edit>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПредыдущийМагазин" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущий магазин</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Магазины</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредыдущийВидГрафикаРаботы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущий вид графика работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыГрафиковРаботы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЦветаДней" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвета дней</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьГрафикРаботыМагазинаДаннымиПоУмолчанию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Первоначальное заполнение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить календарь за указанный на форме год по пятидневной рабочей неделе без учета праздников</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьГрафикРаботыМагазинаДаннымиПоУмолчанию</Action>
+			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НапечататьГрафикРаботыМагазина" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>График работы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать графика работы магазина</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НапечататьГрафикРаботыМагазина</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+		<CommandBar>
+			<Item>
+				<Command>Form.Command.НапечататьГрафикРаботыМагазина</Command>
+				<Type>Added</Type>
+				<CommandGroup>CommandGroup.Печать</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

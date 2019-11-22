@@ -1,0 +1,704 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерСтроки</dataPath>
+			<field>НомерСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказ</dataPath>
+			<field>Заказ</field>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказано</dataPath>
+			<field>Заказано</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=12; ЧДЦ=3; ЧГ=3,0</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказаноОстаток</dataPath>
+			<field>ЗаказаноОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток по заказу</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Шрифт</dcscor:parameter>
+					<dcscor:value xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=12; ЧДЦ=3; ЧГ=3,0</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">18</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">18</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодСтроки</dataPath>
+			<field>КодСтроки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Магазин</dataPath>
+			<field>Магазин</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Отменено</dataPath>
+			<field>Отменено</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПричинаОтмены</dataPath>
+			<field>ПричинаОтмены</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Продано</dataPath>
+			<field>Продано</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=12; ЧДЦ=3; ЧГ=3,0</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Резерв</dataPath>
+			<field>Резерв</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=12; ЧДЦ=3; ЧГ=3,0</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Резервировать</dataPath>
+			<field>Резервировать</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СвободныйОстатокМагазин</dataPath>
+			<field>СвободныйОстатокМагазин</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток на прочих складах магазина</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=12; ЧДЦ=3; ЧГ=3,0</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СвободныйОстатокСеть</dataPath>
+			<field>СвободныйОстатокСеть</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток прочих магазинов</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=12; ЧДЦ=3; ЧГ=3,0</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СвободныйОстатокСклад</dataPath>
+			<field>СвободныйОстатокСклад</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток на складе сборки заказа</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=12; ЧДЦ=3; ЧГ=3,0</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтмененоСообщение</dataPath>
+			<field>ОтмененоСообщение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Выполнено</dataPath>
+			<field>Выполнено</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ ПЕРВЫЕ 1
+	ЗаказПокупателя.Магазин,
+	ЗаказПокупателя.Склад
+ПОМЕСТИТЬ ТаблицаМагазинСклад
+ИЗ
+	Документ.ЗаказПокупателя КАК ЗаказПокупателя
+ГДЕ
+	ЗаказПокупателя.Ссылка = &amp;ЗаказПокупателя
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЗаказПокупателяТовары.НомерСтроки,
+	ЗаказПокупателяТовары.Номенклатура,
+	ЗаказПокупателяТовары.Характеристика,
+	ЗаказПокупателяТовары.КодСтроки,
+	ЗаказПокупателяТовары.Количество,
+	ЗаказПокупателяТовары.Отменено,
+	ЗаказПокупателяТовары.ПричинаОтмены,
+	ЗаказПокупателяТовары.Резервировать,
+	ЗаказПокупателяТовары.ПричинаОтмены.Наименование
+ПОМЕСТИТЬ ТаблицаДокумента
+ИЗ
+	Документ.ЗаказПокупателя.Товары КАК ЗаказПокупателяТовары
+ГДЕ
+	ЗаказПокупателяТовары.Ссылка = &amp;ЗаказПокупателя
+	И ЗаказПокупателяТовары.Ссылка.Проведен
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТоварыНаСкладах.НомерСтроки,
+	ТоварыНаСкладах.Номенклатура,
+	ТоварыНаСкладах.Характеристика,
+	ТоварыНаСкладах.КодСтроки,
+	СУММА(ТоварыНаСкладах.Резерв) КАК Резерв
+ПОМЕСТИТЬ ТаблицаРезерва
+ИЗ
+	РегистрНакопления.ТоварыНаСкладах КАК ТоварыНаСкладах
+ГДЕ
+	ТоварыНаСкладах.Регистратор = &amp;ЗаказПокупателя
+
+СГРУППИРОВАТЬ ПО
+	ТоварыНаСкладах.Номенклатура,
+	ТоварыНаСкладах.Характеристика,
+	ТоварыНаСкладах.НомерСтроки,
+	ТоварыНаСкладах.КодСтроки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЗаказыПокупателейОстатки.Номенклатура,
+	ЗаказыПокупателейОстатки.Характеристика,
+	ЗаказыПокупателейОстатки.КодСтроки,
+	СУММА(ЗаказыПокупателейОстатки.ЗаказаноОстаток) КАК ЗаказаноОстаток
+ПОМЕСТИТЬ ТаблицаОстатковЗаказа
+ИЗ
+	РегистрНакопления.ЗаказыПокупателей.Остатки(, Заказ = &amp;ЗаказПокупателя) КАК ЗаказыПокупателейОстатки
+
+СГРУППИРОВАТЬ ПО
+	ЗаказыПокупателейОстатки.Номенклатура,
+	ЗаказыПокупателейОстатки.Характеристика,
+	ЗаказыПокупателейОстатки.КодСтроки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТаблицаРегистраПоСкладам.Номенклатура,
+	ТаблицаРегистраПоСкладам.Характеристика,
+	СУММА(ТаблицаРегистраПоСкладам.СвободныйОстатокСклад) КАК СвободныйОстатокСклад,
+	СУММА(ТаблицаРегистраПоСкладам.СвободныйОстатокМагазин) КАК СвободныйОстатокМагазин,
+	СУММА(ТаблицаРегистраПоСкладам.СвободныйОстатокСеть) КАК СвободныйОстатокСеть
+ПОМЕСТИТЬ ТаблицаОстатковТоваров
+ИЗ
+	(ВЫБРАТЬ
+		ТоварыНаСкладахОстатки.Склад КАК Склад,
+		ТоварыНаСкладахОстатки.Склад.Магазин КАК Магазин,
+		ТоварыНаСкладахОстатки.Номенклатура КАК Номенклатура,
+		ТоварыНаСкладахОстатки.Характеристика КАК Характеристика,
+		ВЫБОР
+			КОГДА ТоварыНаСкладахОстатки.Склад В
+					(ВЫБРАТЬ
+						ТаблицаМагазинСклад.Склад
+					ИЗ
+						ТаблицаМагазинСклад КАК ТаблицаМагазинСклад)
+				ТОГДА ТоварыНаСкладахОстатки.КоличествоОстаток - ТоварыНаСкладахОстатки.РезервОстаток
+			ИНАЧЕ 0
+		КОНЕЦ КАК СвободныйОстатокСклад,
+		ВЫБОР
+			КОГДА ТоварыНаСкладахОстатки.Склад.Магазин В
+						(ВЫБРАТЬ
+							ТаблицаМагазинСклад.Магазин
+						ИЗ
+							ТаблицаМагазинСклад КАК ТаблицаМагазинСклад)
+					И НЕ ТоварыНаСкладахОстатки.Склад В
+							(ВЫБРАТЬ
+								ТаблицаМагазинСклад.Склад
+							ИЗ
+								ТаблицаМагазинСклад КАК ТаблицаМагазинСклад)
+				ТОГДА ТоварыНаСкладахОстатки.КоличествоОстаток - ТоварыНаСкладахОстатки.РезервОстаток
+			ИНАЧЕ 0
+		КОНЕЦ КАК СвободныйОстатокМагазин,
+		ВЫБОР
+			КОГДА НЕ ТоварыНаСкладахОстатки.Склад.Магазин В
+						(ВЫБРАТЬ
+							ТаблицаМагазинСклад.Магазин
+						ИЗ
+							ТаблицаМагазинСклад КАК ТаблицаМагазинСклад)
+				ТОГДА ТоварыНаСкладахОстатки.КоличествоОстаток - ТоварыНаСкладахОстатки.РезервОстаток
+			ИНАЧЕ 0
+		КОНЕЦ КАК СвободныйОстатокСеть
+	ИЗ
+		РегистрНакопления.ТоварыНаСкладах.Остатки(
+				,
+				Номенклатура В
+					(ВЫБРАТЬ
+						ТаблицаДокумента.Номенклатура
+					ИЗ
+						ТаблицаДокумента КАК ТаблицаДокумента)) КАК ТоварыНаСкладахОстатки
+	ГДЕ
+		ТоварыНаСкладахОстатки.КоличествоОстаток - ТоварыНаСкладахОстатки.РезервОстаток &gt; 0) КАК ТаблицаРегистраПоСкладам
+
+СГРУППИРОВАТЬ ПО
+	ТаблицаРегистраПоСкладам.Номенклатура,
+	ТаблицаРегистраПоСкладам.Характеристика
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЗаказыПокупателей.КодСтроки,
+	ЗаказыПокупателей.Номенклатура,
+	ЗаказыПокупателей.Характеристика,
+	СУММА(ЗаказыПокупателей.Заказано) КАК Продано
+ПОМЕСТИТЬ ТаблицаПродажи
+ИЗ
+	РегистрНакопления.ЗаказыПокупателей КАК ЗаказыПокупателей
+ГДЕ
+	ЗаказыПокупателей.Заказ = &amp;ЗаказПокупателя
+	И ЗаказыПокупателей.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Расход)
+
+СГРУППИРОВАТЬ ПО
+	ЗаказыПокупателей.Номенклатура,
+	ЗаказыПокупателей.Характеристика,
+	ЗаказыПокупателей.КодСтроки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТаблицаДокумента.НомерСтроки,
+	ТаблицаДокумента.Номенклатура,
+	ТаблицаДокумента.Характеристика,
+	ТаблицаДокумента.КодСтроки,
+	ТаблицаДокумента.Количество КАК Заказано,
+	ТаблицаДокумента.Отменено,
+	ТаблицаДокумента.ПричинаОтмены,
+	ТаблицаДокумента.Резервировать,
+	ЕСТЬNULL(ТаблицаРезерва.Резерв, 0) КАК Резерв,
+	ЕСТЬNULL(ТаблицаОстатковЗаказа.ЗаказаноОстаток, 0) КАК ЗаказаноОстаток,
+	ЕСТЬNULL(ТаблицаПродажи.Продано, 0) КАК Продано,
+	ЕСТЬNULL(ТаблицаОстатковТоваров.СвободныйОстатокСклад, 0) КАК СвободныйОстатокСклад,
+	ЕСТЬNULL(ТаблицаОстатковТоваров.СвободныйОстатокМагазин, 0) КАК СвободныйОстатокМагазин,
+	ЕСТЬNULL(ТаблицаОстатковТоваров.СвободныйОстатокСеть, 0) КАК СвободныйОстатокСеть,
+	ВЫБОР
+		КОГДА ТаблицаДокумента.Отменено
+			ТОГДА "Отменено" + ВЫБОР
+					КОГДА ТаблицаДокумента.ПричинаОтмены = ЗНАЧЕНИЕ(Справочник.ПричиныОтменыЗаказовПокупателей.ПустаяСсылка)
+						ТОГДА ""
+					ИНАЧЕ " (" + ТаблицаДокумента.ПричинаОтменыНаименование + ")"
+				КОНЕЦ
+		ИНАЧЕ ""
+	КОНЕЦ КАК ОтмененоСообщение,
+	ВЫБОР
+		КОГДА НЕ ТаблицаДокумента.Количество = 0
+				И ЕСТЬNULL(ТаблицаПродажи.Продано, 0) &gt; 0
+				И ЕСТЬNULL(ТаблицаОстатковЗаказа.ЗаказаноОстаток, 0) = 0
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК Выполнено
+ИЗ
+	ТаблицаДокумента КАК ТаблицаДокумента
+		ЛЕВОЕ СОЕДИНЕНИЕ ТаблицаРезерва КАК ТаблицаРезерва
+		ПО ТаблицаДокумента.Номенклатура = ТаблицаРезерва.Номенклатура
+			И ТаблицаДокумента.Характеристика = ТаблицаРезерва.Характеристика
+			И ТаблицаДокумента.КодСтроки = ТаблицаРезерва.КодСтроки
+		ЛЕВОЕ СОЕДИНЕНИЕ ТаблицаОстатковЗаказа КАК ТаблицаОстатковЗаказа
+		ПО ТаблицаДокумента.КодСтроки = ТаблицаОстатковЗаказа.КодСтроки
+		ЛЕВОЕ СОЕДИНЕНИЕ ТаблицаОстатковТоваров КАК ТаблицаОстатковТоваров
+		ПО ТаблицаДокумента.Номенклатура = ТаблицаОстатковТоваров.Номенклатура
+			И ТаблицаДокумента.Характеристика = ТаблицаОстатковТоваров.Характеристика
+		ЛЕВОЕ СОЕДИНЕНИЕ ТаблицаПродажи КАК ТаблицаПродажи
+		ПО ТаблицаДокумента.КодСтроки = ТаблицаПродажи.КодСтроки</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Заказано</dataPath>
+		<expression>Сумма(Заказано)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЗаказаноОстаток</dataPath>
+		<expression>Сумма(ЗаказаноОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Продано</dataPath>
+		<expression>Сумма(Продано)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Резерв</dataPath>
+		<expression>Сумма(Резерв)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СвободныйОстатокМагазин</dataPath>
+		<expression>Сумма(СвободныйОстатокМагазин)</expression>
+		<group>КодСтроки</group>
+		<group>Номенклатура</group>
+		<group>Номенклатура Иерархия</group>
+		<group>НомерСтроки</group>
+		<group>Характеристика</group>
+	</totalField>
+	<totalField>
+		<dataPath>СвободныйОстатокСеть</dataPath>
+		<expression>Сумма(СвободныйОстатокСеть)</expression>
+		<group>КодСтроки</group>
+		<group>Номенклатура</group>
+		<group>Номенклатура Иерархия</group>
+		<group>НомерСтроки</group>
+		<group>Характеристика</group>
+	</totalField>
+	<totalField>
+		<dataPath>СвободныйОстатокСклад</dataPath>
+		<expression>Сумма(СвободныйОстатокСклад)</expression>
+		<group>КодСтроки</group>
+		<group>Номенклатура</group>
+		<group>Номенклатура Иерархия</group>
+		<group>НомерСтроки</group>
+		<group>Характеристика</group>
+	</totalField>
+	<totalField>
+		<dataPath>ОтмененоСообщение</dataPath>
+		<expression>ОтмененоСообщение</expression>
+		<group>КодСтроки</group>
+		<group>Номенклатура</group>
+		<group>Номенклатура Иерархия</group>
+		<group>НомерСтроки</group>
+		<group>Характеристика</group>
+	</totalField>
+	<totalField>
+		<dataPath>Отменено</dataPath>
+		<expression>Отменено</expression>
+		<group>КодСтроки</group>
+		<group>Номенклатура</group>
+		<group>Номенклатура Иерархия</group>
+		<group>НомерСтроки</group>
+		<group>Характеристика</group>
+	</totalField>
+	<totalField>
+		<dataPath>Выполнено</dataPath>
+		<expression>Выполнено</expression>
+		<group>КодСтроки</group>
+		<group>Номенклатура</group>
+		<group>Номенклатура Иерархия</group>
+		<group>НомерСтроки</group>
+		<group>Характеристика</group>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ЗаказПокупателя</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Заказ покупателя</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ЗаказПокупателя</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>СостояниеВыполненияЗаказа</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Состояние выполнения заказа</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОтмененоСообщение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗаказаноОстаток</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Заказано</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Резерв</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Продано</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СвободныйОстатокСклад</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СвободныйОстатокМагазин</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СвободныйОстатокСеть</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Отменено</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Без отмененных строк</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:userSettingID>a3531cd5-da7f-46e0-a866-2317a060fddd</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ЗаказПокупателя</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>35ce7317-7271-4b33-8641-60238b590594</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>КодСтроки</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Auto</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние выполнения заказа</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Номенклатура</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Характеристика</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>КодСтроки</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Номенклатура</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Характеристика</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КодСтроки</dcsset:field>
+						</dcsset:item>
+						<dcsset:placement>Together</dcsset:placement>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОтмененоСообщение</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЗаказаноОстаток</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Заказано</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Резерв</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Продано</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СвободныйОстатокСклад</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СвободныйОстатокМагазин</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СвободныйОстатокСеть</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:conditionalAppearance>
+					<dcsset:item>
+						<dcsset:selection/>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Отменено</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ЦветТекста</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Color">style:ЦветТекстаОтмененнойСтрокиДокумента</dcscor:value>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:selection/>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Выполнено</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ЦветТекста</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Color">style:ЦветПроведенногоДокумента</dcscor:value>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+				</dcsset:conditionalAppearance>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

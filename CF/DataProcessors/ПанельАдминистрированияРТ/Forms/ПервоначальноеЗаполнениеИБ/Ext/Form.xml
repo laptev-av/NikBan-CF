@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЗаголовок" id="1555">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаголовокExtendedTooltip" id="1574"/>
+			<ChildItems>
+				<LabelDecoration name="ОписаниеРаздела1" id="1545">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проведение операций первоначального заполнения информационной базы.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОписаниеРаздела1КонтекстноеМеню" id="1546"/>
+					<ExtendedTooltip name="ОписаниеРаздела1ExtendedTooltip" id="1575"/>
+				</LabelDecoration>
+				<CommandBar name="ГруппаСправка" id="1558">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа справка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа справка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСправкаExtendedTooltip" id="1577"/>
+					<ChildItems>
+						<Button name="Справка" id="1559">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<ExtendedTooltip name="СправкаExtendedTooltip" id="1578"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВводОстатковДенежныхСредств" id="1547">
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВводОстатковДенежныхСредствExtendedTooltip" id="1579"/>
+			<ChildItems>
+				<Button name="ДокументВводОстатковДенежныхСредствОткрытьСписок" id="1560">
+					<Type>Hyperlink</Type>
+					<CommandName>Document.ВводОстатковДенежныхСредств.StandardCommand.OpenList</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ввод остатков денежных средств</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ExtendedTooltip name="ДокументВводОстатковДенежныхСредствОткрытьСписокExtendedTooltip" id="1580">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ввод начальных остатков денежных средств в операционных кассах магазинов.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВводОстатковПоНакопительнымСкидкам" id="1562">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВводОстатковПоНакопительнымСкидкамExtendedTooltip" id="1582"/>
+			<ChildItems>
+				<Button name="ВводОстатковПоНакопительнымСкидкам" id="1563">
+					<Type>Hyperlink</Type>
+					<CommandName>Document.ВводОстатковПоНакопительнымСкидкам.StandardCommand.OpenList</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ввод остатков по накопительным скидкам</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ExtendedTooltip name="ВводОстатковПоНакопительнымСкидкамExtendedTooltip" id="1583">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ввод данных о накоплениях покупателей для обслуживания накопительных скидок.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВводОстатковРасчетовСПоставщиками" id="1570">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ввод остатков расчетов с поставщиками</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВводОстатковРасчетовСПоставщикамиExtendedTooltip" id="1585"/>
+			<ChildItems>
+				<Button name="ДокументВводОстатковРасчетовСПоставщиками" id="1571">
+					<Type>Hyperlink</Type>
+					<CommandName>Document.ВводОстатковРасчетовСПоставщиками.StandardCommand.OpenList</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ввод остатков расчетов с поставщиками</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ExtendedTooltip name="ДокументВводОстатковРасчетовСПоставщикамиExtendedTooltip" id="1586">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ввод начальных остатков взаиморасчетов с поставщиками по магазинам.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВводОстатковРасчетовСКлиентами" id="1598">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ввод остатков расчетов с клиентами</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ввод остатков расчетов с клиентами</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВводОстатковРасчетовСКлиентамиРасширеннаяПодсказка" id="1599"/>
+			<ChildItems>
+				<Button name="ДокументВводОстатковРасчетовСКлиентами" id="1600">
+					<Type>Hyperlink</Type>
+					<CommandName>Document.ВводОстатковРасчетовСКлиентами.StandardCommand.OpenList</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ввод остатков расчетов с клиентами</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ExtendedTooltip name="ДокументВводОстатковРасчетовСКлиентамиРасширеннаяПодсказка" id="1601">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ввод начальных остатков взаиморасчетов с клиентами по магазинам и организациям.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКорректировкаРегистров" id="1566">
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКорректировкаРегистровExtendedTooltip" id="1588"/>
+			<ChildItems>
+				<Button name="КорректировкаРегистров" id="1567">
+					<Type>Hyperlink</Type>
+					<CommandName>Document.КорректировкаРегистров.StandardCommand.OpenList</CommandName>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ExtendedTooltip name="КорректировкаРегистровExtendedTooltip" id="1589">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ручная корректировка записей регистров накопления и регистров сведений.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНачальныеОстаткиУзлов" id="1551">
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНачальныеОстаткиУзловExtendedTooltip" id="1591"/>
+			<ChildItems>
+				<Button name="ДокументВводНачальныхОстатковУзлаОткрытьСписок" id="1561">
+					<Type>Hyperlink</Type>
+					<CommandName>Document.ВводНачальныхОстатковУзла.StandardCommand.OpenList</CommandName>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ExtendedTooltip name="ДокументВводНачальныхОстатковУзлаОткрытьСписокExtendedTooltip" id="1592">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Начальные остатки узлов при создании начального образа информационной базы из базы центрального узла РИБ.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЗагрузкаДанныхИзУТ103" id="1594">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа загрузка данных из у т103</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗагрузкаДанныхИзУТ103РасширеннаяПодсказка" id="1595"/>
+			<ChildItems>
+				<Button name="ЗагрузкаДанныхИзУТ103" id="1596">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ЗагрузкаДанныхИзУТ103</CommandName>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ExtendedTooltip name="ЗагрузкаДанныхИзУТ103РасширеннаяПодсказка" id="1597">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Загрузка данных из конфигурации Управление торговлей, редакция 10.3.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор констант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>НаборКонстант.ДополнительнаяКолонкаПечатныхФормДокументов</Field>
+				<Field>НаборКонстант.ЕдиницаИзмеренияВеса</Field>
+				<Field>НаборКонстант.ЕдиницаИзмеренияОбъема</Field>
+				<Field>НаборКонстант.ИспользоватьДополнительныеОтчеты</Field>
+				<Field>НаборКонстант.ИспользоватьОплатуБанковскимиКредитами</Field>
+				<Field>НаборКонстант.ИспользоватьОплатуПлатежнымиКартами</Field>
+				<Field>НаборКонстант.ПрефиксВнутреннегоШтрихкодаВесовогоТовара</Field>
+				<Field>НаборКонстант.ПрефиксВнутреннегоШтрихкодаШтучногоТовара</Field>
+				<Field>НаборКонстант.ПрефиксШтрихкодаУзлаРИБ</Field>
+				<Field>НаборКонстант.СебестоимостьВключаетНДС</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="РежимРаботы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузкаДанныхИзУТ103" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка данных из конфигурации УТ 10.3</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка данных из УТ 10.3</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузкаДанныхИзУТ103</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

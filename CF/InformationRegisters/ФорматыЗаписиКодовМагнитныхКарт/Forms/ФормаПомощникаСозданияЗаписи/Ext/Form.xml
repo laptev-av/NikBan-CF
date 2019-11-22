@@ -1,0 +1,1464 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Помощник формирования формата записи кода карты</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="ExternalEvent">ВнешнееСобытие</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппировкаМастера" id="31">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группировка мастера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппировкаМастераExtendedTooltip" id="754"/>
+			<ChildItems>
+				<UsualGroup name="КартинкаМастера" id="28">
+					<Width>26</Width>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="КартинкаМастераExtendedTooltip" id="755"/>
+					<ChildItems>
+						<Pages name="СтраницыДекорацииМастера" id="472">
+							<ReadOnly>true</ReadOnly>
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы декорации мастера</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы декорации мастера</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ExtendedTooltip name="СтраницыДекорацииМастераExtendedTooltip" id="756"/>
+							<ChildItems>
+								<Page name="СтраницаДекорацииНачало" id="721">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>1</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница декорации начало</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="СтраницаДекорацииНачалоExtendedTooltip" id="757"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация22" id="722">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>true</VerticalStretch>
+											<SkipOnInput>false</SkipOnInput>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Abs>Picture.png</xr:Abs>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация22КонтекстноеМеню" id="723"/>
+											<ExtendedTooltip name="Декорация22ExtendedTooltip" id="758"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаДекорацииВыделениеКодаКарты" id="473">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>2</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница декорации выделение кода карты</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="СтраницаДекорацииВыделениеКодаКартыExtendedTooltip" id="759"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация24" id="724">
+											<SkipOnInput>false</SkipOnInput>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Abs>Picture.png</xr:Abs>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация24КонтекстноеМеню" id="725"/>
+											<ExtendedTooltip name="Декорация24ExtendedTooltip" id="760"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаДекорацииКорректировкаФормата" id="732">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>3</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница декорации продолжение</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="СтраницаДекорацииКорректировкаФорматаExtendedTooltip" id="761"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация26" id="733">
+											<SkipOnInput>false</SkipOnInput>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Abs>Picture.png</xr:Abs>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация26КонтекстноеМеню" id="734"/>
+											<ExtendedTooltip name="Декорация26ExtendedTooltip" id="762"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаДекорацииСчитываниеКода" id="729">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>4</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница декорации продолжение</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="СтраницаДекорацииСчитываниеКодаExtendedTooltip" id="763"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация25" id="730">
+											<SkipOnInput>false</SkipOnInput>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Abs>Picture.png</xr:Abs>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация25КонтекстноеМеню" id="731"/>
+											<ExtendedTooltip name="Декорация25ExtendedTooltip" id="764"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаДекорацииГотово" id="474">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>5</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница декорации готово</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="СтраницаДекорацииГотовоExtendedTooltip" id="765"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация23" id="475">
+											<SkipOnInput>false</SkipOnInput>
+											<PictureSize>Stretch</PictureSize>
+											<Picture>
+												<xr:Abs>Picture.png</xr:Abs>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация23КонтекстноеМеню" id="476"/>
+											<ExtendedTooltip name="Декорация23ExtendedTooltip" id="766"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</UsualGroup>
+				<Pages name="СтраницыМастера" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страницы мастера</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страницы мастера</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницыМастераExtendedTooltip" id="767"/>
+					<ChildItems>
+						<Page name="СтраницаМастераНачало" id="3">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница мастера начало</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница мастера начало</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаМастераНачалоExtendedTooltip" id="768"/>
+							<ChildItems>
+								<LabelDecoration name="ЗаголовокСтраницыМастера1" id="140">
+									<Width>50</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>50</MaxWidth>
+									<Height>4</Height>
+									<HorizontalStretch>true</HorizontalStretch>
+									<SkipOnInput>false</SkipOnInput>
+									<Font ref="sys:DefaultGUIFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вас приветствует помощник  формирования формата записи кода магнитной карты!</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Top</VerticalAlign>
+									<TitleHeight>2</TitleHeight>
+									<ContextMenu name="ЗаголовокСтраницыМастера1КонтекстноеМеню" id="141"/>
+									<ExtendedTooltip name="ЗаголовокСтраницыМастера1ExtendedTooltip" id="769"/>
+								</LabelDecoration>
+								<LabelDecoration name="Декорация6" id="145">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>2</Height>
+									<HorizontalStretch>true</HorizontalStretch>
+									<SkipOnInput>false</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Помощник позволит Вам автоматически заполнить информацию о формате магнитной карты
+при считывании магнитной карты считывателем магнитной карты.
+</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="Декорация6КонтекстноеМеню" id="146"/>
+									<ExtendedTooltip name="Декорация6ExtendedTooltip" id="770"/>
+								</LabelDecoration>
+								<LabelDecoration name="Декорация7" id="662">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>3</Height>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Шаг1: Считайте данные с магнитной карты с помощью считывателя магнитных карт.</v8:content>
+										</v8:item>
+									</Title>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="Декорация7КонтекстноеМеню" id="663"/>
+									<ExtendedTooltip name="Декорация7ExtendedTooltip" id="771"/>
+								</LabelDecoration>
+								<PictureDecoration name="ДекорацияСчитатьКодКартыИзСМК" id="32">
+									<Width>50</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>50</MaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalStretch>true</HorizontalStretch>
+									<SkipOnInput>false</SkipOnInput>
+									<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация </v8:content>
+										</v8:item>
+									</Title>
+									<PictureSize>AutoSizeIgnoreScale</PictureSize>
+									<Picture>
+										<xr:Abs>Picture.png</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияСчитатьКодКартыИзСМККонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ДекорацияСчитатьКодКартыИзСМКExtendedTooltip" id="772"/>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаИнфо1" id="737">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительная информация</v8:content>
+										</v8:item>
+									</Title>
+									<Height>1</Height>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="ГруппаИнфо1ExtendedTooltip" id="773"/>
+									<ChildItems>
+										<PictureDecoration name="декИнфо" id="735">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дек инфо</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.Информация</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="декИнфоКонтекстноеМеню" id="736"/>
+											<ExtendedTooltip name="декИнфоExtendedTooltip" id="774"/>
+										</PictureDecoration>
+										<LabelDecoration name="ДекорацияИнформацияПервогоЭтапа" id="664">
+											<Width>50</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>50</MaxWidth>
+											<Height>4</Height>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Записанные на магнитные карты данные могут быть представлены в различных форматах (в зависимости от системы карт), в этих данных должен содержаться код магнитной карты, по которому карта будет распознаваться в "1С:Рознице".</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="ДекорацияИнформацияПервогоЭтапаКонтекстноеМеню" id="665"/>
+											<ExtendedTooltip name="ДекорацияИнформацияПервогоЭтапаExtendedTooltip" id="775"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаМастераВыделениеКодаКарты" id="609">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница мастера выделение кода карты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница мастера выделение кода карты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаМастераВыделениеКодаКартыExtendedTooltip" id="776"/>
+							<ChildItems>
+								<LabelDecoration name="ЗаголовокСтраницыМастера2" id="612">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>3</Height>
+									<SkipOnInput>false</SkipOnInput>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Шаг 2: Выделите код карты при помощи мышки и нажмите "Далее"</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="ЗаголовокСтраницыМастера2КонтекстноеМеню" id="613"/>
+									<ExtendedTooltip name="ЗаголовокСтраницыМастера2ExtendedTooltip" id="777"/>
+								</LabelDecoration>
+								<InputField name="ДанныеПервойДорожки" id="668">
+									<DataPath>ДанныеПервойДорожки</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Width>50</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>50</MaxWidth>
+									<Height>2</Height>
+									<VerticalStretch>false</VerticalStretch>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="ДанныеПервойДорожкиКонтекстноеМеню" id="669"/>
+									<ExtendedTooltip name="ДанныеПервойДорожкиExtendedTooltip" id="778"/>
+								</InputField>
+								<InputField name="ДанныеВторойДорожки" id="670">
+									<DataPath>ДанныеВторойДорожки</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Width>50</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>50</MaxWidth>
+									<Height>2</Height>
+									<VerticalStretch>false</VerticalStretch>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="ДанныеВторойДорожкиКонтекстноеМеню" id="671"/>
+									<ExtendedTooltip name="ДанныеВторойДорожкиExtendedTooltip" id="779"/>
+								</InputField>
+								<InputField name="ДанныеТретьейДорожки" id="672">
+									<DataPath>ДанныеТретьейДорожки</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Width>50</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>50</MaxWidth>
+									<Height>2</Height>
+									<VerticalStretch>false</VerticalStretch>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="ДанныеТретьейДорожкиКонтекстноеМеню" id="673"/>
+									<ExtendedTooltip name="ДанныеТретьейДорожкиExtendedTooltip" id="780"/>
+								</InputField>
+								<LabelDecoration name="ДекорацияОтступ2" id="741">
+									<Height>3</Height>
+									<ContextMenu name="ДекорацияОтступ2КонтекстноеМеню" id="742"/>
+									<ExtendedTooltip name="ДекорацияОтступ2ExtendedTooltip" id="781"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаИнфо2" id="738">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительная информация</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="ГруппаИнфо2ExtendedTooltip" id="782"/>
+									<ChildItems>
+										<PictureDecoration name="декИнфо1" id="739">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дек инфо</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.Информация</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="декИнфо1КонтекстноеМеню" id="740"/>
+											<ExtendedTooltip name="декИнфо1ExtendedTooltip" id="783"/>
+										</PictureDecoration>
+										<LabelDecoration name="Декорация11" id="678">
+											<Width>50</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>50</MaxWidth>
+											<Height>4</Height>
+											<SkipOnInput>false</SkipOnInput>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Если данные считались только в поле "Данные первой дорожки" и в тексте присутствуют не печатные символы, то возможно считыватель магнитных карт настроен некорректно. </v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="Декорация11КонтекстноеМеню" id="679"/>
+											<ExtendedTooltip name="Декорация11ExtendedTooltip" id="784"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаМастераКорректировкаФормата" id="6">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница мастера корректировка формата</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница мастера корректировка формата</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаМастераКорректировкаФорматаExtendedTooltip" id="785"/>
+							<ChildItems>
+								<LabelDecoration name="ЗаголовокСтраницыМастера3" id="174">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>3</Height>
+									<SkipOnInput>false</SkipOnInput>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Шаг 3: При необходимости вручную скорректируйте формат записи кода карты</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="ЗаголовокСтраницыМастера3КонтекстноеМеню" id="175"/>
+									<ExtendedTooltip name="ЗаголовокСтраницыМастера3ExtendedTooltip" id="786"/>
+								</LabelDecoration>
+								<InputField name="ДанныеНужнойДорожки" id="695">
+									<DataPath>ДанныеНужнойДорожки</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Width>50</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>50</MaxWidth>
+									<Height>2</Height>
+									<VerticalStretch>false</VerticalStretch>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="ДанныеНужнойДорожкиКонтекстноеМеню" id="696">
+										<Autofill>false</Autofill>
+										<ChildItems>
+											<Button name="ДанныеНужнойДорожкиСформироватьФорматКодаКарты" id="748">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СформироватьЗановоФорматКодаКарты</CommandName>
+												<ExtendedTooltip name="ДанныеНужнойДорожкиСформироватьФорматКодаКартыExtendedTooltip" id="787"/>
+											</Button>
+											<Button name="ДанныеНужнойДорожкиУстановитьПрефикс" id="697">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.УстановитьПрефикс</CommandName>
+												<ExtendedTooltip name="ДанныеНужнойДорожкиУстановитьПрефиксExtendedTooltip" id="788"/>
+											</Button>
+											<Button name="ДанныеНужнойДорожкиУстановитьСуффикс" id="698">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.УстановитьСуффикс</CommandName>
+												<ExtendedTooltip name="ДанныеНужнойДорожкиУстановитьСуффиксExtendedTooltip" id="789"/>
+											</Button>
+										</ChildItems>
+									</ContextMenu>
+									<ExtendedTooltip name="ДанныеНужнойДорожкиExtendedTooltip" id="790"/>
+								</InputField>
+								<UsualGroup name="ГруппаИнфо3" id="743">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительная информация</v8:content>
+										</v8:item>
+									</Title>
+									<Width>50</Width>
+									<Height>3</Height>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="ГруппаИнфо3ExtendedTooltip" id="791"/>
+									<ChildItems>
+										<PictureDecoration name="декИнфо2" id="744">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дек инфо</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.Информация</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="декИнфо2КонтекстноеМеню" id="745"/>
+											<ExtendedTooltip name="декИнфо2ExtendedTooltip" id="792"/>
+										</PictureDecoration>
+										<LabelDecoration name="Декорация13" id="746">
+											<Width>50</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>50</MaxWidth>
+											<SkipOnInput>false</SkipOnInput>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>В поле "Данные нужной дорожки" можно выделить текст и из контекстного меню поля вызвать действие заполнения префикса, суффикса карты или заново сформировать формат записи кода карты.</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="Декорация13КонтекстноеМеню" id="747"/>
+											<ExtendedTooltip name="Декорация13ExtendedTooltip" id="793"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<LabelDecoration name="Декорация2" id="693">
+									<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+									<TitleHeight>2</TitleHeight>
+									<ContextMenu name="Декорация2КонтекстноеМеню" id="694"/>
+									<ExtendedTooltip name="Декорация2ExtendedTooltip" id="794"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаПрефиксСуффикс" id="690">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПрефиксСуффиксExtendedTooltip" id="795"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаЛево" id="691">
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаЛевоExtendedTooltip" id="796"/>
+											<ChildItems>
+												<InputField name="КодКарты2" id="726">
+													<DataPath>КодКарты</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Width>50</Width>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>50</MaxWidth>
+													<ContextMenu name="КодКарты2КонтекстноеМеню" id="727"/>
+													<ExtendedTooltip name="КодКарты2ExtendedTooltip" id="797"/>
+												</InputField>
+												<InputField name="Префикс" id="684">
+													<DataPath>Префикс</DataPath>
+													<ContextMenu name="ПрефиксКонтекстноеМеню" id="685"/>
+													<ExtendedTooltip name="ПрефиксExtendedTooltip" id="798"/>
+												</InputField>
+												<InputField name="Суффикс" id="686">
+													<DataPath>Суффикс</DataPath>
+													<ContextMenu name="СуффиксКонтекстноеМеню" id="687"/>
+													<ExtendedTooltip name="СуффиксExtendedTooltip" id="799"/>
+												</InputField>
+												<InputField name="КоличествоСимволов" id="688">
+													<DataPath>КоличествоСимволов</DataPath>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>0 - длина кода может варьироваться</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ContextMenu name="КоличествоСимволовКонтекстноеМеню" id="689"/>
+													<ExtendedTooltip name="КоличествоСимволовExtendedTooltip" id="800"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<LabelDecoration name="Декорация5" id="194">
+									<SkipOnInput>false</SkipOnInput>
+									<ContextMenu name="Декорация5КонтекстноеМеню" id="195"/>
+									<ExtendedTooltip name="Декорация5ExtendedTooltip" id="801"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьДалееПроверкаСчитывания" id="131">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<SkipOnInput>false</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Нажмите кнопку "Далее" для проверки считывания кода карты.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьДалееПроверкаСчитыванияКонтекстноеМеню" id="132"/>
+									<ExtendedTooltip name="НадписьДалееПроверкаСчитыванияExtendedTooltip" id="802"/>
+								</LabelDecoration>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаМастераСчитываниеКодаКарты" id="7">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница мастера считывание кода карты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница мастера считывание кода карты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаМастераСчитываниеКодаКартыExtendedTooltip" id="803"/>
+							<ChildItems>
+								<LabelDecoration name="ЗаголовокСтраницыМастераСчитываниеКодаКарты" id="176">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>2</Height>
+									<SkipOnInput>false</SkipOnInput>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Шаг 4: Проверьте считывание кода карты</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Top</VerticalAlign>
+									<ContextMenu name="ЗаголовокСтраницыМастераСчитываниеКодаКартыКонтекстноеМеню" id="177"/>
+									<ExtendedTooltip name="ЗаголовокСтраницыМастераСчитываниеКодаКартыExtendedTooltip" id="804"/>
+								</LabelDecoration>
+								<LabelDecoration name="Декорация4" id="700">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Считайте данные с магнитной карты с помощью считывателя магнитных карт.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация4КонтекстноеМеню" id="701"/>
+									<ExtendedTooltip name="Декорация4ExtendedTooltip" id="805"/>
+								</LabelDecoration>
+								<PictureDecoration name="ДекорацияСчитатьКодКартыИзСМК1" id="702">
+									<Width>50</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>50</MaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<SkipOnInput>false</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация </v8:content>
+										</v8:item>
+									</Title>
+									<PictureSize>Proportionally</PictureSize>
+									<Picture>
+										<xr:Abs>Picture.png</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияСчитатьКодКартыИзСМК1КонтекстноеМеню" id="703"/>
+									<ExtendedTooltip name="ДекорацияСчитатьКодКартыИзСМК1ExtendedTooltip" id="806"/>
+								</PictureDecoration>
+								<InputField name="КодКарты1" id="706">
+									<DataPath>КодКарты</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Искомый код карты</v8:content>
+										</v8:item>
+									</Title>
+									<Width>50</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>50</MaxWidth>
+									<ContextMenu name="КодКарты1КонтекстноеМеню" id="707"/>
+									<ExtendedTooltip name="КодКарты1ExtendedTooltip" id="807"/>
+								</InputField>
+								<InputField name="ВыделенныйКодКарты" id="704">
+									<DataPath>ВыделенныйКодКарты</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Считанный код карты</v8:content>
+										</v8:item>
+									</Title>
+									<Width>50</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>50</MaxWidth>
+									<ContextMenu name="ВыделенныйКодКартыКонтекстноеМеню" id="705"/>
+									<ExtendedTooltip name="ВыделенныйКодКартыExtendedTooltip" id="808"/>
+								</InputField>
+								<LabelDecoration name="Декорация10" id="196">
+									<Height>1</Height>
+									<SkipOnInput>false</SkipOnInput>
+									<ContextMenu name="Декорация10КонтекстноеМеню" id="197"/>
+									<ExtendedTooltip name="Декорация10ExtendedTooltip" id="809"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаИнфо4" id="749">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительная информация</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="ГруппаИнфо4ExtendedTooltip" id="810"/>
+									<ChildItems>
+										<PictureDecoration name="декИнфо3" id="750">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дек инфо</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.Информация</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="декИнфо3КонтекстноеМеню" id="751"/>
+											<ExtendedTooltip name="декИнфо3ExtendedTooltip" id="811"/>
+										</PictureDecoration>
+										<LabelDecoration name="Декорация14" id="752">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>50</MaxWidth>
+											<SkipOnInput>false</SkipOnInput>
+											<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Если считанный код карты на равен искомому, тогда возможно вам следует вернуться на предыдущую страницу и заново сформировать код записи</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="Декорация14КонтекстноеМеню" id="753"/>
+											<ExtendedTooltip name="Декорация14ExtendedTooltip" id="812"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаМастераОкончание" id="392">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница мастера окончание</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница 14</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаМастераОкончаниеExtendedTooltip" id="813"/>
+							<ChildItems>
+								<LabelDecoration name="ЗаголовокСтраницыМастераФинал" id="393">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>2</Height>
+									<SkipOnInput>false</SkipOnInput>
+									<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Формат записи кода карты успешно создан</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="ЗаголовокСтраницыМастераФиналКонтекстноеМеню" id="394"/>
+									<ExtendedTooltip name="ЗаголовокСтраницыМастераФиналExtendedTooltip" id="814"/>
+								</LabelDecoration>
+								<LabelDecoration name="Декорация12" id="708">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные формата:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация12КонтекстноеМеню" id="709"/>
+									<ExtendedTooltip name="Декорация12ExtendedTooltip" id="815"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаСохраненныеДанные" id="718">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ChildItemsWidth>Equal</ChildItemsWidth>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСохраненныеДанныеExtendedTooltip" id="816"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаПрефиксДлина" id="719">
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПрефиксДлинаExtendedTooltip" id="817"/>
+											<ChildItems>
+												<InputField name="НомерДорожки" id="714">
+													<DataPath>НомерДорожки</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<ContextMenu name="НомерДорожкиКонтекстноеМеню" id="715"/>
+													<ExtendedTooltip name="НомерДорожкиExtendedTooltip" id="818"/>
+												</InputField>
+												<InputField name="Префикс1" id="710">
+													<DataPath>Префикс</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<ContextMenu name="Префикс1КонтекстноеМеню" id="711"/>
+													<ExtendedTooltip name="Префикс1ExtendedTooltip" id="819"/>
+												</InputField>
+												<InputField name="КоличествоСимволов1" id="716">
+													<DataPath>КоличествоСимволов</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<ContextMenu name="КоличествоСимволов1КонтекстноеМеню" id="717"/>
+													<ExtendedTooltip name="КоличествоСимволов1ExtendedTooltip" id="820"/>
+												</InputField>
+												<InputField name="Суффикс1" id="712">
+													<DataPath>Суффикс</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<ContextMenu name="Суффикс1КонтекстноеМеню" id="713"/>
+													<ExtendedTooltip name="Суффикс1ExtendedTooltip" id="821"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаГотово" id="840">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа готово</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа готово</v8:content>
+										</v8:item>
+									</ToolTip>
+									<VerticalStretch>true</VerticalStretch>
+									<VerticalAlign>Bottom</VerticalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаГотовоРасширеннаяПодсказка" id="841"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьГотово1" id="410">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<SkipOnInput>false</SkipOnInput>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Нажмите кнопку "Готово" для выхода из помощника.</v8:content>
+												</v8:item>
+											</Title>
+											<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+											<VerticalAlign>Bottom</VerticalAlign>
+											<ContextMenu name="НадписьГотово1КонтекстноеМеню" id="411"/>
+											<ExtendedTooltip name="НадписьГотово1ExtendedTooltip" id="823"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппировкаКнопок" id="451">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группировка кнопок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группировка кнопок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппировкаКнопокExtendedTooltip" id="824"/>
+			<ChildItems>
+				<Button name="КомандаСправка" id="233">
+					<Type>UsualButton</Type>
+					<SkipOnInput>false</SkipOnInput>
+					<CommandName>Form.Command.КомандаСправка</CommandName>
+					<ExtendedTooltip name="КомандаСправкаExtendedTooltip" id="825"/>
+				</Button>
+				<Pages name="КнопкиМастера" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кнопки мастера</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кнопки мастера</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ExtendedTooltip name="КнопкиМастераExtendedTooltip" id="826"/>
+					<ChildItems>
+						<Page name="КнопкиНачала" id="12">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кнопки начала</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кнопки начала</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="КнопкиНачалаExtendedTooltip" id="827"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация3" id="38">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>50</MaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<SkipOnInput>false</SkipOnInput>
+									<ContextMenu name="Декорация3КонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="Декорация3ExtendedTooltip" id="828"/>
+								</LabelDecoration>
+								<Button name="КомандаНазад2" id="232">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<SkipOnInput>false</SkipOnInput>
+									<Enabled>false</Enabled>
+									<CommandName>Form.Command.КомандаНазад</CommandName>
+									<Picture>
+										<xr:Abs>Picture.png</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="КомандаНазад2ExtendedTooltip" id="829"/>
+								</Button>
+								<Button name="КомандаДалее" id="13">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>Form.Command.КомандаДалее</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.НавигацияВперед</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="КомандаДалееExtendedTooltip" id="830"/>
+								</Button>
+								<Button name="КомандаОтмена" id="14">
+									<Type>UsualButton</Type>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>Form.Command.КомандаОтмена</CommandName>
+									<ExtendedTooltip name="КомандаОтменаExtendedTooltip" id="831"/>
+								</Button>
+							</ChildItems>
+						</Page>
+						<Page name="КнопкиПродолжения" id="10">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кнопки продолжения</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кнопки продолжения</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="КнопкиПродолженияExtendedTooltip" id="832"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация31" id="40">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>50</MaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<SkipOnInput>false</SkipOnInput>
+									<ContextMenu name="Декорация31КонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="Декорация31ExtendedTooltip" id="833"/>
+								</LabelDecoration>
+								<Button name="КомандаНазад" id="18">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>Form.Command.КомандаНазад</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.НавигацияНазад</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="КомандаНазадExtendedTooltip" id="834"/>
+								</Button>
+								<Button name="КомандаДалее1" id="17">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>Form.Command.КомандаДалее</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.НавигацияВперед</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="КомандаДалее1ExtendedTooltip" id="835"/>
+								</Button>
+								<Button name="КомандаОтмена1" id="15">
+									<Type>UsualButton</Type>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>Form.Command.КомандаОтмена</CommandName>
+									<ExtendedTooltip name="КомандаОтмена1ExtendedTooltip" id="836"/>
+								</Button>
+							</ChildItems>
+						</Page>
+						<Page name="КнопкиОкончания" id="11">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кнопки окончания</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кнопки окончания</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="КнопкиОкончанияExtendedTooltip" id="837"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация311" id="42">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>50</MaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<SkipOnInput>false</SkipOnInput>
+									<ContextMenu name="Декорация311КонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="Декорация311ExtendedTooltip" id="838"/>
+								</LabelDecoration>
+								<Button name="КомандаГотово" id="20">
+									<Type>UsualButton</Type>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>Form.Command.КомандаГотово</CommandName>
+									<ExtendedTooltip name="КомандаГотовоExtendedTooltip" id="839"/>
+								</Button>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="КодКарты" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код карты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ДанныеПервойДорожки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные первой дорожки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеВторойДорожки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные второй дорожки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеТретьейДорожки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные третьей дорожки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Префикс" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Префикс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Суффикс" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Суффикс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоСимволов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длина</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ДанныеНужнойДорожки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные нужной дорожки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыделенныйКодКарты" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделенный код карты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерДорожки" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер дорожки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаписанФорматЗаписи" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записан формат записи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьПодключаемоеОборудование" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать подключаемое оборудование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗакрытиеПодтверждено" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрытие подтверждено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоддерживаемыеТипыПодключаемогоОборудования" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поддерживаемые типы подключаемого оборудования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрыСобытийПО" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры событий ПО</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ВыделенныйКодКарты</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">КодКарты</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">ВыделенныйКодКарты</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаДалее" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаДалее</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаНазад" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.НавигацияНазад</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаНазад</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаОтмена" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаОтмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаГотово" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Готово</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаГотово</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаСправка" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справка</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Help</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСправка</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьСуффикс" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить суффикс</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить суффикс</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьСуффикс</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьПрефикс" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить префикс</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить суффикс</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьПрефикс</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СформироватьЗановоФорматКодаКарты" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать заново формат кода карты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать заново формат кода карты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СформироватьЗановоФорматКодаКарты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

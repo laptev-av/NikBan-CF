@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Subsystem uuid="cefab63d-757e-4261-aa11-6b862b7fcc87">
+		<Properties>
+			<Name>ЗапасыИЗакупки</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закупки</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.РазделЗакупки</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.Поставщики</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СебестоимостьНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.УдалитьСпособУчетаСебестоимости</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыУчетаСебестоимости</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьУчетСебестоимости</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СебестоимостьВключаетНДС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ОтчетыПоЗапасамИЗакупкам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ТоварыКПоступлению</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УстановкаСебестоимости</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПечатьЭтикетокИЦенников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеОбработкиЗапасыИЗакупки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДополнительныеОтчетыЗапасыИЗакупки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.АнализПродажФормированиеЗаказов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.НастройкаРаспределенияТоваровПоСкладамИОрганизациям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.АналитикаХозяйственныхОпераций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПодсистемаЗапасыИЗакупки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПодборТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.СебестоимостьПоставкиТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.ПФ_MXL_М11</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.ПФ_MXL_М15</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.ПФ_MXL_М4</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.ПФ_MXL_ТОРГ13</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.ПФ_MXL_ТОРГ4</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПравилаРаспределенияНаСебестоимостьТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеУстановокСебестоимости</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ОтчетыИОбработкиМенеджера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПечатьЭтикетокИЦенников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПодсистемаЗапасыИЗакупки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПодсистемаЗапасыИЗакупкиЗакупки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПодсистемаЗапасыИЗакупкиРаботаСПоставщиками</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПодсистемаЗапасыИЗакупкиСнабжение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеОстатковТоваровОрганизаций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеСебестоимостиТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеУстановокСебестоимости</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.РасчетСебестоимости</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ВедомостьДвиженияСерий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РазделЗакупки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.НезаполненныеРеквизитыЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.РасхожденияРеквизитовЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЦенникиКПечати</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>РаботаСПоставщиками</Subsystem>
+			<Subsystem>Закупки</Subsystem>
+			<Subsystem>Снабжение</Subsystem>
+			<Subsystem>СчетаФактуры</Subsystem>
+			<Subsystem>ЕГАИС</Subsystem>
+			<Subsystem>ВЕТИС</Subsystem>
+			<Subsystem>КомиссионнаяТорговля</Subsystem>
+			<Subsystem>ЭДО</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

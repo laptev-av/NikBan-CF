@@ -1,0 +1,1423 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИнформационнаяБаза</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудник</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<inputParameters>
+				<dcscor:item>
+					<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+						<dcscor:item>
+							<dcscor:choiceParameter>Отбор.Магазин</dcscor:choiceParameter>
+							<dcscor:value>МагазинДляОтбора</dcscor:value>
+							<dcscor:mode xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d8p1:LinkedValueChangeMode">Clear</dcscor:mode>
+						</dcscor:item>
+					</dcscor:value>
+				</dcscor:item>
+			</inputParameters>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтклонениеФактическиОтработанногоВремениВПланируемоеВремяОтПланового</dataPath>
+			<field>ОтклонениеФактическиОтработанногоВремениВПланируемоеВремяОтПланового</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонение факта по плану от плана (час)</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=10; ЧДЦ=2; ЧРД=.; ЧРГ=' '</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">8</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтклонениеФактическиОтработанногоВремениОтПланового</dataPath>
+			<field>ОтклонениеФактическиОтработанногоВремениОтПланового</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отклонение факта от плана (час)</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=10; ЧДЦ=2; ЧРД=.; ЧРГ=' '</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">18</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтношениеВнеПланируемогоВремениКПлановому</dataPath>
+			<field>ОтношениеВнеПланируемогоВремениКПлановому</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отношение факта вне плана к плану (%)</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=10; ЧДЦ=2; ЧРД=.; ЧРГ=' '</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">8</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтношениеФактическиОтработанногоВремениВПланируемоеВремяКПлановому</dataPath>
+			<field>ОтношениеФактическиОтработанногоВремениВПланируемоеВремяКПлановому</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отношение факта по плану к плану (%)</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=10; ЧДЦ=2; ЧРД=.; ЧРГ=' '</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">8</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтношениеФактическиОтработанногоВремениКПлановому</dataPath>
+			<field>ОтношениеФактическиОтработанногоВремениКПлановому</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отношение факта к плану (%)</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=10; ЧДЦ=2; ЧРД=.; ЧРГ=' '</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">8</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланируемоеКоличествоЧасов</dataPath>
+			<field>ПланируемоеКоличествоЧасов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План (час)</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=10; ЧДЦ=2; ЧРД=.; ЧРГ=' '</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактическоеКоличествоЧасов</dataPath>
+			<field>ФактическоеКоличествоЧасов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Факт (час)</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=10; ЧДЦ=2; ЧРД=.; ЧРГ=' '</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактическоеКоличествоЧасовВнеПланируемогоВремени</dataPath>
+			<field>ФактическоеКоличествоЧасовВнеПланируемогоВремени</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Факт вне плана (час)</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=10; ЧДЦ=2; ЧРД=.; ЧРГ=' '</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">8</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактическоеКоличествоЧасовВПланируемоеВремя</dataPath>
+			<field>ФактическоеКоличествоЧасовВПланируемоеВремя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Факт по плану (час)</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=10; ЧДЦ=2; ЧРД=.; ЧРГ=' '</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">8</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактическоеВПланируемое</dataPath>
+			<field>ФактическоеВПланируемое</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фактическое в планируемое</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Планируемое</dataPath>
+			<field>Планируемое</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Планируемое</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Фактическое</dataPath>
+			<field>Фактическое</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фактическое</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Смена</dataPath>
+			<field>Смена</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<inputParameters>
+				<dcscor:item>
+					<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+						<dcscor:item>
+							<dcscor:choiceParameter>Отбор.Магазин</dcscor:choiceParameter>
+							<dcscor:value>МагазинДляОтбора</dcscor:value>
+							<dcscor:mode xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d8p1:LinkedValueChangeMode">Clear</dcscor:mode>
+						</dcscor:item>
+					</dcscor:value>
+				</dcscor:item>
+			</inputParameters>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Магазин</dataPath>
+			<field>Магазин</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Магазин</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИнформационнаяБаза</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПодЗапрос.Сотрудник КАК Сотрудник,
+	ПодЗапрос.Дата КАК Дата,
+	ПодЗапрос.Смена,
+	МАКСИМУМ(ПодЗапрос.Период) КАК НачалоПлан,
+	МАКСИМУМ(ПодЗапрос.ДатаОкончания) КАК КонецПлан,
+	МАКСИМУМ(ПодЗапрос.НачалоРаботы) КАК НачалоФакт,
+	МАКСИМУМ(ПодЗапрос.ОкончаниеРаботы) КАК КонецФакт,
+	СУММА(ПодЗапрос.Планируемое) КАК Планируемое,
+	СУММА(ПодЗапрос.Фактическое) КАК Фактическое,
+	ВЫБОР
+		КОГДА МАКСИМУМ(ПодЗапрос.ОкончаниеРаботы) МЕЖДУ МАКСИМУМ(ПодЗапрос.Период) И МАКСИМУМ(ПодЗапрос.ДатаОкончания)
+				И МАКСИМУМ(ПодЗапрос.НачалоРаботы) &lt; МАКСИМУМ(ПодЗапрос.Период)
+			ТОГДА РАЗНОСТЬДАТ(МАКСИМУМ(ПодЗапрос.Период), МАКСИМУМ(ПодЗапрос.ОкончаниеРаботы), МИНУТА) / 60
+		ИНАЧЕ ВЫБОР
+				КОГДА МАКСИМУМ(ПодЗапрос.ОкончаниеРаботы) МЕЖДУ МАКСИМУМ(ПодЗапрос.Период) И МАКСИМУМ(ПодЗапрос.ДатаОкончания)
+						И МАКСИМУМ(ПодЗапрос.НачалоРаботы) &gt;= МАКСИМУМ(ПодЗапрос.Период)
+					ТОГДА РАЗНОСТЬДАТ(МАКСИМУМ(ПодЗапрос.НачалоРаботы), МАКСИМУМ(ПодЗапрос.ОкончаниеРаботы), МИНУТА) / 60
+				ИНАЧЕ ВЫБОР
+						КОГДА МАКСИМУМ(ПодЗапрос.ДатаОкончания) МЕЖДУ МАКСИМУМ(ПодЗапрос.НачалоРаботы) И МАКСИМУМ(ПодЗапрос.ОкончаниеРаботы)
+								И МАКСИМУМ(ПодЗапрос.Период) &lt; МАКСИМУМ(ПодЗапрос.НачалоРаботы)
+							ТОГДА РАЗНОСТЬДАТ(МАКСИМУМ(ПодЗапрос.НачалоРаботы), МАКСИМУМ(ПодЗапрос.ДатаОкончания), МИНУТА) / 60
+						ИНАЧЕ ВЫБОР
+								КОГДА МАКСИМУМ(ПодЗапрос.ДатаОкончания) МЕЖДУ МАКСИМУМ(ПодЗапрос.НачалоРаботы) И МАКСИМУМ(ПодЗапрос.ОкончаниеРаботы)
+										И МАКСИМУМ(ПодЗапрос.Период) &gt;= МАКСИМУМ(ПодЗапрос.НачалоРаботы)
+									ТОГДА РАЗНОСТЬДАТ(МАКСИМУМ(ПодЗапрос.Период), МАКСИМУМ(ПодЗапрос.ДатаОкончания), МИНУТА) / 60
+								ИНАЧЕ 0
+							КОНЕЦ
+					КОНЕЦ
+			КОНЕЦ
+	КОНЕЦ КАК ФактическоеВПланируемое,
+	МАКСИМУМ(ПодЗапрос.Регистратор) КАК Регистратор
+ПОМЕСТИТЬ Временная
+ИЗ
+	(ВЫБРАТЬ
+		ПланируемоеВремя.Сотрудник КАК Сотрудник,
+		НАЧАЛОПЕРИОДА(ПланируемоеВремя.Период, ДЕНЬ) КАК Дата,
+		ПланируемоеВремя.Период КАК Период,
+		ПланируемоеВремя.ДатаОкончания КАК ДатаОкончания,
+		РАЗНОСТЬДАТ(ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0), ПланируемоеВремя.ДлинаРабочегоВремени, МИНУТА) / 60 КАК Планируемое,
+		ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0) КАК НачалоРаботы,
+		ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0) КАК ОкончаниеРаботы,
+		0 КАК Фактическое,
+		ПланируемоеВремя.ИнтервалРаботыМагазинов КАК Смена,
+		0 КАК Регистратор
+	ИЗ
+		РегистрСведений.ПланируемоеРабочееВремяСотрудников КАК ПланируемоеВремя
+	ГДЕ
+		ПланируемоеВремя.Период &gt;= &amp;НачалоПериода
+		И (ПланируемоеВремя.Период &lt;= &amp;КонецПериода
+				ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0))
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ФактическоеРабочееВремяСотрудников.Сотрудник,
+		НАЧАЛОПЕРИОДА(ФактическоеРабочееВремяСотрудников.НачалоРаботы, ДЕНЬ),
+		ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0),
+		ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0),
+		0,
+		ФактическоеРабочееВремяСотрудников.НачалоРаботы,
+		ФактическоеРабочееВремяСотрудников.ОкончаниеРаботы,
+		ФактическоеРабочееВремяСотрудников.РабочееВремяСотрудников,
+		ФактическоеРабочееВремяСотрудников.Смена,
+		ФактическоеРабочееВремяСотрудников.Регистратор
+	ИЗ
+		(ВЫБРАТЬ
+			НАЧАЛОПЕРИОДА(ФактическоеРабочееВремяСотрудников.Период, ДЕНЬ) КАК Дата,
+			ФактическоеРабочееВремяСотрудников.Сотрудник КАК Сотрудник,
+			СУММА(ФактическоеРабочееВремяСотрудников.РабочееВремяСотрудников) КАК РабочееВремяСотрудников,
+			МИНИМУМ(ФактическоеРабочееВремяСотрудников.НачалоРаботы) КАК НачалоРаботы,
+			МАКСИМУМ(ФактическоеРабочееВремяСотрудников.ОкончаниеРаботы) КАК ОкончаниеРаботы,
+			ФактическоеРабочееВремяСотрудников.Смена КАК Смена,
+			ВложенныйЗапрос.Регистратор КАК Регистратор
+		ИЗ
+			РегистрНакопления.ФактическоеРабочееВремяСотрудников КАК ФактическоеРабочееВремяСотрудников
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+					ФактическоеРабочееВремяСотрудников.Регистратор КАК Регистратор,
+					ФактическоеРабочееВремяСотрудников.Период КАК Период,
+					ФактическоеРабочееВремяСотрудников.Магазин КАК Магазин,
+					ФактическоеРабочееВремяСотрудников.Смена КАК Смена,
+					ФактическоеРабочееВремяСотрудников.Сотрудник КАК Сотрудник
+				ИЗ
+					РегистрНакопления.ФактическоеРабочееВремяСотрудников КАК ФактическоеРабочееВремяСотрудников) КАК ВложенныйЗапрос
+				ПО ФактическоеРабочееВремяСотрудников.Магазин = ВложенныйЗапрос.Магазин
+					И ФактическоеРабочееВремяСотрудников.Смена = ВложенныйЗапрос.Смена
+					И ФактическоеРабочееВремяСотрудников.Сотрудник = ВложенныйЗапрос.Сотрудник
+					И ФактическоеРабочееВремяСотрудников.Период = ВложенныйЗапрос.Период
+					И ФактическоеРабочееВремяСотрудников.Регистратор = ВложенныйЗапрос.Регистратор
+		ГДЕ
+			ФактическоеРабочееВремяСотрудников.Период &gt;= &amp;НачалоПериода
+			И (ФактическоеРабочееВремяСотрудников.Период &lt;= &amp;КонецПериода
+					ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0))
+		
+		СГРУППИРОВАТЬ ПО
+			ФактическоеРабочееВремяСотрудников.Сотрудник,
+			НАЧАЛОПЕРИОДА(ФактическоеРабочееВремяСотрудников.Период, ДЕНЬ),
+			ФактическоеРабочееВремяСотрудников.Смена,
+			ВложенныйЗапрос.Регистратор) КАК ФактическоеРабочееВремяСотрудников) КАК ПодЗапрос
+
+СГРУППИРОВАТЬ ПО
+	ПодЗапрос.Сотрудник,
+	ПодЗапрос.Дата,
+	ПодЗапрос.Смена
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	СотрудникДата.Сотрудник.Магазин КАК Магазин,
+	СотрудникДата.Сотрудник,
+	СотрудникДата.Дата КАК Дата,
+	ПланВФакт.Смена,
+	ПланСотрудника.Планируемое КАК ПланируемоеКоличествоЧасов,
+	ФактСотрудника.Фактическое КАК ФактическоеКоличествоЧасов,
+	ПланВФакт.ФактическоеВПланируемое КАК ФактическоеКоличествоЧасовВПланируемоеВремя,
+	ФактСотрудника.Фактическое - ПланВФакт.ФактическоеВПланируемое КАК ФактическоеКоличествоЧасовВнеПланируемогоВремени,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ПланСотрудника.Планируемое, 0) = 0
+			ТОГДА 0
+		ИНАЧЕ (ФактСотрудника.Фактическое - ПланВФакт.ФактическоеВПланируемое) / ПланСотрудника.Планируемое * 100
+	КОНЕЦ КАК ОтношениеВнеПланируемогоВремениКПлановому,
+	ФактСотрудника.Фактическое - ПланСотрудника.Планируемое КАК ОтклонениеФактическиОтработанногоВремениОтПланового,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ПланСотрудника.Планируемое, 0) = 0
+			ТОГДА 0
+		ИНАЧЕ ФактСотрудника.Фактическое / ПланСотрудника.Планируемое * 100
+	КОНЕЦ КАК ОтношениеФактическиОтработанногоВремениКПлановому,
+	ПланВФакт.ФактическоеВПланируемое - ПланСотрудника.Планируемое КАК ОтклонениеФактическиОтработанногоВремениВПланируемоеВремяОтПланового,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ПланСотрудника.Планируемое, 0) = 0
+			ТОГДА 0
+		ИНАЧЕ ПланВФакт.ФактическоеВПланируемое / ПланСотрудника.Планируемое * 100
+	КОНЕЦ КАК ОтношениеФактическиОтработанногоВремениВПланируемоеВремяКПлановому,
+	СотрудникДата.Регистратор
+ИЗ
+	(ВЫБРАТЬ
+		Временная.Сотрудник КАК Сотрудник,
+		Временная.Дата КАК Дата,
+		Временная.Смена КАК Смена,
+		Временная.Регистратор КАК Регистратор
+	ИЗ
+		Временная КАК Временная
+	
+	СГРУППИРОВАТЬ ПО
+		Временная.Сотрудник,
+		Временная.Дата,
+		Временная.Смена,
+		Временная.Регистратор) КАК СотрудникДата
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			СУММА(ЕСТЬNULL(План.Планируемое, 0)) КАК Планируемое,
+			План.Сотрудник КАК Сотрудник,
+			План.Дата КАК Дата,
+			План.Смена КАК Смена
+		ИЗ
+			(ВЫБРАТЬ
+				Временная.Сотрудник КАК Сотрудник,
+				Временная.Дата КАК Дата,
+				МАКСИМУМ(Временная.Планируемое) КАК Планируемое,
+				Временная.Смена КАК Смена
+			ИЗ
+				Временная КАК Временная
+			
+			СГРУППИРОВАТЬ ПО
+				Временная.Сотрудник,
+				Временная.Дата,
+				Временная.НачалоПлан,
+				Временная.КонецПлан,
+				Временная.Смена) КАК План
+		
+		СГРУППИРОВАТЬ ПО
+			План.Сотрудник,
+			План.Дата,
+			План.Смена) КАК ПланСотрудника
+		ПО СотрудникДата.Сотрудник = ПланСотрудника.Сотрудник
+			И СотрудникДата.Дата = ПланСотрудника.Дата
+			И СотрудникДата.Смена = ПланСотрудника.Смена
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			СУММА(ЕСТЬNULL(Факт.Фактическое, 0)) КАК Фактическое,
+			Факт.Сотрудник КАК Сотрудник,
+			Факт.Дата КАК Дата,
+			Факт.Смена КАК Смена
+		ИЗ
+			(ВЫБРАТЬ
+				Временная.Сотрудник КАК Сотрудник,
+				Временная.Дата КАК Дата,
+				Временная.Смена КАК Смена,
+				МАКСИМУМ(Временная.Фактическое) КАК Фактическое
+			ИЗ
+				Временная КАК Временная
+			
+			СГРУППИРОВАТЬ ПО
+				Временная.Сотрудник,
+				Временная.Дата,
+				Временная.НачалоФакт,
+				Временная.КонецФакт,
+				Временная.Смена) КАК Факт
+		
+		СГРУППИРОВАТЬ ПО
+			Факт.Сотрудник,
+			Факт.Дата,
+			Факт.Смена) КАК ФактСотрудника
+		ПО СотрудникДата.Сотрудник = ФактСотрудника.Сотрудник
+			И СотрудникДата.Дата = ФактСотрудника.Дата
+			И СотрудникДата.Смена = ФактСотрудника.Смена
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			Временная.Сотрудник КАК Сотрудник,
+			Временная.Дата КАК Дата,
+			Временная.Смена КАК Смена,
+			СУММА(ЕСТЬNULL(Временная.ФактическоеВПланируемое, 0)) КАК ФактическоеВПланируемое
+		ИЗ
+			Временная КАК Временная
+		
+		СГРУППИРОВАТЬ ПО
+			Временная.Сотрудник,
+			Временная.Дата,
+			Временная.Смена) КАК ПланВФакт
+		ПО СотрудникДата.Сотрудник = ПланВФакт.Сотрудник
+			И СотрудникДата.Дата = ПланВФакт.Дата
+			И СотрудникДата.Смена = ПланВФакт.Смена</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных2</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачалоПлан</dataPath>
+			<field>НачалоПлан</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало смены</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Планируемое</dataPath>
+			<field>Планируемое</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Планируемое</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачалоФакт</dataPath>
+			<field>НачалоФакт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало работы</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачалоРаботы</dataPath>
+			<field>НачалоРаботы</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОкончания</dataPath>
+			<field>ДатаОкончания</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОкончаниеРаботы</dataPath>
+			<field>ОкончаниеРаботы</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонецПлан</dataPath>
+			<field>КонецПлан</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конец смены</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонецФакт</dataPath>
+			<field>КонецФакт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конец работы</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РабочееВремяСотрудников</dataPath>
+			<field>РабочееВремяСотрудников</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Размещение</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Фактическое</dataPath>
+			<field>Фактическое</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фактическое</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Смена</dataPath>
+			<field>Смена</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИнформационнаяБаза</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПодЗапрос.Сотрудник КАК Сотрудник,
+	ПодЗапрос.Дата КАК Дата,
+	ПодЗапрос.Смена,
+	МАКСИМУМ(ПодЗапрос.Период) КАК НачалоПлан,
+	МАКСИМУМ(ПодЗапрос.ДатаОкончания) КАК КонецПлан,
+	МАКСИМУМ(ПодЗапрос.НачалоРаботы) КАК НачалоФакт,
+	МАКСИМУМ(ПодЗапрос.ОкончаниеРаботы) КАК КонецФакт,
+	СУММА(ПодЗапрос.Планируемое) КАК Планируемое,
+	СУММА(ПодЗапрос.Фактическое) КАК Фактическое,
+	МАКСИМУМ(ПодЗапрос.Регистратор) КАК Регистратор
+ИЗ
+	(ВЫБРАТЬ
+		ПланируемоеВремя.Сотрудник КАК Сотрудник,
+		НАЧАЛОПЕРИОДА(ПланируемоеВремя.Период, ДЕНЬ) КАК Дата,
+		ПланируемоеВремя.Период КАК Период,
+		ПланируемоеВремя.ДатаОкончания КАК ДатаОкончания,
+		РАЗНОСТЬДАТ(ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0), ПланируемоеВремя.ДлинаРабочегоВремени, МИНУТА) / 60 КАК Планируемое,
+		ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0) КАК НачалоРаботы,
+		ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0) КАК ОкончаниеРаботы,
+		0 КАК Фактическое,
+		ПланируемоеВремя.ИнтервалРаботыМагазинов КАК Смена,
+		0 КАК Регистратор
+	ИЗ
+		РегистрСведений.ПланируемоеРабочееВремяСотрудников КАК ПланируемоеВремя
+	ГДЕ
+		ПланируемоеВремя.Период &gt;= &amp;НачалоПериода
+		И (ПланируемоеВремя.Период &lt;= &amp;КонецПериода
+				ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0))
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ФактическоеРабочееВремяСотрудников.Сотрудник,
+		НАЧАЛОПЕРИОДА(ФактическоеРабочееВремяСотрудников.НачалоРаботы, ДЕНЬ),
+		ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0),
+		ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0),
+		0,
+		ФактическоеРабочееВремяСотрудников.НачалоРаботы,
+		ФактическоеРабочееВремяСотрудников.ОкончаниеРаботы,
+		ФактическоеРабочееВремяСотрудников.РабочееВремяСотрудников,
+		ФактическоеРабочееВремяСотрудников.Смена,
+		ФактическоеРабочееВремяСотрудников.Регистратор
+	ИЗ
+		(ВЫБРАТЬ
+			НАЧАЛОПЕРИОДА(ФактическоеРабочееВремяСотрудников.Период, ДЕНЬ) КАК Дата,
+			ФактическоеРабочееВремяСотрудников.Сотрудник КАК Сотрудник,
+			СУММА(ФактическоеРабочееВремяСотрудников.РабочееВремяСотрудников) КАК РабочееВремяСотрудников,
+			МИНИМУМ(ФактическоеРабочееВремяСотрудников.НачалоРаботы) КАК НачалоРаботы,
+			МАКСИМУМ(ФактическоеРабочееВремяСотрудников.ОкончаниеРаботы) КАК ОкончаниеРаботы,
+			ФактическоеРабочееВремяСотрудников.Смена КАК Смена,
+			ВложенныйЗапрос.Регистратор КАК Регистратор
+		ИЗ
+			РегистрНакопления.ФактическоеРабочееВремяСотрудников КАК ФактическоеРабочееВремяСотрудников
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+					ФактическоеРабочееВремяСотрудников.Регистратор КАК Регистратор,
+					ФактическоеРабочееВремяСотрудников.Период КАК Период,
+					ФактическоеРабочееВремяСотрудников.Сотрудник КАК Сотрудник
+				ИЗ
+					РегистрНакопления.ФактическоеРабочееВремяСотрудников КАК ФактическоеРабочееВремяСотрудников) КАК ВложенныйЗапрос
+				ПО ФактическоеРабочееВремяСотрудников.Сотрудник = ВложенныйЗапрос.Сотрудник
+					И ФактическоеРабочееВремяСотрудников.Период = ВложенныйЗапрос.Период
+					И ФактическоеРабочееВремяСотрудников.Регистратор = ВложенныйЗапрос.Регистратор
+		ГДЕ
+			ФактическоеРабочееВремяСотрудников.Период &gt;= &amp;НачалоПериода
+			И (ФактическоеРабочееВремяСотрудников.Период &lt;= &amp;КонецПериода
+					ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0))
+		
+		СГРУППИРОВАТЬ ПО
+			ФактическоеРабочееВремяСотрудников.Сотрудник,
+			НАЧАЛОПЕРИОДА(ФактическоеРабочееВремяСотрудников.Период, ДЕНЬ),
+			ФактическоеРабочееВремяСотрудников.Смена,
+			ВложенныйЗапрос.Регистратор) КАК ФактическоеРабочееВремяСотрудников) КАК ПодЗапрос
+
+СГРУППИРОВАТЬ ПО
+	ПодЗапрос.Сотрудник,
+	ПодЗапрос.Дата,
+	ПодЗапрос.Смена</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>НаборДанных2</destinationDataSet>
+		<sourceExpression>Регистратор</sourceExpression>
+		<destinationExpression>Регистратор</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>НаборДанных2</destinationDataSet>
+		<sourceExpression>Дата</sourceExpression>
+		<destinationExpression>Дата</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>НаборДанных2</destinationDataSet>
+		<sourceExpression>Сотрудник</sourceExpression>
+		<destinationExpression>Сотрудник</destinationExpression>
+	</dataSetLink>
+	<calculatedField>
+		<dataPath>ЕстьОтклонение</dataPath>
+		<expression>ВЫБОР КОГДА ОтклонениеФактическиОтработанногоВремениОтПланового &gt; 0 ИЛИ ОтклонениеФактическиОтработанногоВремениОтПланового &lt; 0 ТОГДА Истина ИНАЧЕ Ложь КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Есть отклонение</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<field>true</field>
+			<group>true</group>
+			<order>true</order>
+		</useRestriction>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>МагазинДляОтбора</dataPath>
+		<expression>Сотрудник.Магазин</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Магазин</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<field>true</field>
+			<group>true</group>
+			<order>true</order>
+		</useRestriction>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ОтклонениеФактаОтПлана</dataPath>
+		<expression>ВЫБОР
+		КОГДА ПланируемоеКоличествоЧасов = 0
+			ТОГДА 100
+		ИНАЧЕ ОтклонениеФактическиОтработанногоВремениОтПланового / ПланируемоеКоличествоЧасов*100
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Отклонение факта от плана (%)</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<condition>true</condition>
+			<group>true</group>
+			<order>true</order>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+				<dcscor:value xsi:type="xs:decimal">18</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<totalField>
+		<dataPath>ОтклонениеФактическиОтработанногоВремениВПланируемоеВремяОтПланового</dataPath>
+		<expression>Сумма(ОтклонениеФактическиОтработанногоВремениВПланируемоеВремяОтПланового)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОтклонениеФактическиОтработанногоВремениОтПланового</dataPath>
+		<expression>Сумма(ОтклонениеФактическиОтработанногоВремениОтПланового)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОтношениеВнеПланируемогоВремениКПлановому</dataPath>
+		<expression>Среднее(ОтношениеВнеПланируемогоВремениКПлановому)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОтношениеФактическиОтработанногоВремениВПланируемоеВремяКПлановому</dataPath>
+		<expression>Среднее(ОтношениеФактическиОтработанногоВремениВПланируемоеВремяКПлановому)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОтношениеФактическиОтработанногоВремениКПлановому</dataPath>
+		<expression>Среднее(ОтношениеФактическиОтработанногоВремениКПлановому)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПланируемоеКоличествоЧасов</dataPath>
+		<expression>Сумма(ПланируемоеКоличествоЧасов)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФактическоеКоличествоЧасов</dataPath>
+		<expression>Сумма(ФактическоеКоличествоЧасов)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФактическоеКоличествоЧасовВнеПланируемогоВремени</dataPath>
+		<expression>Сумма(ФактическоеКоличествоЧасовВнеПланируемогоВремени)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФактическоеКоличествоЧасовВПланируемоеВремя</dataPath>
+		<expression>Сумма(ФактическоеКоличествоЧасовВПланируемоеВремя)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НачалоПлан</dataPath>
+		<expression>НачалоПлан</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КонецПлан</dataPath>
+		<expression>КонецПлан</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НачалоФакт</dataPath>
+		<expression>НачалоФакт</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КонецФакт</dataPath>
+		<expression>КонецФакт</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОтклонениеФактаОтПлана</dataPath>
+		<expression>ВычислитьВыражение("ВЫБОР
+        КОГДА ПланируемоеКоличествоЧасов = 0
+            ТОГДА 100
+        ИНАЧЕ Сумма(ОтклонениеФактическиОтработанногоВремениОтПланового) / Сумма(ПланируемоеКоличествоЧасов)*100
+КОНЕЦ", "", "Группировка")</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЕстьОтклонение</dataPath>
+		<expression>ВычислитьВыражение("ВЫБОР КОГДА Сумма(ОтклонениеФактическиОтработанногоВремениОтПланового) &gt; 0 ИЛИ Сумма(ОтклонениеФактическиОтработанногоВремениОтПланового) &lt; 0 ТОГДА Истина ИНАЧЕ Ложь КОНЕЦ", "", "Группировка")</expression>
+	</totalField>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+		<inputParameters>
+			<dcscor:item>
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>БыстрыйВыбор</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</inputParameters>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>План/Факт по рабочему времени сотрудников</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПланируемоеКоличествоЧасов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ФактическоеКоличествоЧасов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ФактическоеКоличествоЧасовВПланируемоеВремя</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ФактическоеКоличествоЧасовВнеПланируемогоВремени</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ОтношениеВнеПланируемогоВремениКПлановому</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОтклонениеФактическиОтработанногоВремениОтПланового</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ОтношениеФактическиОтработанногоВремениКПлановому</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ОтклонениеФактическиОтработанногоВремениВПланируемоеВремяОтПланового</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ОтношениеФактическиОтработанногоВремениВПланируемоеВремяКПлановому</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОтклонениеФактаОтПлана</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Сотрудник</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ФизическиеЛица.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>2c6dd36b-357d-4f8c-8a6f-a736defffec2</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">ЕстьОтклонение</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть отклонение</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:userSettingID>87769c5c-e867-4890-abba-3112f772319f</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">МагазинДляОтбора</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Магазины.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>ebe069c3-c6c2-411c-a85e-5e993873aa4f</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Смена</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>4fdea479-b1f4-4472-8766-7977c024bf2d</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>62ddee7c-ecbf-490d-9cf1-87291c27cee6</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ПланируемоеКоличествоЧасов</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Дата</dcsset:left>
+							<dcsset:comparisonType>Filled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:FieldAlternativeBackColor</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ОтношениеФактическиОтработанногоВремениВПланируемоеВремяКПлановому</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ОтношениеФактическиОтработанногоВремениКПлановому</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Дата</dcsset:left>
+							<dcsset:comparisonType>Filled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">web:AliceBlue</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ОтклонениеФактическиОтработанногоВремениОтПланового</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ОтклонениеФактаОтПлана</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="xs:string"/>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInGroup>DontUse</dcsset:useInGroup>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Смена</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Смена</dcsset:left>
+							<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:ЦветНедоступногоТекста</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;Смена не указана&gt;</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Sea</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>План/Факт по рабочему времени сотрудников</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Сотрудник</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Смена</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:row>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>ПланФактДетальный</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Детально</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>План/Факт</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПланируемоеКоличествоЧасов</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ФактическоеКоличествоЧасов</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Horizontally</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Плановое время в смене</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НачалоПлан</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КонецПлан</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Horizontally</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фактическое время отчета</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НачалоФакт</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КонецФакт</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Horizontally</dcsset:placement>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>2d7530fc-0fe8-4645-98c2-dc4abb90429b</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>НачалоПлан</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>КонецПлан</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>НачалоФакт</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>КонецФакт</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="xs:string"/>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInGroup>DontUse</dcsset:useInGroup>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Регистратор</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">40</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Дата</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Регистратор</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

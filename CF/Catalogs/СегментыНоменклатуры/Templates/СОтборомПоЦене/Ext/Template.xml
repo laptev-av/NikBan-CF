@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>СписокСегмента</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭлементСписка</dataPath>
+			<field>ЭлементСписка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаЭлемента</dataPath>
+			<field>ХарактеристикаЭлемента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цена</dataPath>
+			<field>Цена</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Магазины.Ссылка КАК Магазин
+ПОМЕСТИТЬ втМагазиныСПрименениемЦен
+ИЗ
+	Справочник.Магазины КАК Магазины
+ГДЕ
+	&amp;ИспользоватьПрименениеЦен
+	И Магазины.ИспользоватьПрименениеЦен
+	И Магазины.Ссылка = &amp;Магазин
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Магазины.Ссылка КАК Магазин,
+	Магазины.ФорматМагазина КАК ФорматМагазина
+ПОМЕСТИТЬ втМагазиныСАссортиментом
+ИЗ
+	Справочник.Магазины КАК Магазины
+ГДЕ
+	Магазины.КонтролироватьАссортимент
+	И НЕ(&amp;ИспользоватьПрименениеЦен
+				И Магазины.ИспользоватьПрименениеЦен)
+	И Магазины.Ссылка = &amp;Магазин
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Магазины.Ссылка КАК Магазин,
+	Магазины.ПравилоЦенообразования КАК ПравилоЦенообразования,
+	Магазины.ПравилоЦенообразования.ВидЦен КАК ВидЦены
+ПОМЕСТИТЬ втМагазиныОбычные
+ИЗ
+	Справочник.Магазины КАК Магазины
+ГДЕ
+	НЕ Магазины.КонтролироватьАссортимент
+	И НЕ(&amp;ИспользоватьПрименениеЦен
+				И Магазины.ИспользоватьПрименениеЦен)
+	И Магазины.Ссылка = &amp;Магазин
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	МагазиныОбычные.Магазин КАК Магазин,
+	ПравилаЦенообразованияЦеновыеГруппы.ЦеноваяГруппа КАК ЦеноваяГруппа,
+	ПравилаЦенообразованияЦеновыеГруппы.ВидЦен КАК ВидЦены
+ПОМЕСТИТЬ втПравилаОбычныхМагазинов
+ИЗ
+	Справочник.ПравилаЦенообразования.ЦеновыеГруппы КАК ПравилаЦенообразованияЦеновыеГруппы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ втМагазиныОбычные КАК МагазиныОбычные
+		ПО (МагазиныОбычные.ПравилоЦенообразования = ПравилаЦенообразованияЦеновыеГруппы.Ссылка)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДействующиеЦены.ОбъектЦенообразования КАК Магазин,
+	ДействующиеЦены.Номенклатура КАК Номенклатура,
+	ДействующиеЦены.Характеристика КАК Характеристика,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ДействующиеЦены.Упаковка.Коэффициент, 0) = 0
+			ТОГДА ДействующиеЦены.Цена
+		ИНАЧЕ ВЫРАЗИТЬ(ДействующиеЦены.Цена / ДействующиеЦены.Упаковка.Коэффициент КАК ЧИСЛО(15, 2))
+	КОНЕЦ КАК Цена
+ПОМЕСТИТЬ втЦеныДействующие
+ИЗ
+	РегистрСведений.ДействующиеЦеныНоменклатуры.СрезПоследних(
+			&amp;Период,
+			ОбъектЦенообразования В
+				(ВЫБРАТЬ
+					Т.Магазин
+				ИЗ
+					втМагазиныСПрименениемЦен КАК Т)) КАК ДействующиеЦены
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Ассортимент.Номенклатура КАК Номенклатура,
+	МагазиныСАссортиментом.Магазин КАК Магазин,
+	Ассортимент.ВидЦен КАК ВидЦен
+ПОМЕСТИТЬ втАссортимент
+ИЗ
+	РегистрСведений.Ассортимент.СрезПоследних(
+			&amp;Период,
+			ОбъектПланирования В
+				(ВЫБРАТЬ РАЗЛИЧНЫЕ
+					Т.ФорматМагазина
+				ИЗ
+					втМагазиныСАссортиментом КАК Т)) КАК Ассортимент
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ втМагазиныСАссортиментом КАК МагазиныСАссортиментом
+		ПО (МагазиныСАссортиментом.ФорматМагазина = Ассортимент.ОбъектПланирования)
+ГДЕ
+	Ассортимент.РазрешеныЗакупки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Ассортимент.Магазин КАК Магазин,
+	Ассортимент.Номенклатура КАК Номенклатура,
+	ЦеныНоменклатуры.Характеристика КАК Характеристика,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ЦеныНоменклатуры.Упаковка.Коэффициент, 0) = 0
+			ТОГДА ЦеныНоменклатуры.Цена
+		ИНАЧЕ ВЫРАЗИТЬ(ЦеныНоменклатуры.Цена / ЦеныНоменклатуры.Упаковка.Коэффициент КАК ЧИСЛО(15, 2))
+	КОНЕЦ КАК Цена
+ПОМЕСТИТЬ втЦеныАссортиментные
+ИЗ
+	втАссортимент КАК Ассортимент
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ЦеныНоменклатуры.СрезПоследних(
+				&amp;Период,
+				ВидЦены В
+					(ВЫБРАТЬ РАЗЛИЧНЫЕ
+						Т.ВидЦен
+					ИЗ
+						втАссортимент КАК Т)) КАК ЦеныНоменклатуры
+		ПО Ассортимент.Номенклатура = ЦеныНоменклатуры.Номенклатура
+			И Ассортимент.ВидЦен = ЦеныНоменклатуры.ВидЦены
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТаблицаТовары.Ссылка КАК Номенклатура,
+	МагазиныОбычные.Магазин КАК Магазин,
+	ЕСТЬNULL(ПравилаОбычныхМагазинов.ВидЦены, МагазиныОбычные.ВидЦены) КАК ВидЦены
+ПОМЕСТИТЬ втВидыЦенПоПравилам
+ИЗ
+	Справочник.Номенклатура КАК ТаблицаТовары
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ втМагазиныОбычные КАК МагазиныОбычные
+		ПО (ИСТИНА)
+		ЛЕВОЕ СОЕДИНЕНИЕ втПравилаОбычныхМагазинов КАК ПравилаОбычныхМагазинов
+		ПО (ПравилаОбычныхМагазинов.Магазин = МагазиныОбычные.Магазин)
+			И (ПравилаОбычныхМагазинов.ЦеноваяГруппа = ТаблицаТовары.ЦеноваяГруппа)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВидыЦенПоПравилам.Магазин КАК Магазин,
+	ВидыЦенПоПравилам.Номенклатура КАК Номенклатура,
+	ЦеныНоменклатуры.Характеристика КАК Характеристика,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ЦеныНоменклатуры.Упаковка.Коэффициент, 0) = 0
+			ТОГДА ЦеныНоменклатуры.Цена
+		ИНАЧЕ ВЫРАЗИТЬ(ЦеныНоменклатуры.Цена / ЦеныНоменклатуры.Упаковка.Коэффициент КАК ЧИСЛО(15, 2))
+	КОНЕЦ КАК Цена
+ПОМЕСТИТЬ втЦеныПравильные
+ИЗ
+	втВидыЦенПоПравилам КАК ВидыЦенПоПравилам
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ЦеныНоменклатуры.СрезПоследних(
+				&amp;Период,
+				ВидЦены В
+					(ВЫБРАТЬ РАЗЛИЧНЫЕ
+						Т.ВидЦены
+					ИЗ
+						втВидыЦенПоПравилам КАК Т)) КАК ЦеныНоменклатуры
+		ПО (ЦеныНоменклатуры.ВидЦены = ВидыЦенПоПравилам.ВидЦены)
+			И (ЦеныНоменклатуры.Номенклатура = ВидыЦенПоПравилам.Номенклатура)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Подзапрос.Магазин КАК Магазин,
+	Подзапрос.Номенклатура КАК Номенклатура,
+	Подзапрос.Характеристика КАК Характеристика,
+	Подзапрос.Цена КАК Цена
+ПОМЕСТИТЬ РозничныеЦены
+ИЗ
+	(ВЫБРАТЬ
+		ЦеныПравильные.Магазин КАК Магазин,
+		ЦеныПравильные.Номенклатура КАК Номенклатура,
+		ЦеныПравильные.Характеристика КАК Характеристика,
+		ЦеныПравильные.Цена КАК Цена
+	ИЗ
+		втЦеныПравильные КАК ЦеныПравильные
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЦеныАссортиментные.Магазин,
+		ЦеныАссортиментные.Номенклатура,
+		ЦеныАссортиментные.Характеристика,
+		ЦеныАссортиментные.Цена
+	ИЗ
+		втЦеныАссортиментные КАК ЦеныАссортиментные
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЦеныДействующие.Магазин,
+		ЦеныДействующие.Номенклатура,
+		ЦеныДействующие.Характеристика,
+		ЦеныДействующие.Цена
+	ИЗ
+		втЦеныДействующие КАК ЦеныДействующие) КАК Подзапрос
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Подзапрос.Номенклатура КАК ЭлементСписка,
+	Подзапрос.Характеристика КАК ХарактеристикаЭлемента,
+	ВЫРАЗИТЬ(РозничныеЦены.Цена КАК ЧИСЛО(15, 2)) КАК Цена
+ИЗ
+	(ВЫБРАТЬ
+		Номенклатура.Ссылка КАК Номенклатура,
+		ХарактеристикиНоменклатуры.Ссылка КАК Характеристика
+	ИЗ
+		Справочник.Номенклатура КАК Номенклатура
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ХарактеристикиНоменклатуры КАК ХарактеристикиНоменклатуры
+			ПО (ХарактеристикиНоменклатуры.Владелец = Номенклатура.Ссылка)
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		Номенклатура.Ссылка,
+		ХарактеристикиНоменклатуры.Ссылка
+	ИЗ
+		Справочник.Номенклатура КАК Номенклатура
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ХарактеристикиНоменклатуры КАК ХарактеристикиНоменклатуры
+			ПО (ХарактеристикиНоменклатуры.Владелец = Номенклатура.ВидНоменклатуры)
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		Номенклатура.Ссылка,
+		ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)
+	ИЗ
+		Справочник.Номенклатура КАК Номенклатура) КАК Подзапрос
+		ЛЕВОЕ СОЕДИНЕНИЕ РозничныеЦены КАК РозничныеЦены
+		ПО Подзапрос.Номенклатура = РозничныеЦены.Номенклатура
+			И Подзапрос.Характеристика = РозничныеЦены.Характеристика
+			И РозничныеЦены.Магазин = &amp;Магазин</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>ПоляСегмента</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Характеристика</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Цена</dataPath>
+			<field>Цена</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=15; ЧДЦ=2</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Магазины.Ссылка КАК Магазин
+ПОМЕСТИТЬ втМагазиныСПрименениемЦен
+ИЗ
+	Справочник.Магазины КАК Магазины
+ГДЕ
+	&amp;ИспользоватьПрименениеЦен
+	И Магазины.ИспользоватьПрименениеЦен
+	И Магазины.Ссылка = &amp;Магазин
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Магазины.Ссылка КАК Магазин,
+	Магазины.ФорматМагазина КАК ФорматМагазина
+ПОМЕСТИТЬ втМагазиныСАссортиментом
+ИЗ
+	Справочник.Магазины КАК Магазины
+ГДЕ
+	Магазины.КонтролироватьАссортимент
+	И НЕ(&amp;ИспользоватьПрименениеЦен
+				И Магазины.ИспользоватьПрименениеЦен)
+	И Магазины.Ссылка = &amp;Магазин
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Магазины.Ссылка КАК Магазин,
+	Магазины.ПравилоЦенообразования КАК ПравилоЦенообразования,
+	Магазины.ПравилоЦенообразования.ВидЦен КАК ВидЦены
+ПОМЕСТИТЬ втМагазиныОбычные
+ИЗ
+	Справочник.Магазины КАК Магазины
+ГДЕ
+	НЕ Магазины.КонтролироватьАссортимент
+	И НЕ(&amp;ИспользоватьПрименениеЦен
+				И Магазины.ИспользоватьПрименениеЦен)
+	И Магазины.Ссылка = &amp;Магазин
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	МагазиныОбычные.Магазин КАК Магазин,
+	ПравилаЦенообразованияЦеновыеГруппы.ЦеноваяГруппа КАК ЦеноваяГруппа,
+	ПравилаЦенообразованияЦеновыеГруппы.ВидЦен КАК ВидЦены
+ПОМЕСТИТЬ втПравилаОбычныхМагазинов
+ИЗ
+	Справочник.ПравилаЦенообразования.ЦеновыеГруппы КАК ПравилаЦенообразованияЦеновыеГруппы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ втМагазиныОбычные КАК МагазиныОбычные
+		ПО (МагазиныОбычные.ПравилоЦенообразования = ПравилаЦенообразованияЦеновыеГруппы.Ссылка)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ДействующиеЦены.ОбъектЦенообразования КАК Магазин,
+	ДействующиеЦены.Номенклатура КАК Номенклатура,
+	ДействующиеЦены.Характеристика КАК Характеристика,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ДействующиеЦены.Упаковка.Коэффициент, 0) = 0
+			ТОГДА ДействующиеЦены.Цена
+		ИНАЧЕ ВЫРАЗИТЬ(ДействующиеЦены.Цена / ДействующиеЦены.Упаковка.Коэффициент КАК ЧИСЛО(15, 2))
+	КОНЕЦ КАК Цена
+ПОМЕСТИТЬ втЦеныДействующие
+ИЗ
+	РегистрСведений.ДействующиеЦеныНоменклатуры.СрезПоследних(
+			&amp;Период,
+			ОбъектЦенообразования В
+				(ВЫБРАТЬ
+					Т.Магазин
+				ИЗ
+					втМагазиныСПрименениемЦен КАК Т)) КАК ДействующиеЦены
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Ассортимент.Номенклатура КАК Номенклатура,
+	МагазиныСАссортиментом.Магазин КАК Магазин,
+	Ассортимент.ВидЦен КАК ВидЦен
+ПОМЕСТИТЬ втАссортимент
+ИЗ
+	РегистрСведений.Ассортимент.СрезПоследних(
+			&amp;Период,
+			ОбъектПланирования В
+				(ВЫБРАТЬ РАЗЛИЧНЫЕ
+					Т.ФорматМагазина
+				ИЗ
+					втМагазиныСАссортиментом КАК Т)) КАК Ассортимент
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ втМагазиныСАссортиментом КАК МагазиныСАссортиментом
+		ПО (МагазиныСАссортиментом.ФорматМагазина = Ассортимент.ОбъектПланирования)
+ГДЕ
+	Ассортимент.РазрешеныЗакупки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Ассортимент.Магазин КАК Магазин,
+	Ассортимент.Номенклатура КАК Номенклатура,
+	ЦеныНоменклатуры.Характеристика КАК Характеристика,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ЦеныНоменклатуры.Упаковка.Коэффициент, 0) = 0
+			ТОГДА ЦеныНоменклатуры.Цена
+		ИНАЧЕ ВЫРАЗИТЬ(ЦеныНоменклатуры.Цена / ЦеныНоменклатуры.Упаковка.Коэффициент КАК ЧИСЛО(15, 2))
+	КОНЕЦ КАК Цена
+ПОМЕСТИТЬ втЦеныАссортиментные
+ИЗ
+	втАссортимент КАК Ассортимент
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ЦеныНоменклатуры.СрезПоследних(
+				&amp;Период,
+				ВидЦены В
+					(ВЫБРАТЬ РАЗЛИЧНЫЕ
+						Т.ВидЦен
+					ИЗ
+						втАссортимент КАК Т)) КАК ЦеныНоменклатуры
+		ПО Ассортимент.Номенклатура = ЦеныНоменклатуры.Номенклатура
+			И Ассортимент.ВидЦен = ЦеныНоменклатуры.ВидЦены
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТаблицаТовары.Ссылка КАК Номенклатура,
+	МагазиныОбычные.Магазин КАК Магазин,
+	ЕСТЬNULL(ПравилаОбычныхМагазинов.ВидЦены, МагазиныОбычные.ВидЦены) КАК ВидЦены
+ПОМЕСТИТЬ втВидыЦенПоПравилам
+ИЗ
+	Справочник.Номенклатура КАК ТаблицаТовары
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ втМагазиныОбычные КАК МагазиныОбычные
+		ПО (ИСТИНА)
+		ЛЕВОЕ СОЕДИНЕНИЕ втПравилаОбычныхМагазинов КАК ПравилаОбычныхМагазинов
+		ПО (ПравилаОбычныхМагазинов.Магазин = МагазиныОбычные.Магазин)
+			И (ПравилаОбычныхМагазинов.ЦеноваяГруппа = ТаблицаТовары.ЦеноваяГруппа)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВидыЦенПоПравилам.Магазин КАК Магазин,
+	ВидыЦенПоПравилам.Номенклатура КАК Номенклатура,
+	ЦеныНоменклатуры.Характеристика КАК Характеристика,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ЦеныНоменклатуры.Упаковка.Коэффициент, 0) = 0
+			ТОГДА ЦеныНоменклатуры.Цена
+		ИНАЧЕ ВЫРАЗИТЬ(ЦеныНоменклатуры.Цена / ЦеныНоменклатуры.Упаковка.Коэффициент КАК ЧИСЛО(15, 2))
+	КОНЕЦ КАК Цена
+ПОМЕСТИТЬ втЦеныПравильные
+ИЗ
+	втВидыЦенПоПравилам КАК ВидыЦенПоПравилам
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ЦеныНоменклатуры.СрезПоследних(
+				&amp;Период,
+				ВидЦены В
+					(ВЫБРАТЬ РАЗЛИЧНЫЕ
+						Т.ВидЦены
+					ИЗ
+						втВидыЦенПоПравилам КАК Т)) КАК ЦеныНоменклатуры
+		ПО (ЦеныНоменклатуры.ВидЦены = ВидыЦенПоПравилам.ВидЦены)
+			И (ЦеныНоменклатуры.Номенклатура = ВидыЦенПоПравилам.Номенклатура)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Подзапрос.Магазин КАК Магазин,
+	Подзапрос.Номенклатура КАК Номенклатура,
+	Подзапрос.Характеристика КАК Характеристика,
+	Подзапрос.Цена КАК Цена
+ПОМЕСТИТЬ РозничныеЦены
+ИЗ
+	(ВЫБРАТЬ
+		ЦеныПравильные.Магазин КАК Магазин,
+		ЦеныПравильные.Номенклатура КАК Номенклатура,
+		ЦеныПравильные.Характеристика КАК Характеристика,
+		ЦеныПравильные.Цена КАК Цена
+	ИЗ
+		втЦеныПравильные КАК ЦеныПравильные
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЦеныАссортиментные.Магазин,
+		ЦеныАссортиментные.Номенклатура,
+		ЦеныАссортиментные.Характеристика,
+		ЦеныАссортиментные.Цена
+	ИЗ
+		втЦеныАссортиментные КАК ЦеныАссортиментные
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЦеныДействующие.Магазин,
+		ЦеныДействующие.Номенклатура,
+		ЦеныДействующие.Характеристика,
+		ЦеныДействующие.Цена
+	ИЗ
+		втЦеныДействующие КАК ЦеныДействующие) КАК Подзапрос
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Подзапрос.Номенклатура КАК Номенклатура,
+	Подзапрос.Характеристика КАК Характеристика,
+	ВЫРАЗИТЬ(РозничныеЦены.Цена КАК ЧИСЛО(15, 2)) КАК Цена
+ИЗ
+	(ВЫБРАТЬ
+		Номенклатура.Ссылка КАК Номенклатура,
+		ХарактеристикиНоменклатуры.Ссылка КАК Характеристика
+	ИЗ
+		Справочник.Номенклатура КАК Номенклатура
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ХарактеристикиНоменклатуры КАК ХарактеристикиНоменклатуры
+			ПО (ХарактеристикиНоменклатуры.Владелец = Номенклатура.Ссылка)
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		Номенклатура.Ссылка,
+		ХарактеристикиНоменклатуры.Ссылка
+	ИЗ
+		Справочник.Номенклатура КАК Номенклатура
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ХарактеристикиНоменклатуры КАК ХарактеристикиНоменклатуры
+			ПО (ХарактеристикиНоменклатуры.Владелец = Номенклатура.ВидНоменклатуры)
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		Номенклатура.Ссылка,
+		ЗНАЧЕНИЕ(Справочник.ХарактеристикиНоменклатуры.ПустаяСсылка)
+	ИЗ
+		Справочник.Номенклатура КАК Номенклатура) КАК Подзапрос
+		ЛЕВОЕ СОЕДИНЕНИЕ РозничныеЦены КАК РозничныеЦены
+		ПО Подзапрос.Номенклатура = РозничныеЦены.Номенклатура
+			И Подзапрос.Характеристика = РозничныеЦены.Характеристика
+			И РозничныеЦены.Магазин = &amp;Магазин</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>СписокСегмента</sourceDataSet>
+		<destinationDataSet>ПоляСегмента</destinationDataSet>
+		<sourceExpression>ЭлементСписка</sourceExpression>
+		<destinationExpression>Номенклатура</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>СписокСегмента</sourceDataSet>
+		<destinationDataSet>ПоляСегмента</destinationDataSet>
+		<sourceExpression>ХарактеристикаЭлемента</sourceExpression>
+		<destinationExpression>Характеристика</destinationExpression>
+	</dataSetLink>
+	<totalField>
+		<dataPath>Цена</dataPath>
+		<expression>Максимум(Цена)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>КонецПериода(ТекущаяДата(),"День")</expression>
+		<availableAsField>false</availableAsField>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ИспользоватьПрименениеЦен</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Использовать применение цен</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Магазин</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Магазин</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Магазины</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+		<denyIncompleteValues>true</denyIncompleteValues>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Характеристика</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Цена</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура.Артикул</dcsset:field>
+					<dcsset:title>Артикул </dcsset:title>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура.ЕдиницаИзмерения</dcsset:field>
+					<dcsset:title>Единица измерения</dcsset:title>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура.ЦеноваяГруппа</dcsset:field>
+					<dcsset:title>Ценовая группа</dcsset:title>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура.ТипНоменклатуры</dcsset:field>
+					<dcsset:title>Тип номенклатуры</dcsset:title>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура.НаименованиеПолное</dcsset:field>
+					<dcsset:title>Полное наименование</dcsset:title>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">ЭлементСписка.ЭтоГруппа</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">ЭлементСписка.ПометкаУдаления</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Цена</dcsset:left>
+					<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Магазин</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Номенклатура.ВидНоменклатуры</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Номенклатура</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">web:DarkBlue</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="false" italic="false" underline="true" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Номенклатура</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Характеристика</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>Список</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Список</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Характеристика</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Цена</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Магазин</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>3553dfd2-136a-4f16-9703-9c54ac212aa5</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Номенклатура</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Характеристика</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

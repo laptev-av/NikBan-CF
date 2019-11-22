@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Subsystem uuid="fac6ab46-a5ca-4f2d-8012-17995fd10d13">
+		<Properties>
+			<Name>РозничныеПродажи</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Розничные продажи</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтчетОРозничныхПродажах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЧекККМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаОтПокупателяПлатежнойКартой</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СводныйОтчетПоКассовойСмене</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РозничныеПродажиСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОстаткиИДвиженияДенежныхСредствВКассахККМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоЧекам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ЗакрытиеКассовойСмены</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СтатистикаЧеков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СтатистикаЧековПоДнямНедели</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СтатистикаЧековПоЧасам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПродажиПоДисконтнымКартамЧека</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УдалитьКассоваяСмена</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ОбменСПодключаемымОборудованием</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ОбменСПодключаемымОборудованием</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.РМКУправляемыйРежим</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ДенежныеСредстваККМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкаРМКНаКомпьютере</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВнесениеДенежныхСредствВКассуККМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВыемкаДенежныхСредствИзКассыККМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ФормаРМКУправляемаяИнформацииОбОшибке</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.КонтрагентРозничныйПокупатель</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыОперацийЧекККМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыКассовойСмены</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыЧековККМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыКассККМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыОплатЧекаККМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТочкиВыдачиСообщенияКассиру</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьЛогированиеДействийКассираВРМК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыДействийКассираВРМК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЛогированиеДействийКассира</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗаказПокупателя</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ЗаказыПокупателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьЗаказыПокупателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьРезервированиеПоЗаказамПокупателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьРезервированиеПоЗаказамПокупателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьЗаказыПокупателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыЗаказовПокупателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СостоянияЗаказовПокупателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.МетодыРасчетаПотребности</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьПричиныОтменыЗаказовПокупателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьПричиныОтменыЗаказовПокупателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПричиныОтменыЗаказовПокупателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОстаткиПоЗаказу</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗаказыПокупателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПричиныОтменыЗаказовПокупателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЛогДействийКассираВРМК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьЛогированиеДействийКассираВРМК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьОбменССайтомРТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПечатьФискальныхЧеков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РозничныеПродажиВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РозничныеПродажиКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеЗаказовПокупателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеКассовыхСмен</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеОтчетовОРозничныхПродажах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеПродажиПоПлатежнымКартам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеСводныхОтчетовПоКассовойСмене</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеЧековККМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПодсистемаПродажиРозничныеПродажи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеЗаказовПокупателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеКассовыхСмен</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеОтчетовОРозничныхПродажах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеПродажиПоПлатежнымКартам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеСводныхОтчетовПоКассовойСмене</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеЧековККМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.СхемаКомпоновкиПодбораРМК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.СхемаКомпоновкиПодбораРМКАссортимент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМК_Enter</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМК_Стереть</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМК_Сторно</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМК_ТочкаКалькулятора</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМК_Цифра0</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМК_Цифра1</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМК_Цифра2</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМК_Цифра3</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМК_Цифра4</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМК_Цифра5</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМК_Цифра6</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМК_Цифра7</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМК_Цифра8</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМК_Цифра9</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМКЗавершениеРаботы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМКЗакрытиеСмены</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМКЗакрыть</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМКНастройкаРМК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМКОбменДанными</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМКОткрытиеСмены</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМКОтчетБезГашения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМКРегистрацияПродаж</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РМКСводныйОтчет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Чек</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЧекАннулированный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЧекАннулированныйУдаленный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЧекАрхивный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЧекАрхивныйУдаленный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЧекОтложенный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЧекОтложенныйУдаленный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЧекПробитый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЧекПробитыйУдаленный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЧекТекущий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЧекТекущийУдаленный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЧекУдаленный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ФормаРабочегоМестаКассира</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ОткрытиеКассовойСмены</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПомощникНастройкиКассовогоМеста</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыВыемкиПриЗакрытииСмены</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КассоваяДисциплинаВыемкиПриЗакрытииСмены</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЖурналУчетаПродажиАлкогольнойПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПалитраБыстрыхТоваровПрисоединенныеФайлы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ДатаНачалаПримененияПриказа164</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КассоваяСмена</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЖурналУчетаВыданныхПокупателюДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.РМКУправляемыйРежим</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.КоличествоДнейХраненияОтложенныхЧеков</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

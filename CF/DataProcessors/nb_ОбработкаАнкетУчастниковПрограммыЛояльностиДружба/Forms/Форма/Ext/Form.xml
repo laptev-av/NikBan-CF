@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКомандаВыполнитьПроверкуНовогоПользователя" id="109">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаВыполнитьПроверкуНовогоПользователя</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.Важно</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаКомандаВыполнитьПроверкуНовогоПользователяРасширеннаяПодсказка" id="110"/>
+			</Button>
+			<Button name="ФормаВыполнитьРегистрацию" id="61">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаВыполнитьРегистрацию</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.Важно</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаВыполнитьРегистрациюРасширеннаяПодсказка" id="62"/>
+			</Button>
+			<Button name="ФормаКомандаНачислитьБонус" id="111">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаНачислитьБонус</CommandName>
+				<ExtendedTooltip name="ФормаКомандаНачислитьБонусРасширеннаяПодсказка" id="112"/>
+			</Button>
+			<Button name="ФормаКомандаНоваяАнкета" id="68">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаНоваяАнкета</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.СинхронизацияДанныхВыполнение</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаКомандаНоваяАнкетаРасширеннаяПодсказка" id="69"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ДатаРегистрации" id="58">
+			<DataPath>Объект.nb_ДатаРегистрации</DataPath>
+			<ContextMenu name="ДатаРегистрацииКонтекстноеМеню" id="59"/>
+			<ExtendedTooltip name="ДатаРегистрацииРасширеннаяПодсказка" id="60"/>
+		</InputField>
+		<UsualGroup name="ГруппаБанныйКод" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Банный код</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа банный код</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаБанныйКодРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаБК" id="63">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа БК</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа БК</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>StrongSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаБКРасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<InputField name="nb_БК" id="1">
+							<DataPath>Объект.nb_БК</DataPath>
+							<ContextMenu name="nb_БККонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="nb_БКРасширеннаяПодсказка" id="3"/>
+							<Events>
+								<Event name="OnChange">nb_БКПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Клиент" id="65">
+							<DataPath>Объект.Клиент</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<SkipOnInput>true</SkipOnInput>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="КлиентКонтекстноеМеню" id="66"/>
+							<ExtendedTooltip name="КлиентРасширеннаяПодсказка" id="67"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаРекомендующий" id="70">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кто порекомендовал</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа рекомендующий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаРекомендующийРасширеннаяПодсказка" id="71"/>
+					<ChildItems>
+						<InputField name="БКРекомендателя" id="4">
+							<DataPath>Объект.Рекомендатель_БК</DataPath>
+							<SkipOnInput>true</SkipOnInput>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БК</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="БКРекомендателяКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="БКРекомендателяРасширеннаяПодсказка" id="6"/>
+							<Events>
+								<Event name="OnChange">БКРекомендателяПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Рекомендатель" id="72">
+							<DataPath>Объект.Рекомендатель</DataPath>
+							<SkipOnInput>true</SkipOnInput>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="РекомендательКонтекстноеМеню" id="73"/>
+							<ExtendedTooltip name="РекомендательРасширеннаяПодсказка" id="74"/>
+							<Events>
+								<Event name="OnChange">РекомендательПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="ПервоеПосещение" id="75">
+			<DataPath>Объект.ПервоеПосещение</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПервоеПосещениеКонтекстноеМеню" id="76"/>
+			<ExtendedTooltip name="ПервоеПосещениеРасширеннаяПодсказка" id="77"/>
+			<Events>
+				<Event name="OnChange">ПервоеПосещениеПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаФИО" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фамилия Имя Отчество</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ФИО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаФИОРасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<InputField name="Фамилия" id="11">
+					<DataPath>Объект.Фамилия</DataPath>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ФамилияКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ФамилияРасширеннаяПодсказка" id="13"/>
+				</InputField>
+				<InputField name="Имя" id="14">
+					<DataPath>Объект.Имя</DataPath>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ИмяКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ИмяРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="Отчество" id="17">
+					<DataPath>Объект.Отчество</DataPath>
+					<ContextMenu name="ОтчествоКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ОтчествоРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="ДатаРождения" id="55">
+					<DataPath>Объект.ДатаРождения</DataPath>
+					<ContextMenu name="ДатаРожденияКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ДатаРожденияРасширеннаяПодсказка" id="57"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Пол" id="41">
+			<DataPath>Объект.Пол</DataPath>
+			<ContextMenu name="ПолКонтекстноеМеню" id="42"/>
+			<ExtendedTooltip name="ПолРасширеннаяПодсказка" id="43"/>
+		</InputField>
+		<InputField name="nb_РайонПроживания" id="38">
+			<DataPath>Объект.nb_РайонПроживания</DataPath>
+			<ContextMenu name="nb_РайонПроживанияКонтекстноеМеню" id="39"/>
+			<ExtendedTooltip name="nb_РайонПроживанияРасширеннаяПодсказка" id="40"/>
+		</InputField>
+		<UsualGroup name="ГруппаОповещения" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информационные оповещения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа оповещения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаОповещенияРасширеннаяПодсказка" id="24"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаSMS" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа SMS</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа SMS</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаSMSРасширеннаяПодсказка" id="26"/>
+					<ChildItems>
+						<InputField name="Телефон" id="20">
+							<DataPath>Объект.Телефон</DataPath>
+							<Mask>+7 (999) 999 9999</Mask>
+							<ContextMenu name="ТелефонКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="ТелефонРасширеннаяПодсказка" id="22"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаEMail" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>E-Mail</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа e mail</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаEMailРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<InputField name="EMail" id="32">
+							<DataPath>Объект.EMail</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>E-Mail</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="EMailКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="EMailРасширеннаяПодсказка" id="34"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаФлагОповещения" id="50">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Соглашение на получение уведомлений</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа флаг оповещения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаФлагОповещенияРасширеннаяПодсказка" id="51"/>
+					<ChildItems>
+						<CheckBoxField name="nb_СоглашениеНаУведомлениеEMail" id="35">
+							<DataPath>Объект.nb_СоглашениеНаУведомлениеEMail</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>E-Mail</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="nb_СоглашениеНаУведомлениеEMailКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="nb_СоглашениеНаУведомлениеEMailРасширеннаяПодсказка" id="37"/>
+						</CheckBoxField>
+						<CheckBoxField name="nb_СоглашениеНаУведомлениеPUSH" id="44">
+							<DataPath>Объект.nb_СоглашениеНаУведомлениеPUSH</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>PUSH</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="nb_СоглашениеНаУведомлениеPUSHКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="nb_СоглашениеНаУведомлениеPUSHРасширеннаяПодсказка" id="46"/>
+						</CheckBoxField>
+						<CheckBoxField name="nb_СоглашениеНаУведомлениеSMS" id="27">
+							<DataPath>Объект.nb_СоглашениеНаУведомлениеSMS</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>SMS</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="nb_СоглашениеНаУведомлениеSMSКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="nb_СоглашениеНаУведомлениеSMSРасширеннаяПодсказка" id="29"/>
+						</CheckBoxField>
+						<CheckBoxField name="nb_ВГруппеВК" id="52">
+							<DataPath>Объект.nb_ВГруппеВК</DataPath>
+							<Visible>false</Visible>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="nb_ВГруппеВККонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="nb_ВГруппеВКРасширеннаяПодсказка" id="54"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<CheckBoxField name="nb_ЕстьРегистрацияВГруппеВК" id="106">
+					<DataPath>Объект.nb_ЕстьРегистрацияВГруппеВК</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регистрация в группе Николаевских бань (любая соц. сеть)</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="nb_ЕстьРегистрацияВГруппеВККонтекстноеМеню" id="107"/>
+					<ExtendedTooltip name="nb_ЕстьРегистрацияВГруппеВКРасширеннаяПодсказка" id="108"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИсточник" id="78">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Откуда узнали о возможности регистрации в системе</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа источник</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаИсточникРасширеннаяПодсказка" id="79"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИсточник_Флажки" id="98">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа источник флажки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа источник флажки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИсточник_ФлажкиРасширеннаяПодсказка" id="99"/>
+					<ChildItems>
+						<CheckBoxField name="Источник_Администратор" id="80">
+							<DataPath>Объект.Источник_Администратор</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="Источник_АдминистраторКонтекстноеМеню" id="81"/>
+							<ExtendedTooltip name="Источник_АдминистраторРасширеннаяПодсказка" id="82"/>
+						</CheckBoxField>
+						<CheckBoxField name="Источник_Сайт" id="83">
+							<DataPath>Объект.Источник_Сайт</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="Источник_СайтКонтекстноеМеню" id="84"/>
+							<ExtendedTooltip name="Источник_СайтРасширеннаяПодсказка" id="85"/>
+						</CheckBoxField>
+						<CheckBoxField name="Источник_СоцСети" id="86">
+							<DataPath>Объект.Источник_СоцСети</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="Источник_СоцСетиКонтекстноеМеню" id="87"/>
+							<ExtendedTooltip name="Источник_СоцСетиРасширеннаяПодсказка" id="88"/>
+						</CheckBoxField>
+						<CheckBoxField name="Источник_Друзья" id="89">
+							<DataPath>Объект.Источник_Друзья</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="Источник_ДрузьяКонтекстноеМеню" id="90"/>
+							<ExtendedTooltip name="Источник_ДрузьяРасширеннаяПодсказка" id="91"/>
+						</CheckBoxField>
+						<CheckBoxField name="Источник_2_ГИС" id="92">
+							<DataPath>Объект.Источник_2_ГИС</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="Источник_2_ГИСКонтекстноеМеню" id="93"/>
+							<ExtendedTooltip name="Источник_2_ГИСРасширеннаяПодсказка" id="94"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="Источник_Другое" id="95">
+					<DataPath>Объект.Источник_Другое</DataPath>
+					<ContextMenu name="Источник_ДругоеКонтекстноеМеню" id="96"/>
+					<ExtendedTooltip name="Источник_ДругоеРасширеннаяПодсказка" id="97"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Ответственный" id="100">
+			<DataPath>Объект.Ответственный</DataPath>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="101"/>
+			<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="102"/>
+		</InputField>
+		<InputField name="Комментарий" id="103">
+			<DataPath>Объект.Комментарий</DataPath>
+			<MultiLine>true</MultiLine>
+			<ExtendedEdit>true</ExtendedEdit>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="104"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="105"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.nb_ОбработкаАнкетУчастниковПрограммыЛояльностиДружба</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаВыполнитьРегистрацию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить регистрацию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда выполнить регистрацию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьРегистрацию</Action>
+		</Command>
+		<Command name="КомандаНоваяАнкета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новая анкета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда новая анкета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаНоваяАнкета</Action>
+		</Command>
+		<Command name="КомандаВыполнитьПроверкуНовогоПользователя" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда выполнить проверку нового пользователя</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВыполнитьПроверкуНовогоПользователя</Action>
+		</Command>
+		<Command name="КомандаНачислитьБонус" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начислить бонус</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начислить бонус за вход в систему по рекомендации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаНачислитьБонус</Action>
+		</Command>
+	</Commands>
+</Form>

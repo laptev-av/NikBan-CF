@@ -1,0 +1,1681 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Свертка информационной базы</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ПанельОсновная" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель основная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель навигации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ПанельОсновнаяExtendedTooltip" id="322"/>
+			<ChildItems>
+				<Page name="СтраницаРезервноеКопирование" id="480">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница резервное копирование</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница резервное копирование</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаРезервноеКопированиеРасширеннаяПодсказка" id="481"/>
+					<ChildItems>
+						<UsualGroup name="Группа2" id="457">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Резервное копирование</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="458"/>
+							<ChildItems>
+								<PictureDecoration name="Декорация21" id="548">
+									<Picture>
+										<xr:Ref>CommonPicture.Информация</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="Декорация21КонтекстноеМеню" id="549"/>
+									<ExtendedTooltip name="Декорация21РасширеннаяПодсказка" id="550"/>
+								</PictureDecoration>
+								<LabelDecoration name="Декорация22" id="551">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Операция свертки информационной базы необратима. </v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация22КонтекстноеМеню" id="552"/>
+									<ExtendedTooltip name="Декорация22РасширеннаяПодсказка" id="553"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ДекорацияРезервноеКопирование" id="454">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Перед выполнением операции рекомендуется сделать резервную копию данных.</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Top</VerticalAlign>
+							<ContextMenu name="ДекорацияРезервноеКопированиеКонтекстноеМеню" id="455"/>
+							<ExtendedTooltip name="ДекорацияРезервноеКопированиеРасширеннаяПодсказка" id="456"/>
+							<Events>
+								<Event name="URLProcessing">ДекорацияРезервнаяКопияОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияОтступРезервноеКопирование" id="494">
+							<VerticalStretch>true</VerticalStretch>
+							<ContextMenu name="ДекорацияОтступРезервноеКопированиеКонтекстноеМеню" id="495"/>
+							<ExtendedTooltip name="ДекорацияОтступРезервноеКопированиеРасширеннаяПодсказка" id="496"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияДалееРезервноеКопирование" id="491">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Для продолжения нажмите кнопку "Далее"</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияДалееРезервноеКопированиеКонтекстноеМеню" id="492"/>
+							<ExtendedTooltip name="ДекорацияДалееРезервноеКопированиеРасширеннаяПодсказка" id="493"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаСинхронизацияДанных" id="482">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница синхронизация данных</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница синхронизация данных</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаСинхронизацияДанныхРасширеннаяПодсказка" id="483"/>
+					<ChildItems>
+						<UsualGroup name="Группа3" id="464">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Синхронизация данных</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="465"/>
+							<ChildItems>
+								<PictureDecoration name="Декорация23" id="554">
+									<Picture>
+										<xr:Ref>CommonPicture.Информация</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="Декорация23КонтекстноеМеню" id="555"/>
+									<ExtendedTooltip name="Декорация23РасширеннаяПодсказка" id="556"/>
+								</PictureDecoration>
+								<LabelDecoration name="Декорация5" id="469">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>В программе используется синхронизация данных.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация5КонтекстноеМеню" id="470"/>
+									<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="471"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ДекорацияСинхронизацияДанных" id="445">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Перед выполнением свертки данные в сворачиваемом периоде должны быть синхронизированы.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияСинхронизацияДанныхКонтекстноеМеню" id="446"/>
+							<ExtendedTooltip name="ДекорацияСинхронизацияДанныхРасширеннаяПодсказка" id="447"/>
+							<Events>
+								<Event name="URLProcessing">ДекорацияСинхронизацияДанныхОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияОтступСинхронизацияДанных" id="503">
+							<VerticalStretch>true</VerticalStretch>
+							<ContextMenu name="ДекорацияОтступСинхронизацияДанныхКонтекстноеМеню" id="504"/>
+							<ExtendedTooltip name="ДекорацияОтступСинхронизацияДанныхРасширеннаяПодсказка" id="505"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияДалееСинхронизацияДанных" id="500">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Для продолжения нажмите кнопку "Далее"</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияДалееСинхронизацияДанныхКонтекстноеМеню" id="501"/>
+							<ExtendedTooltip name="ДекорацияДалееСинхронизацияДанныхРасширеннаяПодсказка" id="502"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПараметрыСвертки" id="509">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница параметры свертки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница параметры свертки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаПараметрыСверткиРасширеннаяПодсказка" id="510"/>
+					<ChildItems>
+						<UsualGroup name="ПараметрыСвертки" id="484">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметры свертки информационной базы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметры свертки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ПараметрыСверткиРасширеннаяПодсказка" id="485"/>
+							<ChildItems>
+								<InputField name="ДатаСверткиИБ" id="159">
+									<DataPath>Объект.ДатаСверткиИБ</DataPath>
+									<TitleLocation>Left</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Укажите дату, до которой необходимо свернуть базу.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy; ДЛФ=D</v8:content>
+										</v8:item>
+									</EditFormat>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="ДатаСверткиИБКонтекстноеМеню" id="160"/>
+									<ExtendedTooltip name="ДатаСверткиИБExtendedTooltip" id="341"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<RadioButtonField name="РежимСверткиАвтоматический" id="168">
+							<DataPath>РежимСвертки</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Все этапы свертки выполняются последовательно за один прием.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ColumnsCount>1</ColumnsCount>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Автоматический</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="РежимСверткиАвтоматическийКонтекстноеМеню" id="169"/>
+							<ExtendedTooltip name="РежимСверткиАвтоматическийExtendedTooltip" id="351"/>
+						</RadioButtonField>
+						<RadioButtonField name="РежимСверткиКонтролируемый" id="258">
+							<DataPath>РежимСвертки</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Каждый этап свертки выполняется обособленно.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Контролируемый</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="РежимСверткиКонтролируемыйКонтекстноеМеню" id="259"/>
+							<ExtendedTooltip name="РежимСверткиКонтролируемыйExtendedTooltip" id="353"/>
+						</RadioButtonField>
+						<UsualGroup name="ДополнительныеИнструменты" id="582">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дополнительные инструменты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дополнительные инструменты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ДополнительныеИнструментыРасширеннаяПодсказка" id="583"/>
+							<ChildItems>
+								<InputField name="КоличествоОбъектовВТранзакции" id="584">
+									<DataPath>КоличествоОбъектовВТранзакции</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>При необходимости можно выбрать количество удаляемых объектов в одной явной транзакции. Значение по умолчанию: 10 000</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ContextMenu name="КоличествоОбъектовВТранзакцииКонтекстноеМеню" id="585"/>
+									<ExtendedTooltip name="КоличествоОбъектовВТранзакцииРасширеннаяПодсказка" id="586"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="Декорация2" id="514">
+							<VerticalStretch>true</VerticalStretch>
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="515"/>
+							<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="516"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаРазделитель" id="593">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа разделитель</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа разделитель</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРазделительРасширеннаяПодсказка" id="594"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация12" id="511">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для продолжения нажмите кнопку "Далее"</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация12КонтекстноеМеню" id="512"/>
+									<ExtendedTooltip name="Декорация12РасширеннаяПодсказка" id="513"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОграничения" id="489">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница ограничения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница ограничения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаОграниченияРасширеннаяПодсказка" id="490"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОграничения" id="247">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ограничения свертки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ограничения</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОграниченияExtendedTooltip" id="345"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияОграничения" id="557">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация ограничения</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.ЗнакСтоп</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияОграниченияКонтекстноеМеню" id="558"/>
+									<ExtendedTooltip name="ДекорацияОграниченияРасширеннаяПодсказка" id="559"/>
+								</PictureDecoration>
+								<LabelDecoration name="ПредупреждениеОграничения" id="241">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Информационная база попадает под ограничения свертки:</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ContextMenu name="ПредупреждениеОграниченияКонтекстноеМеню" id="242"/>
+									<ExtendedTooltip name="ПредупреждениеОграниченияExtendedTooltip" id="348"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="Продажи" id="566">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Открыта кассовая смена</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="ПродажиКонтекстноеМеню" id="567"/>
+							<ExtendedTooltip name="ПродажиРасширеннаяПодсказка" id="568"/>
+							<Events>
+								<Event name="Click">ПродажиНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="ИзлишкиНедостачи" id="575">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Не оформлены излишки и недостачи</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="ИзлишкиНедостачиКонтекстноеМеню" id="576"/>
+							<ExtendedTooltip name="ИзлишкиНедостачиРасширеннаяПодсказка" id="577"/>
+							<Events>
+								<Event name="Click">ПересчетНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="ПКО" id="560">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Денежные средства к поступлению</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="ПКОКонтекстноеМеню" id="561"/>
+							<ExtendedTooltip name="ПКОРасширеннаяПодсказка" id="562"/>
+							<Events>
+								<Event name="Click">ПКОНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="РКО" id="563">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Денежные средства к выплате</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="РКОКонтекстноеМеню" id="564"/>
+							<ExtendedTooltip name="РКОРасширеннаяПодсказка" id="565"/>
+							<Events>
+								<Event name="Click">РКОНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияОтступОграничения" id="497">
+							<VerticalStretch>true</VerticalStretch>
+							<ContextMenu name="ДекорацияОтступОграниченияКонтекстноеМеню" id="498"/>
+							<ExtendedTooltip name="ДекорацияОтступОграниченияРасширеннаяПодсказка" id="499"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияОграниченияДалее" id="506">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дальнейшее продолжение свертки может привести к потере данных.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияОграниченияДалееКонтекстноеМеню" id="507"/>
+							<ExtendedTooltip name="ДекорацияОграниченияДалееРасширеннаяПодсказка" id="508"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаСостояниеСвертки" id="176">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница состояние свертки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница состояние свертки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаСостояниеСверткиExtendedTooltip" id="357"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЭтапы" id="531">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Этапы свертки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа этапы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаЭтапыРасширеннаяПодсказка" id="532"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПродолжениеСвертки" id="305">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа продолжение свертки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа продолжение свертки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПродолжениеСверткиExtendedTooltip" id="358"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияПродолжениеСвертки" id="287">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Продолжение начатой ранее свертки. Дата свертки:</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияПродолжениеСверткиКонтекстноеМеню" id="288"/>
+											<ExtendedTooltip name="ДекорацияПродолжениеСверткиExtendedTooltip" id="359"/>
+										</LabelDecoration>
+										<LabelField name="ДекорацияДатаСверткиИБ" id="306">
+											<DataPath>Объект.ДатаСверткиИБ</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=dd.MM.yyyy; ДЛФ=D</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="ДекорацияДатаСверткиИБКонтекстноеМеню" id="307"/>
+											<ExtendedTooltip name="ДекорацияДатаСверткиИБExtendedTooltip" id="360"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаЭтап1" id="196">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа этап1</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа этап1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЭтап1ExtendedTooltip" id="361"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьЭтап1" id="181">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>1. Формирование документов ввода остатков.</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Center</VerticalAlign>
+											<ContextMenu name="НадписьЭтап1КонтекстноеМеню" id="182"/>
+											<ExtendedTooltip name="НадписьЭтап1ExtendedTooltip" id="362"/>
+										</LabelDecoration>
+										<PictureDecoration name="КартинкаЭтап1" id="199">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка этап1 </v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>AutoSize</PictureSize>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаЭтап1КонтекстноеМеню" id="200"/>
+											<ExtendedTooltip name="КартинкаЭтап1ExtendedTooltip" id="363"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаЭтап2" id="203">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа этап2</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа этап2</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЭтап2ExtendedTooltip" id="364"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьЭтап2" id="183">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Height>1</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>2. Удаление движений регистров, пометка на удаление документов.</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Center</VerticalAlign>
+											<ContextMenu name="НадписьЭтап2КонтекстноеМеню" id="184"/>
+											<ExtendedTooltip name="НадписьЭтап2ExtendedTooltip" id="365"/>
+										</LabelDecoration>
+										<PictureDecoration name="КартинкаЭтап2" id="204">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка этап2</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>AutoSize</PictureSize>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаЭтап2КонтекстноеМеню" id="205"/>
+											<ExtendedTooltip name="КартинкаЭтап2ExtendedTooltip" id="366"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаЭтап3" id="214">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа этап3</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа этап3</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЭтап3ExtendedTooltip" id="367"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьЭтап3" id="185">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>3. Проведение документов ввода остатков.</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalAlign>Top</VerticalAlign>
+											<ContextMenu name="НадписьЭтап3КонтекстноеМеню" id="186"/>
+											<ExtendedTooltip name="НадписьЭтап3ExtendedTooltip" id="368"/>
+										</LabelDecoration>
+										<PictureDecoration name="КартинкаЭтап3" id="215">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка этап3</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>AutoSize</PictureSize>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаЭтап3КонтекстноеМеню" id="216"/>
+											<ExtendedTooltip name="КартинкаЭтап3ExtendedTooltip" id="369"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<Pages name="СтраницыПереключаемые" id="238">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страницы переключаемые</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страницы переключаемые</v8:content>
+										</v8:item>
+									</ToolTip>
+									<PagesRepresentation>None</PagesRepresentation>
+									<ExtendedTooltip name="СтраницыПереключаемыеExtendedTooltip" id="371"/>
+									<ChildItems>
+										<Page name="СтраницаИдетСвертка" id="239">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница идет свертка</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница идет свертка</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СтраницаИдетСверткаExtendedTooltip" id="372"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаПодождите" id="190">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа картинки</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа картинки</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаПодождитеExtendedTooltip" id="373"/>
+													<ChildItems>
+														<PictureDecoration name="Декорация16" id="191">
+															<SkipOnInput>false</SkipOnInput>
+															<Picture>
+																<xr:Ref>CommonPicture.Информация32</xr:Ref>
+																<xr:LoadTransparent>false</xr:LoadTransparent>
+															</Picture>
+															<FileDragMode>AsFile</FileDragMode>
+															<ContextMenu name="Декорация16КонтекстноеМеню" id="192"/>
+															<ExtendedTooltip name="Декорация16ExtendedTooltip" id="374"/>
+														</PictureDecoration>
+														<LabelDecoration name="Декорация17" id="194">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<SkipOnInput>false</SkipOnInput>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Выполняется свертка информационной базы. 
+Пожалуйста, подождите...</v8:content>
+																</v8:item>
+															</Title>
+															<VerticalAlign>Center</VerticalAlign>
+															<ContextMenu name="Декорация17КонтекстноеМеню" id="195"/>
+															<ExtendedTooltip name="Декорация17ExtendedTooltip" id="375"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаПроцессОстановлен" id="240">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница процесс остановлен</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница процесс остановлен</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СтраницаПроцессОстановленExtendedTooltip" id="376"/>
+											<ChildItems>
+												<LabelDecoration name="Декорация18" id="526">
+													<ContextMenu name="Декорация18КонтекстноеМеню" id="527"/>
+													<ExtendedTooltip name="Декорация18РасширеннаяПодсказка" id="528"/>
+												</LabelDecoration>
+												<LabelDecoration name="ДекорацияДокументыВводаОстатковЭтапы" id="225">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Height>1</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Открыть список документов ввода остатков</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ДекорацияДокументыВводаОстатковЭтапыКонтекстноеМеню" id="226"/>
+													<ExtendedTooltip name="ДекорацияДокументыВводаОстатковЭтапыExtendedTooltip" id="378"/>
+													<Events>
+														<Event name="Click">ДекорацияДокументыВводаОстатковЭтапыНажатие</Event>
+													</Events>
+												</LabelDecoration>
+												<LabelDecoration name="ДекорацияЖурналРегистрацииЭтапы" id="227">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Height>1</Height>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Открыть журнал регистрации для просмотра сообщений о ходе свертки</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ДекорацияЖурналРегистрацииЭтапыКонтекстноеМеню" id="228"/>
+													<ExtendedTooltip name="ДекорацияЖурналРегистрацииЭтапыExtendedTooltip" id="379"/>
+													<Events>
+														<Event name="Click">ДекорацияЖурналРегистрацииЭтапыНажатие</Event>
+													</Events>
+												</LabelDecoration>
+												<LabelDecoration name="Декорация19" id="587">
+													<VerticalStretch>true</VerticalStretch>
+													<ContextMenu name="Декорация19КонтекстноеМеню" id="588"/>
+													<ExtendedTooltip name="Декорация19РасширеннаяПодсказка" id="589"/>
+												</LabelDecoration>
+												<LabelDecoration name="ДекорацияСледующийЭтап" id="223">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Для выполнения следующего этапа нажмите "Далее".</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДекорацияСледующийЭтапКонтекстноеМеню" id="224"/>
+													<ExtendedTooltip name="ДекорацияСледующийЭтапExtendedTooltip" id="377"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаВозниклиОшибки" id="291">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница возникли ошибки</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница возникли ошибки</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="СтраницаВозниклиОшибкиExtendedTooltip" id="380"/>
+											<ChildItems>
+												<LabelDecoration name="Декорация15" id="523">
+													<ContextMenu name="Декорация15КонтекстноеМеню" id="524"/>
+													<ExtendedTooltip name="Декорация15РасширеннаяПодсказка" id="525"/>
+												</LabelDecoration>
+												<UsualGroup name="ГруппаОшибки" id="294">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа ошибки</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа ошибки</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаОшибкиExtendedTooltip" id="381"/>
+													<ChildItems>
+														<PictureDecoration name="ОшибкиКартинка" id="295">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Ошибки картинка</v8:content>
+																</v8:item>
+															</Title>
+															<Picture>
+																<xr:Ref>CommonPicture.НекорректныйКонтрагент</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<FileDragMode>AsFile</FileDragMode>
+															<ContextMenu name="ОшибкиКартинкаКонтекстноеМеню" id="296"/>
+															<ExtendedTooltip name="ОшибкиКартинкаExtendedTooltip" id="382"/>
+														</PictureDecoration>
+														<LabelDecoration name="ДекорацияВозниклиОшибки" id="292">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>При выполнении свертки возникли ошибки.</v8:content>
+																</v8:item>
+															</Title>
+															<VerticalAlign>Center</VerticalAlign>
+															<ContextMenu name="ДекорацияВозниклиОшибкиКонтекстноеМеню" id="293"/>
+															<ExtendedTooltip name="ДекорацияВозниклиОшибкиРасширеннаяПодсказка" id="383"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<LabelDecoration name="ДекорацияЖурналРегистрацииЭтапы1" id="301">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Открыть журнал регистрации для просмотра сообщений о ходе свертки</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ДекорацияЖурналРегистрацииЭтапы1КонтекстноеМеню" id="302"/>
+													<ExtendedTooltip name="ДекорацияЖурналРегистрацииЭтапы1ExtendedTooltip" id="386"/>
+													<Events>
+														<Event name="Click">ДекорацияЖурналРегистрацииЭтапы1Нажатие</Event>
+													</Events>
+												</LabelDecoration>
+												<LabelDecoration name="ДекорацияВозниклиОшибки2" id="297">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Процесс свертки можно продолжить. Для продолжения нажмите "Далее".</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДекорацияВозниклиОшибки2КонтекстноеМеню" id="298"/>
+													<ExtendedTooltip name="ДекорацияВозниклиОшибки2ExtendedTooltip" id="384"/>
+												</LabelDecoration>
+												<LabelDecoration name="Декорация20" id="590">
+													<MaxHeight>1</MaxHeight>
+													<VerticalStretch>true</VerticalStretch>
+													<ContextMenu name="Декорация20КонтекстноеМеню" id="591"/>
+													<ExtendedTooltip name="Декорация20РасширеннаяПодсказка" id="592"/>
+												</LabelDecoration>
+												<LabelDecoration name="ДекорацияВозниклиОшибки3" id="299">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Продолжение свертки невозможно. Восстановите базу из резервной копии и повторите свертку.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДекорацияВозниклиОшибки3КонтекстноеМеню" id="300"/>
+													<ExtendedTooltip name="ДекорацияВозниклиОшибки3ExtendedTooltip" id="385"/>
+												</LabelDecoration>
+											</ChildItems>
+										</Page>
+									</ChildItems>
+								</Pages>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаЗавершение" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Свертка выполнена</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница успешное завершение загрузки данных</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаЗавершениеExtendedTooltip" id="387"/>
+					<ChildItems>
+						<UsualGroup name="СверткаВыполнена" id="580">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Свертка выполнена</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Свертка выполнена</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="СверткаВыполненаРасширеннаяПодсказка" id="581"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияУдалениеНеиспользуемыхЭлементов" id="174">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Удаление неиспользуемых элементов справочников</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="ДекорацияУдалениеНеиспользуемыхЭлементовКонтекстноеМеню" id="175"/>
+									<ExtendedTooltip name="ДекорацияУдалениеНеиспользуемыхЭлементовExtendedTooltip" id="392"/>
+									<Events>
+										<Event name="Click">ДекорацияУдалениеНеиспользуемыхЭлементовНажатие</Event>
+									</Events>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияУдалениеПомеченныхОбъектов" id="308">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Удаление помеченных объектов</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="ДекорацияУдалениеПомеченныхОбъектовКонтекстноеМеню" id="309"/>
+									<ExtendedTooltip name="ДекорацияУдалениеПомеченныхОбъектовРасширеннаяПодсказка" id="391"/>
+									<Events>
+										<Event name="Click">ДекорацияУдалениеПомеченныхОбъектовНажатие</Event>
+									</Events>
+								</LabelDecoration>
+								<Button name="ДатаЗапрета" id="578">
+									<Type>Hyperlink</Type>
+									<CommandName>InformationRegister.ДатыЗапретаИзменения.Command.ДатыЗапретаИзмененияДанных</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата запрета изменения данных</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ДатаЗапретаРасширеннаяПодсказка" id="579"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="РамкаПанелиНавигации" id="99">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рамка панели навигации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рамка панели навигации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="РамкаПанелиНавигацииExtendedTooltip" id="395"/>
+			<ChildItems>
+				<Pages name="ПанельНавигации" id="100">
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Панель навигации</v8:content>
+						</v8:item>
+					</Title>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="ПанельНавигацииExtendedTooltip" id="396"/>
+					<ChildItems>
+						<Page name="СтраницаНавигацииНачало" id="101">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница навигации начало</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница навигации начало</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="СтраницаНавигацииНачалоExtendedTooltip" id="397"/>
+							<ChildItems>
+								<CommandBar name="КоманднаяПанель1" id="102">
+									<EnableContentChange>true</EnableContentChange>
+									<HorizontalLocation>Right</HorizontalLocation>
+									<ExtendedTooltip name="КоманднаяПанель1ExtendedTooltip" id="398"/>
+									<ChildItems>
+										<Button name="КомандаДалее" id="103">
+											<Type>CommandBarButton</Type>
+											<DefaultButton>true</DefaultButton>
+											<DefaultItem>true</DefaultItem>
+											<CommandName>Form.Command.КомандаДалее</CommandName>
+											<ExtendedTooltip name="КомандаДалееExtendedTooltip" id="399"/>
+										</Button>
+										<Button name="КомандаОтмена" id="104">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.КомандаОтмена</CommandName>
+											<ExtendedTooltip name="КомандаОтменаExtendedTooltip" id="400"/>
+										</Button>
+										<Button name="Справка" id="105">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.StandardCommand.Help</CommandName>
+											<ExtendedTooltip name="СправкаExtendedTooltip" id="401"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаНавигацииРежимСвертки" id="229">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница навигации режим свертки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница навигации режим свертки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="СтраницаНавигацииРежимСверткиExtendedTooltip" id="402"/>
+							<ChildItems>
+								<CommandBar name="КоманднаяПанель5_1" id="234">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель5 1</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель3 1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="КоманднаяПанель5_1ExtendedTooltip" id="403"/>
+									<ChildItems>
+										<Button name="КомандаНазад3" id="235">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.КомандаНазад</CommandName>
+											<ExtendedTooltip name="КомандаНазад3ExtendedTooltip" id="404"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+								<CommandBar name="КоманднаяПанель5_2" id="230">
+									<EnableContentChange>true</EnableContentChange>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель5 2</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель5 2</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalLocation>Right</HorizontalLocation>
+									<ExtendedTooltip name="КоманднаяПанель5_2ExtendedTooltip" id="405"/>
+									<ChildItems>
+										<Button name="КомандаДалее4" id="231">
+											<Type>CommandBarButton</Type>
+											<DefaultItem>true</DefaultItem>
+											<CommandName>Form.Command.КомандаДалее</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Далее &gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="КомандаДалее4ExtendedTooltip" id="406"/>
+										</Button>
+										<Button name="КомандаОтмена4" id="232">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.КомандаОтмена</CommandName>
+											<ExtendedTooltip name="КомандаОтмена4ExtendedTooltip" id="407"/>
+										</Button>
+										<Button name="Справка4" id="233">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.StandardCommand.Help</CommandName>
+											<ExtendedTooltip name="Справка4ExtendedTooltip" id="408"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаНавигацииОжидание" id="120">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница навигации ожидание</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница навигации1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="СтраницаНавигацииОжиданиеExtendedTooltip" id="409"/>
+							<ChildItems>
+								<CommandBar name="КоманднаяПанель4_2" id="121">
+									<EnableContentChange>true</EnableContentChange>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель4 2</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель4 2</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalLocation>Right</HorizontalLocation>
+									<ExtendedTooltip name="КоманднаяПанель4_2ExtendedTooltip" id="410"/>
+									<ChildItems>
+										<Button name="КомандаДалее3" id="122">
+											<Type>CommandBarButton</Type>
+											<DefaultItem>true</DefaultItem>
+											<CommandName>Form.Command.КомандаДалее</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Далее &gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="КомандаДалее3ExtendedTooltip" id="411"/>
+										</Button>
+										<Button name="КомандаОтмена3" id="123">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.КомандаОтмена</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Закрыть</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="КомандаОтмена3ExtendedTooltip" id="412"/>
+										</Button>
+										<Button name="Справка3" id="124">
+											<Type>CommandBarButton</Type>
+											<Enabled>false</Enabled>
+											<CommandName>Form.StandardCommand.Help</CommandName>
+											<ExtendedTooltip name="Справка3ExtendedTooltip" id="413"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаНавигацииОкончание" id="113">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница навигации окончание</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница навигации1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="СтраницаНавигацииОкончаниеExtendedTooltip" id="414"/>
+							<ChildItems>
+								<CommandBar name="КоманднаяПанель3_2" id="116">
+									<EnableContentChange>true</EnableContentChange>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель3 2</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель3 2</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalLocation>Right</HorizontalLocation>
+									<ExtendedTooltip name="КоманднаяПанель3_2ExtendedTooltip" id="415"/>
+									<ChildItems>
+										<Button name="КомандаГотово" id="117">
+											<Type>CommandBarButton</Type>
+											<DefaultItem>true</DefaultItem>
+											<CommandName>Form.Command.КомандаГотово</CommandName>
+											<ExtendedTooltip name="КомандаГотовоExtendedTooltip" id="416"/>
+										</Button>
+										<Button name="Справка2" id="119">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.StandardCommand.Help</CommandName>
+											<ExtendedTooltip name="Справка2ExtendedTooltip" id="417"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.СверткаИнформационнойБазы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТаблицаПереходов" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица переходов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ПорядковыйНомерПерехода" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Порядковый номер перехода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяОсновнойСтраницы" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя основной страницы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяСтраницыДекорации" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя страницы декорации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяСтраницыНавигации" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя страницы навигации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяОбработчикаПриОткрытии" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя обработчика при открытии</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяОбработчикаПриПереходеДалее" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя обработчика при переходе далее</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяОбработчикаПриПереходеНазад" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя обработчика при переходе назад</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПорядковыйНомерПерехода" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порядковый номер перехода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимСвертки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим свертки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтапСверткиЗапущен" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этап свертки запущен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтапСверткиЗавершен" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этап свертки завершен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Картинки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Картинки</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ЕстьКонстантаПараметрыСвертки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть константа параметры свертки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыполняетсяОткрытиеФормы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполняется открытие формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИзмененыДокументы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменены документы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УдалитьДокументыВводаОстатков" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить документы ввода остатков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьСинхронизациюДанных" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать синхронизацию данных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоОбъектовВТранзакции" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество объектов в транзакции</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаДалее" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее &gt;</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаДалее</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаНазад" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt; Назад</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаНазад</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаОтмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаОтмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаГотово" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Готово</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаГотово</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОчиститьПараметры" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить параметры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистка параметров свертки информационной базы. При следующем запуске помощник свертки начнет работу с начального этапа. </v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьСохраненныеПараметры</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

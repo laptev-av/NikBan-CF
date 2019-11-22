@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОбщая" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа общая</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбщаяРасширеннаяПодсказка" id="13"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаВертикальКонстант" id="14">
+					<EnableContentChange>true</EnableContentChange>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВертикальКонстантРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<InputField name="АдресДисконтногоСервера" id="1">
+							<DataPath>НаборКонстант.АдресДисконтногоСервера</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Адрес web-сервиса дисконтного сервера в формате
+http://ИмяСервера/ИмяСервиса/ws/DiscountService.1cws?wsdl</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<EditMode>EnterOnInput</EditMode>
+							<DropListButton>true</DropListButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="АдресДисконтногоСервераКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="АдресДисконтногоСервераРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="ПользовательДисконтногоСервера" id="7">
+							<DataPath>НаборКонстант.ПользовательДисконтногоСервера</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пользователь</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>17</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ПользовательДисконтногоСервераКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ПользовательДисконтногоСервераРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="ПарольДисконтногоСервера" id="4">
+							<DataPath>НаборКонстант.ПарольДисконтногоСервера</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пароль</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>17</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<PasswordMode>true</PasswordMode>
+							<ContextMenu name="ПарольДисконтногоСервераКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ПарольДисконтногоСервераРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="ТаймаутПодключенияКДисконтномуСерверу" id="16">
+							<DataPath>НаборКонстант.ТаймаутПодключенияКДисконтномуСерверу</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Таймаут</v8:content>
+								</v8:item>
+							</Title>
+							<Width>17</Width>
+							<ContextMenu name="ТаймаутПодключенияКДисконтномуСерверуКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ТаймаутПодключенияКДисконтномуСерверуРасширеннаяПодсказка" id="18"/>
+						</InputField>
+						<InputField name="ТаймаутПроверочногоПодключенияКДисконтномуСерверу" id="19">
+							<DataPath>НаборКонстант.ТаймаутПроверочногоПодключенияКДисконтномуСерверу</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Таймаут проверочный</v8:content>
+								</v8:item>
+							</Title>
+							<Width>17</Width>
+							<ContextMenu name="ТаймаутПроверочногоПодключенияКДисконтномуСерверуКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ТаймаутПроверочногоПодключенияКДисконтномуСерверуРасширеннаяПодсказка" id="21"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="ПроверитьПодключениеКДисконтномуСерверу" id="10">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ПроверитьПодключениеКДисконтномуСерверу</CommandName>
+					<ExtendedTooltip name="ПроверитьПодключениеКДисконтномуСерверуРасширеннаяПодсказка" id="11"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>НаборКонстант.АдресДисконтногоСервера</Field>
+				<Field>НаборКонстант.ДополнительнаяКолонкаПечатныхФормДокументов</Field>
+				<Field>НаборКонстант.ЕдиницаИзмеренияВеса</Field>
+				<Field>НаборКонстант.ЕдиницаИзмеренияОбъема</Field>
+				<Field>НаборКонстант.ПарольДисконтногоСервера</Field>
+				<Field>НаборКонстант.ПользовательДисконтногоСервера</Field>
+				<Field>НаборКонстант.ТаймаутПодключенияКДисконтномуСерверу</Field>
+				<Field>НаборКонстант.ТаймаутПроверочногоПодключенияКДисконтномуСерверу</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПроверитьПодключениеКДисконтномуСерверу" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить подключение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить подключение к дисконтному серверу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьПодключениеКДисконтномуСерверу</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

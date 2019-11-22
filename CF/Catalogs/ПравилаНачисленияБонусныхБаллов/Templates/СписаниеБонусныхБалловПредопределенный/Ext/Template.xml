@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Запрос</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>БонуснаяПрограммаЛояльности</dataPath>
+			<field>БонуснаяПрограммаЛояльности</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГруппаПолучателейСкидки</dataPath>
+			<field>ГруппаПолучателейСкидки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДисконтнаяКарта</dataPath>
+			<field>ДисконтнаяКарта</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Получатель</dataPath>
+			<field>Получатель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоБаллов</dataPath>
+			<field>КоличествоБаллов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество баллов</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>БаллыКСписанию</dataPath>
+			<field>БаллыКСписанию</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Баллы к списанию</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+				<group>true</group>
+			</useRestriction>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	СоставГруппПолучателейСкидки.Получатель КАК Получатель,
+	ИСТИНА КАК ИспользуетсяОтборПоГруппеПолучателейСкидки
+ПОМЕСТИТЬ ОтборПоГруппеПолучателейСкидки
+{ВЫБРАТЬ
+	Получатель.*}
+ИЗ
+	РегистрСведений.СоставГруппПолучателейСкидки КАК СоставГруппПолучателейСкидки
+{ГДЕ
+	СоставГруппПолучателейСкидки.ГруппаПолучателейСкидки.* КАК ГруппаПолучателейСкидки,
+	СоставГруппПолучателейСкидки.Получатель.* КАК Получатель}
+
+ИНДЕКСИРОВАТЬ ПО
+	СоставГруппПолучателейСкидки.Получатель
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	БонусныеБаллыОстатки.ДисконтнаяКарта,
+	ВЫБОР
+		КОГДА БонусныеБаллыОстатки.КСписаниюОстаток &lt; БонусныеБаллыОстатки.НачисленоОстаток
+			ТОГДА БонусныеБаллыОстатки.КСписаниюОстаток
+		ИНАЧЕ БонусныеБаллыОстатки.НачисленоОстаток
+	КОНЕЦ КАК КоличествоБаллов,
+	БонусныеБаллыОстатки.КСписаниюОстаток КАК БаллыКСписанию 
+	
+ИЗ
+	РегистрНакопления.БонусныеБаллы.Остатки(&amp;ТекущаяДата, БонуснаяПрограммаЛояльности = &amp;БонуснаяПрограммаЛояльности {(ДисконтнаяКарта.ВладелецКарты В
+			    (ВЫБРАТЬ
+			        ОтборПоГруппеПолучателейСкидки.Получатель
+			    ИЗ
+			        ОтборПоГруппеПолучателейСкидки КАК ОтборПоГруппеПолучателейСкидки
+			    ГДЕ
+			        ОтборПоГруппеПолучателейСкидки.ИспользуетсяОтборПоГруппеПолучателейСкидки = &amp;ИспользуетсяОтборПоГруппеПолучателейСкидки))}) КАК БонусныеБаллыОстатки
+ГДЕ
+	БонусныеБаллыОстатки.КСписаниюОстаток &gt; 0
+	
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	БонусныеБаллыОстатки.ДисконтнаяКарта,
+	ВЫБОР КОГДА БонусныеБаллыОстатки.НачисленоОстаток &gt; 0 
+	И БонусныеБаллыОстатки.НачисленоОстаток &gt; ВЫРАЗИТЬ(БонусныеБаллыОстатки.НачисленоОстаток КАК ЧИСЛО(15, 0)) ТОГДА
+		БонусныеБаллыОстатки.НачисленоОстаток - ВЫРАЗИТЬ(БонусныеБаллыОстатки.НачисленоОстаток КАК ЧИСЛО(15, 0)) 
+	КОГДА БонусныеБаллыОстатки.НачисленоОстаток &gt; 0 
+	И БонусныеБаллыОстатки.НачисленоОстаток &lt; ВЫРАЗИТЬ(БонусныеБаллыОстатки.НачисленоОстаток КАК ЧИСЛО(15, 0)) ТОГДА
+		БонусныеБаллыОстатки.НачисленоОстаток + 1 - ВЫРАЗИТЬ(БонусныеБаллыОстатки.НачисленоОстаток КАК ЧИСЛО(15, 0)) 
+	КОГДА БонусныеБаллыОстатки.НачисленоОстаток &lt; 0 
+	И БонусныеБаллыОстатки.НачисленоОстаток &gt; ВЫРАЗИТЬ(БонусныеБаллыОстатки.НачисленоОстаток КАК ЧИСЛО(15, 0)) ТОГДА
+		БонусныеБаллыОстатки.НачисленоОстаток - 1 - ВЫРАЗИТЬ(БонусныеБаллыОстатки.НачисленоОстаток КАК ЧИСЛО(15, 0)) 
+	КОГДА БонусныеБаллыОстатки.НачисленоОстаток &lt; 0 
+	И БонусныеБаллыОстатки.НачисленоОстаток &lt; ВЫРАЗИТЬ(БонусныеБаллыОстатки.НачисленоОстаток КАК ЧИСЛО(15, 0)) ТОГДА
+		БонусныеБаллыОстатки.НачисленоОстаток - ВЫРАЗИТЬ(БонусныеБаллыОстатки.НачисленоОстаток КАК ЧИСЛО(15, 0)) 
+	ИНАЧЕ
+		БонусныеБаллыОстатки.НачисленоОстаток  - ВЫРАЗИТЬ(БонусныеБаллыОстатки.НачисленоОстаток КАК ЧИСЛО(15, 0)) 
+	КОНЕЦ,
+	0 
+	
+ИЗ
+	РегистрНакопления.БонусныеБаллы.Остатки(&amp;ТекущаяДата, БонуснаяПрограммаЛояльности = &amp;БонуснаяПрограммаЛояльности {(ДисконтнаяКарта.ВладелецКарты В
+			    (ВЫБРАТЬ
+			        ОтборПоГруппеПолучателейСкидки.Получатель
+			    ИЗ
+			        ОтборПоГруппеПолучателейСкидки КАК ОтборПоГруппеПолучателейСкидки
+			    ГДЕ
+			        ОтборПоГруппеПолучателейСкидки.ИспользуетсяОтборПоГруппеПолучателейСкидки = &amp;ИспользуетсяОтборПоГруппеПолучателейСкидки))}) КАК БонусныеБаллыОстатки
+ГДЕ
+	БонусныеБаллыОстатки.КСписаниюОстаток &lt;= 0
+	И (ВЫРАЗИТЬ(БонусныеБаллыОстатки.НачисленоОстаток КАК ЧИСЛО(15, 0)) - БонусныеБаллыОстатки.НачисленоОстаток) &lt;&gt; 0
+	</query>
+	</dataSet>
+	<totalField>
+		<dataPath>БаллыКСписанию</dataPath>
+		<expression>Сумма(БаллыКСписанию)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоБаллов</dataPath>
+		<expression>Сумма(КоличествоБаллов)</expression>
+	</totalField>
+	<parameter>
+		<name>ТекущаяДата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Текущая дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>БонуснаяПрограммаЛояльности</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Бонусная программа лояльности</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.БонусныеПрограммыЛояльности</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;ТекущаяДата</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ИспользуетсяОтборПоГруппеПолучателейСкидки</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Используется отбор по группе получателей скидки</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДисконтнаяКарта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоБаллов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>БаллыКСписанию</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

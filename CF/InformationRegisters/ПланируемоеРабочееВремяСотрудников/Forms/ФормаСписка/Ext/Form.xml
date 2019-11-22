@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Reread</ExcludedCommand>
+		<ExcludedCommand>SwitchActivity</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписать" id="73">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗаписатьНаборЗаписейГрафикаРабот</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьExtendedTooltip" id="77"/>
+			</Button>
+			<Button name="ФормаПеречитать" id="72">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗаполнитьАктуальныйГрафикРаботы</CommandName>
+				<ExtendedTooltip name="ФормаПеречитатьExtendedTooltip" id="78"/>
+			</Button>
+			<ButtonGroup name="ГруппаКомандыФормы" id="107">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа команды формы</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа команды формы</v8:content>
+					</v8:item>
+				</ToolTip>
+				<CommandSource>Item.ТаблицаРегистра</CommandSource>
+				<ExtendedTooltip name="ГруппаКомандыФормыРасширеннаяПодсказка" id="108"/>
+			</ButtonGroup>
+			<Button name="ФормаКнопкаСправка" id="76">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="ФормаКнопкаСправкаExtendedTooltip" id="79"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnLoadDataFromSettingsAtServer">ПриЗагрузкеДанныхИзНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПараметров" id="39">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа параметров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПараметровExtendedTooltip" id="80"/>
+			<ChildItems>
+				<InputField name="ОтборМагазин" id="43">
+					<DataPath>ОтборМагазин</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Магазин</v8:content>
+						</v8:item>
+					</Title>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ContextMenu name="ОтборМагазинКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ОтборМагазинExtendedTooltip" id="81"/>
+					<Events>
+						<Event name="OnChange">ОтборМагазинПриИзменении</Event>
+						<Event name="Clearing">ОтборМагазинОчистка</Event>
+					</Events>
+				</InputField>
+				<InputField name="НачалоНедели" id="37">
+					<DataPath>НачалоНедели</DataPath>
+					<ContextMenu name="НачалоНеделиКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="НачалоНеделиExtendedTooltip" id="82"/>
+					<Events>
+						<Event name="OnChange">НачалоНеделиПриИзменении</Event>
+					</Events>
+				</InputField>
+				<Button name="ФормаПрошлаяНеделя" id="35">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗаполнитьГрафикРаботыПрошлойНедели</CommandName>
+					<ExtendedTooltip name="ФормаПрошлаяНеделяExtendedTooltip" id="83"/>
+				</Button>
+				<Button name="ФормаСледующаяНеделя" id="36">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗаполнитьГрафикРаботыСледующейНедели</CommandName>
+					<ExtendedTooltip name="ФормаСледующаяНеделяExtendedTooltip" id="84"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ТаблицаРегистра" id="16">
+			<Representation>Tree</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<SelectionMode>SingleRow</SelectionMode>
+			<InitialTreeView>ExpandAllLevels</InitialTreeView>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ТаблицаРегистра</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>HierarchicalList</ExcludedCommand>
+				<ExcludedCommand>List</ExcludedCommand>
+				<ExcludedCommand>Tree</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<TreeSpecialSearch>false</TreeSpecialSearch>
+			<ContextMenu name="ТаблицаРегистраКонтекстноеМеню" id="17">
+				<ChildItems>
+					<Button name="ТаблицаРегистраКонтекстноеМенюЗаполнитьДлинуРабочегоДняПоГрафикуРаботыНаВсюНеделюДляРаботника" id="75">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗаполнитьДлинуРабочегоДняПоГрафикуРаботыНаВсюНеделюДляРаботника</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заполнить длину рабочего дня по графику работы на всю неделю для сотрудника</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ТаблицаРегистраКонтекстноеМенюЗаполнитьДлинуРабочегоДняПоГрафикуРаботыНаВсюНеделюДляРаботникаРасширеннаяПодсказка" id="86"/>
+					</Button>
+					<Button name="ТаблицаРегистраКонтекстноеМенюКнопкаПоГрафикуРаботы" id="69">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗаполнитьДлинуРабочегоДняПоГрафикуРаботы</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заполнить длину рабочего дня по графику</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ТаблицаРегистраКонтекстноеМенюКнопкаПоГрафикуРаботыExtendedTooltip" id="87"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="ТаблицаРегистраКоманднаяПанель" id="18">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="СформироватьПлан" id="119">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗаполнитьДлинуРабочегоДняПоГрафикуРаботыНаВсюНеделю</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сформировать план</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="СформироватьПланРасширеннаяПодсказка" id="120"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаРегистраExtendedTooltip" id="88"/>
+			<SearchStringAddition name="ТаблицаРегистраСтрокаПоиска" id="98">
+				<AdditionSource>
+					<Item>ТаблицаРегистра</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаРегистраСтрокаПоискаКонтекстноеМеню" id="99"/>
+				<ExtendedTooltip name="ТаблицаРегистраСтрокаПоискаРасширеннаяПодсказка" id="100"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаРегистраСостояниеПросмотра" id="101">
+				<AdditionSource>
+					<Item>ТаблицаРегистра</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаРегистраСостояниеПросмотраКонтекстноеМеню" id="102"/>
+				<ExtendedTooltip name="ТаблицаРегистраСостояниеПросмотраРасширеннаяПодсказка" id="103"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаРегистраУправлениеПоиском" id="104">
+				<AdditionSource>
+					<Item>ТаблицаРегистра</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаРегистраУправлениеПоискомКонтекстноеМеню" id="105"/>
+				<ExtendedTooltip name="ТаблицаРегистраУправлениеПоискомРасширеннаяПодсказка" id="106"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeEditEnd">ТаблицаРегистраПередОкончаниемРедактирования</Event>
+				<Event name="BeforeRowChange">ТаблицаРегистраПередНачаломИзменения</Event>
+				<Event name="OnStartEdit">ТаблицаРегистраПриНачалеРедактирования</Event>
+				<Event name="OnChange">ТаблицаРегистраПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<ColumnGroup name="МагазинСмена" id="109">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Магазин, рабочая смена,</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Магазин, рабочая смена, работа, сотрудник</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<HeaderHorizontalAlign>Left</HeaderHorizontalAlign>
+					<ExtendedTooltip name="МагазинСменаРасширеннаяПодсказка" id="110"/>
+					<ChildItems>
+						<InputField name="ТаблицаРегистраРаботаСотрудник" id="60">
+							<DataPath>ТаблицаРегистра.РаботаСотрудник</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>работа, сотрудник</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Магазин, рабочая смена, работа, сотрудник</v8:content>
+								</v8:item>
+							</ToolTip>
+							<EditMode>EnterOnInput</EditMode>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="ТаблицаРегистраРаботаСотрудникКонтекстноеМеню" id="61">
+								<Autofill>false</Autofill>
+							</ContextMenu>
+							<ExtendedTooltip name="ТаблицаРегистраРаботаСотрудникExtendedTooltip" id="89"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГрПонедельник" id="62">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Понедельник</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Понедельник</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГрПонедельникРасширеннаяПодсказка" id="90"/>
+				</ColumnGroup>
+				<ColumnGroup name="ГрВторник" id="63">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вторник</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вторник</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГрВторникРасширеннаяПодсказка" id="91"/>
+				</ColumnGroup>
+				<ColumnGroup name="ГрСреда" id="64">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Среда</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Среда</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГрСредаРасширеннаяПодсказка" id="92"/>
+				</ColumnGroup>
+				<ColumnGroup name="ГрЧетверг" id="65">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Четверг</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Четверг</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГрЧетвергРасширеннаяПодсказка" id="93"/>
+				</ColumnGroup>
+				<ColumnGroup name="ГрПятница" id="66">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пятница</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пятница</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГрПятницаРасширеннаяПодсказка" id="94"/>
+				</ColumnGroup>
+				<ColumnGroup name="ГрСуббота" id="67">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Суббота</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Суббота</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГрСубботаРасширеннаяПодсказка" id="95"/>
+				</ColumnGroup>
+				<ColumnGroup name="ГрВоскресенье" id="68">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Воскресенье</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Воскресенье</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГрВоскресеньеРасширеннаяПодсказка" id="96"/>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="Примечание" id="114">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Примечание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Примечание</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПримечаниеРасширеннаяПодсказка" id="115"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияПримечаниеВыходнойДень1" id="111">
+					<TextColor>style:SpecialTextColor</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЧ:мм</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияПримечаниеВыходнойДень1КонтекстноеМеню" id="112"/>
+					<ExtendedTooltip name="ДекорацияПримечаниеВыходнойДень1РасширеннаяПодсказка" id="113"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияПримечаниеВыходнойДень2" id="116">
+					<TextColor>#2F5AAF</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>-  выходные или праздничные дни.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияПримечаниеВыходнойДень2КонтекстноеМеню" id="117"/>
+					<ExtendedTooltip name="ДекорацияПримечаниеВыходнойДень2РасширеннаяПодсказка" id="118"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТаблицаРегистра" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица регистра</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="РаботаСотрудник" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Работа сотрудник</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ИнтервалыРаботыМагазинов</v8:Type>
+						<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+						<v8:Type>cfg:CatalogRef.РаботаВыполняемаяСотрудниками</v8:Type>
+						<v8:Type>cfg:CatalogRef.Магазины</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="НачалоНедели" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало недели</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ОтборМагазин" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Магазин</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Магазины</v8:Type>
+			</Type>
+			<Save>
+				<Field>ОтборМагазин</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПредыдущийМагазин" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущий магазин</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Магазины</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредыдущееНачалоНедели" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущее начало недели</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Список" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.ПланируемоеРабочееВремяСотрудников</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьГрафикРаботыСледующейНедели" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Следующая неделя</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Следующая неделя</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.НавигацияВперед</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьГрафикРаботыСледующейНедели</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьГрафикРаботыПрошлойНедели" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прошлая неделя</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прошлая неделя</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.НавигацияНазад</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьГрафикРаботыПрошлойНедели</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьДлинуРабочегоДняПоГрафикуРаботы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить длину рабочего дня по графику работы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить длину рабочего дня по графику работы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F4</Shortcut>
+			<Action>ЗаполнитьДлинуРабочегоДняПоГрафикуРаботы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьАктуальныйГрафикРаботы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перечитать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перечитать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Reread</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьАктуальныйГрафикРаботы</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаписатьНаборЗаписейГрафикаРабот" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаписатьНаборЗаписейГрафикаРабот</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьДлинуРабочегоДняПоГрафикуРаботыНаВсюНеделю" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить длину рабочего дня по графику работы на всю неделю для всех сотрудников</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить длину рабочего дня по графику работы на всю неделю</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьДлинуРабочегоДняПоГрафикуРаботыНаВсюНеделю</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьДлинуРабочегоДняПоГрафикуРаботыНаВсюНеделюДляРаботника" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить длину рабочего дня по графику работы на вю неделю для сотрудника</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить длину рабочего дня по графику работы на всю неделю для работника</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьДлинуРабочегоДняПоГрафикуРаботыНаВсюНеделюДляРаботника</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

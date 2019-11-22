@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройки распределения товаров при поступлении по потребностям</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаСохранитьИЗакрыть" id="56">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.СохранитьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаСохранитьИЗакрытьРасширеннаяПодсказка" id="57"/>
+			</Button>
+			<Button name="ФормаОтмена" id="58">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Отмена</CommandName>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="59"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаМагазинИВариант" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа магазин и вариант</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа магазин и вариант</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаМагазинИВариантРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<LabelField name="Магазин" id="4">
+					<DataPath>Магазин</DataPath>
+					<ContextMenu name="МагазинКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="МагазинРасширеннаяПодсказка" id="6"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="НастройкаВарианта" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка варианта</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка варианта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="НастройкаВариантаРасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<Table name="НастройкиВарианта" id="11">
+					<Representation>List</Representation>
+					<HeightInTableRows>5</HeightInTableRows>
+					<Header>false</Header>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>НастройкиВарианта</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="НастройкиВариантаКонтекстноеМеню" id="12"/>
+					<AutoCommandBar name="НастройкиВариантаКоманднаяПанель" id="13">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="НастройкиВариантаКнопка1" id="52">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.НастройкиВарианта.StandardCommand.MoveUp</CommandName>
+								<ExtendedTooltip name="НастройкиВариантаКнопка1РасширеннаяПодсказка" id="53"/>
+							</Button>
+							<Button name="НастройкиВариантаКнопка2" id="54">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.НастройкиВарианта.StandardCommand.MoveDown</CommandName>
+								<ExtendedTooltip name="НастройкиВариантаКнопка2РасширеннаяПодсказка" id="55"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="НастройкиВариантаРасширеннаяПодсказка" id="14"/>
+					<SearchStringAddition name="НастройкиВариантаСтрокаПоиска" id="15">
+						<AdditionSource>
+							<Item>НастройкиВарианта</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="НастройкиВариантаСтрокаПоискаКонтекстноеМеню" id="16"/>
+						<ExtendedTooltip name="НастройкиВариантаСтрокаПоискаРасширеннаяПодсказка" id="17"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="НастройкиВариантаСостояниеПросмотра" id="18">
+						<AdditionSource>
+							<Item>НастройкиВарианта</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="НастройкиВариантаСостояниеПросмотраКонтекстноеМеню" id="19"/>
+						<ExtendedTooltip name="НастройкиВариантаСостояниеПросмотраРасширеннаяПодсказка" id="20"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="НастройкиВариантаУправлениеПоиском" id="21">
+						<AdditionSource>
+							<Item>НастройкиВарианта</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="НастройкиВариантаУправлениеПоискомКонтекстноеМеню" id="22"/>
+						<ExtendedTooltip name="НастройкиВариантаУправлениеПоискомРасширеннаяПодсказка" id="23"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<CheckBoxField name="НастройкиВариантаИспользоватьДляРаспределения" id="27">
+							<DataPath>НастройкиВарианта.ИспользоватьДляРаспределения</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInHeader>false</ShowInHeader>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НастройкиВариантаИспользоватьДляРаспределенияКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="НастройкиВариантаИспользоватьДляРаспределенияРасширеннаяПодсказка" id="29"/>
+						</CheckBoxField>
+						<InputField name="НастройкиВариантаСклад" id="24">
+							<DataPath>НастройкиВарианта.Склад</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НастройкиВариантаСкладКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="НастройкиВариантаСкладРасширеннаяПодсказка" id="26"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<UsualGroup name="ГруппаПодробностиНастройки" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа подробности настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа подробности настройки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПодробностиНастройкиРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация1" id="49">
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="51"/>
+						</LabelDecoration>
+						<InputField name="НастройкиВариантаПериодАнализаПродаж" id="32">
+							<DataPath>Items.НастройкиВарианта.CurrentData.ПериодАнализаПродаж</DataPath>
+							<ContextMenu name="НастройкиВариантаПериодАнализаПродажКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="НастройкиВариантаПериодАнализаПродажРасширеннаяПодсказка" id="34"/>
+						</InputField>
+						<UsualGroup name="Группа1" id="60">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="61"/>
+							<ChildItems>
+								<InputField name="НастройкиВариантаМаксимум" id="35">
+									<DataPath>Items.НастройкиВарианта.CurrentData.Максимум</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обеспечить продажи на</v8:content>
+										</v8:item>
+									</Title>
+									<Width>7</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="НастройкиВариантаМаксимумКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="НастройкиВариантаМаксимумРасширеннаяПодсказка" id="37"/>
+								</InputField>
+								<LabelDecoration name="Декорация2" id="66">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>дн.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация2КонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="68"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа2" id="62">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="63"/>
+							<ChildItems>
+								<InputField name="НастройкиВариантаМинимум" id="38">
+									<DataPath>Items.НастройкиВарианта.CurrentData.Минимум</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Планируемый остаток на</v8:content>
+										</v8:item>
+									</Title>
+									<Width>7</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="НастройкиВариантаМинимумКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="НастройкиВариантаМинимумРасширеннаяПодсказка" id="40"/>
+								</InputField>
+								<LabelDecoration name="Декорация3" id="69">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>дн.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация3КонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="71"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа3" id="64">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="65"/>
+							<ChildItems>
+								<InputField name="НастройкиВариантаСтраховойЗапас" id="41">
+									<DataPath>Items.НастройкиВарианта.CurrentData.СтраховойЗапас</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Текущий остаток не более</v8:content>
+										</v8:item>
+									</Title>
+									<Width>7</Width>
+									<ChoiceButton>false</ChoiceButton>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="НастройкиВариантаСтраховойЗапасКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="НастройкиВариантаСтраховойЗапасРасширеннаяПодсказка" id="43"/>
+								</InputField>
+								<LabelDecoration name="Декорация5" id="75">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>дн.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация5КонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="77"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПодвал" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="45"/>
+			<ChildItems>
+				<CheckBoxField name="ОткрыватьНастройкиПередРаспределением" id="78">
+					<DataPath>ОткрыватьНастройкиПередРаспределением</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОткрыватьНастройкиПередРаспределениемКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="ОткрыватьНастройкиПередРаспределениемРасширеннаяПодсказка" id="80"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ВариантРаспределенияТоваров" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант распределения товаров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВариантыРаспределенияТоваров</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Магазин" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Магазин</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Магазины</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиВарианта" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки варианта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Склад" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПериодАнализаПродаж" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период анализа продаж</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:StandardPeriod</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Максимум" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Максимум</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>4</v8:Digits>
+							<v8:FractionDigits>1</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Минимум" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Минимум</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>4</v8:Digits>
+							<v8:FractionDigits>1</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтраховойЗапас" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страховой запас</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>4</v8:Digits>
+							<v8:FractionDigits>1</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИспользоватьДляРаспределения" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать для распределения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ОткрыватьНастройкиПередРаспределением" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открывать настройки перед распределением</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьИЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьИЗакрыть</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Отмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

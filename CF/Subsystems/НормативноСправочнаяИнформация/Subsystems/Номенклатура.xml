@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Subsystem uuid="61720bf8-d2f4-4276-aa11-1b91d08e1f34">
+		<Properties>
+			<Name>Номенклатура</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БазовыеЕдиницыИзмерения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Номенклатура</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УпаковкиНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ХарактеристикиНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НаборыУпаковок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.РаботаСКодамиТоваровSKU</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТоварныеГруппы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПолитикиУчетаСерий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьСерииНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьСерииНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СерииНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НоменклатураПрисоединенныеФайлы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьПолнотекстовыйПоискПриПодбореТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьУпаковкиНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьХарактеристикиНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВыборНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ПодборНоменклатурыПоСоответствиюШтрихкодов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ДополнительнаяКолонкаПриОтображенииНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЕдиницаИзмеренияВеса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ЕдиницаИзмеренияОбъема</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьНеуникальныеШтрихкоды</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьПолнотекстовыйПоискПриПодбореТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПрефиксВнутреннегоШтрихкодаВесовогоТовара</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПрефиксШтрихкодаУзлаРИБ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПрефиксВнутреннегоШтрихкодаШтучногоТовара</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВариантыВеденияДополнительныхДанныхПоНоменклатуре</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.НастройкиИспользованияСерийНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПрефиксВнутреннегоШтрихкодаШтучногоФасованногоТовара</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеКлассификаторовИНастроекНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеСерий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеИнформацииПоНоменклатуре</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеСерий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СерииНоменклатурыКолонкаСтатусов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СерииНоменклатурыМожноУказать</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СерииНоменклатурыНеУказаны</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СерииНоменклатурыНеУказаныFEFO</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СерииНоменклатурыУказаны</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СерииНоменклатурыУказаныFEFO</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СтатусыСерийИПодарочныхСертификатов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СтатусыУказанияСерий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОбработчикиВыгрузкиВБухгалтерияПредприятия30</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КодыТоваровSKU</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КодыТоваровPLUНаОборудовании</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВестиСведенияДляДекларацийПоАлкогольнойПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ВестиСведенияДляДекларацийПоАлкогольнойПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыЛицензийАлкогольнойПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЛицензииПоставщиковАлкогольнойПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УдалитьВидыАлкогольнойПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Марки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Штрихкоды</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыАлкогольнойПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.КлассификаторАлкогольнойПродукцииЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Справки1ЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Справки2ЕГАИС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.РаботаСНоменклатурой</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.СопоставлениеНоменклатурыЕГАИСРТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.СопоставлениеОрганизацийЕГАИСРТ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.РаботаСПравиламиИменованияНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПозицииНоменклатурыИменованныеНеПоПравилу</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПравилаИменованияНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьПравилаИменованияНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСПравиламиИменованияКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСПравиламиИменованияКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСПравиламиИменованияВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.РаботаСПравиламиИменования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ДобавлениеИзменениеНомеровГТД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ЧтениеНомеровГТД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.РаботаСПравиламиИменованияДополнительныеРеквизитыИСведенияПриЗаписи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьПравилаИменованияНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьУчетИмпортныхТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НомераГТД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ОсобенностиУчетаНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НоменклатураКПереименованию</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РаботаСПравиламиИменованияПараметрПравила</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РаботаСПравиламиИменованияПоиск</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РаботаСПравиламиИменованияРедактирование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ВестиУчетМаркировкиТабачнойПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВестиУчетМаркировкиТабачнойПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ВестиУчетМаркировкиОбувнойПродукции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ВестиУчетМаркировкиОбувнойПродукции</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

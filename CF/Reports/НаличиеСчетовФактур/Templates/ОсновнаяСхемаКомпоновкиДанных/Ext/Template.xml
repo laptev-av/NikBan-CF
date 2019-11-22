@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Основание</dataPath>
+			<field>Основание</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основание</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">50</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СчетФактура</dataPath>
+			<field>СчетФактура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет-фактура</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">50</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипСчетаФактуры</dataPath>
+			<field>ТипСчетаФактуры</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип счета фактуры</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ПоступлениеТоваров.Ссылка
+ПОМЕСТИТЬ ДокументыПолученныхСчетов
+ИЗ
+	Документ.ПоступлениеТоваров КАК ПоступлениеТоваров
+ГДЕ
+	ПоступлениеТоваров.Проведен
+{ГДЕ
+	(ПоступлениеТоваров.Дата &gt;= &amp;НачалоПериода
+			И (ПоступлениеТоваров.Дата &lt;= &amp;КонецПериода
+				ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)))}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВозвратТоваровОтПокупателя.Ссылка
+ИЗ
+	Документ.ВозвратТоваровОтПокупателя КАК ВозвратТоваровОтПокупателя
+ГДЕ
+	ВозвратТоваровОтПокупателя.Проведен
+{ГДЕ
+	(ВозвратТоваровОтПокупателя.Дата &gt;= &amp;НачалоПериода
+			И (ВозвратТоваровОтПокупателя.Дата &lt;= &amp;КонецПериода
+				ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)))}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	РеализацияТоваров.Ссылка
+ПОМЕСТИТЬ ДокументыВыданныхСчетов
+ИЗ
+	Документ.РеализацияТоваров КАК РеализацияТоваров
+ГДЕ
+	РеализацияТоваров.Проведен
+{ГДЕ
+	(РеализацияТоваров.Дата &gt;= &amp;НачалоПериода
+			И (РеализацияТоваров.Дата &lt;= &amp;КонецПериода
+				ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)))}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПередачаТоваровМеждуОрганизациями.Ссылка
+ИЗ
+	Документ.ПередачаТоваровМеждуОрганизациями КАК ПередачаТоваровМеждуОрганизациями
+ГДЕ
+	ПередачаТоваровМеждуОрганизациями.Проведен
+{ГДЕ
+	(ПередачаТоваровМеждуОрганизациями.Дата &gt;= &amp;НачалоПериода
+			И (ПередачаТоваровМеждуОрганизациями.Дата &lt;= &amp;КонецПериода
+				ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)))}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВозвратТоваровПоставщику.Ссылка
+ИЗ
+	Документ.ВозвратТоваровПоставщику КАК ВозвратТоваровПоставщику
+ГДЕ
+	ВозвратТоваровПоставщику.Проведен
+{ГДЕ
+	(ВозвратТоваровПоставщику.Дата &gt;= &amp;НачалоПериода
+			И (ВозвратТоваровПоставщику.Дата &lt;= &amp;КонецПериода
+				ИЛИ &amp;КонецПериода = ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)))}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Основания.Ссылка.НомерИсправления КАК НомерИсправления,
+	Основания.Ссылка КАК СчетФактура,
+	Основания.ДокументОснование
+ПОМЕСТИТЬ СчетФактураПолученные
+ИЗ
+	ДокументыПолученныхСчетов КАК ДокументыПолученныхСчетов
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.СчетФактураПолученный.ДокументыОснования КАК Основания
+		ПО ДокументыПолученныхСчетов.Ссылка = Основания.ДокументОснование
+ГДЕ
+	Основания.Ссылка.Проведен
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПоследниеИсправления.Основание,
+	ЕСТЬNULL(МАКСИМУМ(СчетФактураПолученные.СчетФактура), ЗНАЧЕНИЕ(Документ.СчетФактураПолученный.ПустаяСсылка)) КАК СчетФактура,
+	ЗНАЧЕНИЕ(Перечисление.ТипыПолученныхСчетовФактур.НаПоступление) КАК ТипСчетаФактуры,
+	ПоследниеИсправления.Основание.Организация КАК Организация
+ПОМЕСТИТЬ НаПоступление
+ИЗ
+	(ВЫБРАТЬ
+		МАКСИМУМ(СчетФактураПолученные.НомерИсправления) КАК НомерИсправления,
+		ДокументыПолученныхСчетов.Ссылка КАК Основание
+	ИЗ
+		ДокументыПолученныхСчетов КАК ДокументыПолученныхСчетов
+			ЛЕВОЕ СОЕДИНЕНИЕ СчетФактураПолученные КАК СчетФактураПолученные
+			ПО ДокументыПолученныхСчетов.Ссылка = СчетФактураПолученные.ДокументОснование
+	
+	СГРУППИРОВАТЬ ПО
+		ДокументыПолученныхСчетов.Ссылка) КАК ПоследниеИсправления
+		ЛЕВОЕ СОЕДИНЕНИЕ СчетФактураПолученные КАК СчетФактураПолученные
+		ПО ПоследниеИсправления.Основание = СчетФактураПолученные.ДокументОснование
+			И ПоследниеИсправления.НомерИсправления = СчетФактураПолученные.НомерИсправления
+
+СГРУППИРОВАТЬ ПО
+	ПоследниеИсправления.Основание,
+	СчетФактураПолученные.СчетФактура.ТипСчетаФактуры,
+	ПоследниеИсправления.Основание.Организация
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СчетФактураВыданный.НомерИсправления,
+	СчетФактураВыданный.Ссылка КАК СчетФактура,
+	ДокументыВыданныхСчетов.Ссылка КАК ДокументОснование
+ПОМЕСТИТЬ СчетФактураВыданные
+ИЗ
+	ДокументыВыданныхСчетов КАК ДокументыВыданныхСчетов
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.СчетФактураВыданный КАК СчетФактураВыданный
+		ПО ДокументыВыданныхСчетов.Ссылка = СчетФактураВыданный.ДокументОснование
+ГДЕ
+	СчетФактураВыданный.Проведен
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПоследниеИсправления.Основание,
+	ЕСТЬNULL(МАКСИМУМ(СчетФактураВыданные.СчетФактура), ЗНАЧЕНИЕ(Документ.СчетФактураВыданный.ПустаяСсылка)) КАК СчетФактура,
+	ЗНАЧЕНИЕ(Перечисление.ТипыВыданныхСчетовФактур.НаРеализацию) КАК ТипСчетаФактуры,
+	ПоследниеИсправления.Основание.Организация КАК Организация
+ПОМЕСТИТЬ НаРеализацию
+ИЗ
+	(ВЫБРАТЬ
+		МАКСИМУМ(СчетФактураВыданные.НомерИсправления) КАК НомерИсправления,
+		ДокументыВыданныхСчетов.Ссылка КАК Основание
+	ИЗ
+		ДокументыВыданныхСчетов КАК ДокументыВыданныхСчетов
+			ЛЕВОЕ СОЕДИНЕНИЕ СчетФактураВыданные КАК СчетФактураВыданные
+			ПО ДокументыВыданныхСчетов.Ссылка = СчетФактураВыданные.ДокументОснование
+	
+	СГРУППИРОВАТЬ ПО
+		ДокументыВыданныхСчетов.Ссылка) КАК ПоследниеИсправления
+		ЛЕВОЕ СОЕДИНЕНИЕ СчетФактураВыданные КАК СчетФактураВыданные
+		ПО ПоследниеИсправления.Основание = СчетФактураВыданные.ДокументОснование
+			И ПоследниеИсправления.НомерИсправления = СчетФактураВыданные.НомерИсправления
+
+СГРУППИРОВАТЬ ПО
+	ПоследниеИсправления.Основание,
+	СчетФактураВыданные.СчетФактура.ТипСчетаФактуры,
+	ПоследниеИсправления.Основание.Организация
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	НаПоступление.Основание,
+	НаПоступление.СчетФактура,
+	НаПоступление.ТипСчетаФактуры,
+	НаПоступление.Организация
+ИЗ
+	НаПоступление КАК НаПоступление
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НаРеализацию.Основание,
+	НаРеализацию.СчетФактура,
+	НаРеализацию.ТипСчетаФактуры,
+	НаРеализацию.Организация
+ИЗ
+	НаРеализацию КАК НаРеализацию</query>
+	</dataSet>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Наличие счетов-фактур</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Основание</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СчетФактура</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>09e7d7c7-8fd6-4e6a-90e8-773f38f08893</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:userSettingID>9aad51bc-1e0b-4727-b159-cd80b6b30078</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>2fc4fb8c-bf2c-4db7-aeba-50e4f47c52a8</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Основание.Дата</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наличие счетов-фактур</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ТипСчетаФактуры</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

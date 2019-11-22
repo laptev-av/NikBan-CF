@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Продавец</dataPath>
+			<field>Продавец</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПлощадьВыкладки</dataPath>
+			<field>ПлощадьВыкладки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Площадь выкладки</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=10; ЧДЦ=2; ЧРГ=' '</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">10</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТоварнаяГруппа</dataPath>
+			<field>ТоварнаяГруппа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Товарная группа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПродажи</dataPath>
+			<field>ДокументПродажи</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Магазин</dataPath>
+			<field>Магазин</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма, руб.</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧЦ=20; ЧДЦ=2; ЧРГ=' '</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказПокупателя</dataPath>
+			<field>ЗаказПокупателя</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ПродажиОбороты.Магазин КАК Магазин,
+	ПродажиОбороты.Номенклатура.ТоварнаяГруппа КАК ТоварнаяГруппа,
+	СУММА(ПродажиОбороты.СтоимостьОборот) КАК Сумма,
+	ПродажиОбороты.Период КАК ПериодПродаж
+ПОМЕСТИТЬ ТаблицаПродажи
+{ВЫБРАТЬ
+	Магазин.*,
+	ТоварнаяГруппа.*}
+ИЗ
+	РегистрНакопления.Продажи.Обороты(&amp;НачалоПериода, &amp;КонецПериода, День, {(Склад).* КАК Склад, (Номенклатура).* КАК Номенклатура, (Продавец).* КАК Продавец, (Магазин).* КАК Магазин, (Склад.Организация).* КАК Организация}) КАК ПродажиОбороты
+{ГДЕ
+	ПродажиОбороты.Магазин.*,
+	ПродажиОбороты.Склад.*,
+	ПродажиОбороты.Номенклатура.*,
+	ПродажиОбороты.Характеристика.*,
+	ПродажиОбороты.ДокументПродажи.*,
+	ПродажиОбороты.Продавец.*,
+	ПродажиОбороты.ЗаказПокупателя.*}
+
+СГРУППИРОВАТЬ ПО
+	ПродажиОбороты.Магазин,
+	ПродажиОбороты.Номенклатура.ТоварнаяГруппа,
+	ПродажиОбороты.Период
+
+ИНДЕКСИРОВАТЬ ПО
+	Магазин,
+	ТоварнаяГруппа
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПлощадьТорговогоПространства.Период КАК ПериодУстановкиПлощади,
+	ПлощадьТорговогоПространства.Магазин,
+	ПлощадьТорговогоПространства.ТоварнаяГруппа,
+	ПлощадьТорговогоПространства.ПлощадьВыкладки
+ПОМЕСТИТЬ ТаблицаПлощадьТорговогоПространства
+ИЗ
+	РегистрСведений.ПлощадьТорговогоПространства КАК ПлощадьТорговогоПространства
+ГДЕ
+	ПлощадьТорговогоПространства.Период &lt;= &amp;КонецПериода
+{ГДЕ
+	ПлощадьТорговогоПространства.Магазин.*,
+	ПлощадьТорговогоПространства.ТоварнаяГруппа.*}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТаблицаПродажи.Магазин,
+	ТаблицаПродажи.ТоварнаяГруппа,
+	ТаблицаПродажи.Сумма,
+	ЕСТЬNULL(ТаблицаПлощадьТорговогоПространства.ПериодУстановкиПлощади, ДАТАВРЕМЯ(1, 1, 1)) КАК ПериодУстановкиПлощади,
+	ЕСТЬNULL(ТаблицаПлощадьТорговогоПространства.ПлощадьВыкладки, 0) КАК ПлощадьВыкладки,
+	ТаблицаПродажи.ПериодПродаж
+ПОМЕСТИТЬ ТаблицаПродажиИПлощадьНеСокращенная
+ИЗ
+	ТаблицаПродажи КАК ТаблицаПродажи
+		ЛЕВОЕ СОЕДИНЕНИЕ ТаблицаПлощадьТорговогоПространства КАК ТаблицаПлощадьТорговогоПространства
+		ПО ТаблицаПродажи.Магазин = ТаблицаПлощадьТорговогоПространства.Магазин
+			И ТаблицаПродажи.ТоварнаяГруппа = ТаблицаПлощадьТорговогоПространства.ТоварнаяГруппа
+			И (ТаблицаПродажи.ПериодПродаж &gt;= ЕСТЬNULL(ТаблицаПлощадьТорговогоПространства.ПериодУстановкиПлощади, ДАТАВРЕМЯ(1, 1, 1)))
+{ГДЕ
+	ТаблицаПродажи.Магазин.*,
+	ТаблицаПродажи.ТоварнаяГруппа.*}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТаблицаПродажиИПлощадьНеСокращенная.Магазин КАК Магазин,
+	ТаблицаПродажиИПлощадьНеСокращенная.ТоварнаяГруппа КАК ТоварнаяГруппа,
+	МАКСИМУМ(ТаблицаПродажиИПлощадьНеСокращенная.ПериодУстановкиПлощади) КАК ПериодУстановкиПлощади,
+	ТаблицаПродажиИПлощадьНеСокращенная.ПериодПродаж КАК ПериодПродаж
+ПОМЕСТИТЬ ТаблицаПродажиИПлощадь
+ИЗ
+	ТаблицаПродажиИПлощадьНеСокращенная КАК ТаблицаПродажиИПлощадьНеСокращенная
+{ГДЕ
+	ТаблицаПродажиИПлощадьНеСокращенная.Магазин.*,
+	ТаблицаПродажиИПлощадьНеСокращенная.ТоварнаяГруппа.*}
+
+СГРУППИРОВАТЬ ПО
+	ТаблицаПродажиИПлощадьНеСокращенная.Магазин,
+	ТаблицаПродажиИПлощадьНеСокращенная.ТоварнаяГруппа,
+	ТаблицаПродажиИПлощадьНеСокращенная.ПериодПродаж
+
+ИНДЕКСИРОВАТЬ ПО
+	Магазин,
+	ТоварнаяГруппа
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТаблицаПродажиИПлощадьНеСокращенная.Магазин,
+	ТаблицаПродажиИПлощадьНеСокращенная.ТоварнаяГруппа,
+	ТаблицаПродажиИПлощадьНеСокращенная.Сумма,
+	ТаблицаПродажиИПлощадьНеСокращенная.ПлощадьВыкладки
+ПОМЕСТИТЬ СоединеннаяТаблица
+ИЗ
+	ТаблицаПродажиИПлощадь КАК ТаблицаПродажиИПлощадь
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ТаблицаПродажиИПлощадьНеСокращенная КАК ТаблицаПродажиИПлощадьНеСокращенная
+		ПО ТаблицаПродажиИПлощадь.Магазин = ТаблицаПродажиИПлощадьНеСокращенная.Магазин
+			И ТаблицаПродажиИПлощадь.ТоварнаяГруппа = ТаблицаПродажиИПлощадьНеСокращенная.ТоварнаяГруппа
+			И ТаблицаПродажиИПлощадь.ПериодУстановкиПлощади = ТаблицаПродажиИПлощадьНеСокращенная.ПериодУстановкиПлощади
+			И ТаблицаПродажиИПлощадь.ПериодПродаж = ТаблицаПродажиИПлощадьНеСокращенная.ПериодПродаж
+{ГДЕ
+	ТаблицаПродажиИПлощадьНеСокращенная.Магазин.*,
+	ТаблицаПродажиИПлощадьНеСокращенная.ТоварнаяГруппа.*}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТаблицаПродажиИПлощадь.Магазин,
+	ТаблицаПродажиИПлощадь.ТоварнаяГруппа,
+	ТаблицаПродажиИПлощадь.Сумма,
+	ТаблицаПродажиИПлощадь.ПлощадьВыкладки
+ИЗ
+	СоединеннаяТаблица КАК ТаблицаПродажиИПлощадь
+{ГДЕ
+	ТаблицаПродажиИПлощадь.ТоварнаяГруппа.* КАК ТоварнаяГруппа,
+	ТаблицаПродажиИПлощадь.Магазин.* КАК Магазин}</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>ВыручкаПоПлощади</dataPath>
+		<expression>ВЫБОР 
+	КОГДА Сумма(ПлощадьВыкладки) = 0 ТОГДА 0
+	ИНАЧЕ Сумма(Сумма) / Сумма(ПлощадьВыкладки)
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Выручка по площади, руб.</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=20; ЧДЦ=2; ЧРГ=' '</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+				<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+				<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<totalField>
+		<dataPath>Сумма</dataPath>
+		<expression>Сумма(Сумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПлощадьВыкладки</dataPath>
+		<expression>Сумма(ПлощадьВыкладки)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВыручкаПоПлощади</dataPath>
+		<expression>ВыручкаПоПлощади</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+		<availableAsField>false</availableAsField>
+		<inputParameters>
+			<dcscor:item>
+				<dcscor:parameter>БыстрыйВыбор</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</inputParameters>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+		<availableAsField>false</availableAsField>
+		<inputParameters>
+			<dcscor:item>
+				<dcscor:parameter>БыстрыйВыбор</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</inputParameters>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>ИспользованиеПлощадиТорговогоПространства</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Использование площади торгового пространства</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПлощадьВыкладки</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВыручкаПоПлощади</dcsset:field>
+				</dcsset:item>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>574a723b-d0dd-4218-9b8b-545e100d6a60</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:userSettingID>084d54b5-78fe-4f97-a56b-747d5e5701d4</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>6b2b358b-622d-4da3-9d0d-e8fd2f2cd027</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>ca33d59a-8b53-49f4-838c-e109e1a824cc</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:viewMode>Normal</dcsset:viewMode>
+				<dcsset:userSettingID>06ec91a7-6b4b-4f94-9ddc-5481605c916e</dcsset:userSettingID>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использование площади торгового пространства</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Магазин</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+					</dcsset:selection>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+					</dcsset:conditionalAppearance>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ТоварнаяГруппа</dcsset:field>
+							<dcsset:groupType>Hierarchy</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+					</dcsset:selection>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+					</dcsset:conditionalAppearance>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+				</dcsset:row>
+			</dcsset:item>
+			<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+			<dcsset:itemsUserSettingID>9de38a2b-2ac8-48a0-b5d3-45f96396f57f</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

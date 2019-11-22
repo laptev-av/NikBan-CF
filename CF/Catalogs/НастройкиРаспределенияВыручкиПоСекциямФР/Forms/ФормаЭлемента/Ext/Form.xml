@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="2">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="3"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="11">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="12"/>
+			</Button>
+			<ButtonGroup name="ГруппаКомандыФормы" id="98">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды формы</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды формы</v8:content>
+					</v8:item>
+				</ToolTip>
+				<CommandSource>Form</CommandSource>
+				<ExtendedTooltip name="ГруппаКомандыФормыРасширеннаяПодсказка" id="99"/>
+			</ButtonGroup>
+			<Button name="ФормаСправка" id="102">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="103"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<UsualGroup name="ГруппаКассовыхОрдеров" id="104">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="ГруппаКассовыхОрдеровРасширеннаяПодсказка" id="105"/>
+			<ChildItems>
+				<InputField name="НомерСекцииДляПриходныхКассовыхОрдеров" id="25">
+					<DataPath>Объект.НомерСекцииДляПриходныхКассовыхОрдеров</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приходный кассовый ордер</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НомерСекцииДляПриходныхКассовыхОрдеровКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="НомерСекцииДляПриходныхКассовыхОрдеровРасширеннаяПодсказка" id="27"/>
+				</InputField>
+				<InputField name="НомерСекцииДляРасходныхКассовыхОрдеров" id="28">
+					<DataPath>Объект.НомерСекцииДляРасходныхКассовыхОрдеров</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расходный кассовый ордер</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НомерСекцииДляРасходныхКассовыхОрдеровКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="НомерСекцииДляРасходныхКассовыхОрдеровРасширеннаяПодсказка" id="30"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПлатежныхКарт" id="106">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="ГруппаПлатежныхКартРасширеннаяПодсказка" id="107"/>
+			<ChildItems>
+				<InputField name="НомерСекцииДляОплатыКартой" id="43">
+					<DataPath>Объект.НомерСекцииДляОплатыКартой</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата платежной картой</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НомерСекцииДляОплатыКартойКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="НомерСекцииДляОплатыКартойРасширеннаяПодсказка" id="45"/>
+				</InputField>
+				<InputField name="НомерСекцииДляВозвратаОплатыНаКарту" id="46">
+					<DataPath>Объект.НомерСекцииДляВозвратаОплатыНаКарту</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Возврат на платежную карту</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НомерСекцииДляВозвратаОплатыНаКартуКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="НомерСекцииДляВозвратаОплатыНаКартуРасширеннаяПодсказка" id="48"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="НомерСекцииПоУмолчаниюДляФискальныхЧеков" id="31">
+			<DataPath>Объект.НомерСекцииПоУмолчаниюДляФискальныхЧеков</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер секции по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="НомерСекцииПоУмолчаниюДляФискальныхЧековКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="НомерСекцииПоУмолчаниюДляФискальныхЧековРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<Pages name="ГруппаЗакладки" id="49">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа закладки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаЗакладкиРасширеннаяПодсказка" id="50"/>
+			<ChildItems>
+				<Page name="ГруппаВидыНоменклатуры" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Секции по видам номенклатуры</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа виды номенклатуры</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаВидыНоменклатурыРасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<Table name="СоответствиеВидовНоменклатурыСекциям" id="7">
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.СоответствиеВидовНоменклатурыСекциям</DataPath>
+							<CommandSet>
+								<ExcludedCommand>CancelSearch</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СоответствиеВидовНоменклатурыСекциямКонтекстноеМеню" id="8"/>
+							<AutoCommandBar name="СоответствиеВидовНоменклатурыСекциямКоманднаяПанель" id="9"/>
+							<ExtendedTooltip name="СоответствиеВидовНоменклатурыСекциямРасширеннаяПодсказка" id="10"/>
+							<SearchStringAddition name="СоответствиеВидовНоменклатурыСекциямСтрокаПоиска" id="71">
+								<AdditionSource>
+									<Item>СоответствиеВидовНоменклатурыСекциям</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СоответствиеВидовНоменклатурыСекциямСтрокаПоискаКонтекстноеМеню" id="72"/>
+								<ExtendedTooltip name="СоответствиеВидовНоменклатурыСекциямСтрокаПоискаРасширеннаяПодсказка" id="73"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СоответствиеВидовНоменклатурыСекциямСостояниеПросмотра" id="74">
+								<AdditionSource>
+									<Item>СоответствиеВидовНоменклатурыСекциям</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СоответствиеВидовНоменклатурыСекциямСостояниеПросмотраКонтекстноеМеню" id="75"/>
+								<ExtendedTooltip name="СоответствиеВидовНоменклатурыСекциямСостояниеПросмотраРасширеннаяПодсказка" id="76"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СоответствиеВидовНоменклатурыСекциямУправлениеПоиском" id="77">
+								<AdditionSource>
+									<Item>СоответствиеВидовНоменклатурыСекциям</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СоответствиеВидовНоменклатурыСекциямУправлениеПоискомКонтекстноеМеню" id="78"/>
+								<ExtendedTooltip name="СоответствиеВидовНоменклатурыСекциямУправлениеПоискомРасширеннаяПодсказка" id="79"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="СоответствиеВидовНоменклатурыСекциямВидНоменклатуры" id="14">
+									<DataPath>Объект.СоответствиеВидовНоменклатурыСекциям.ВидНоменклатуры</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоответствиеВидовНоменклатурыСекциямВидНоменклатурыКонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="СоответствиеВидовНоменклатурыСекциямВидНоменклатурыРасширеннаяПодсказка" id="16"/>
+								</InputField>
+								<InputField name="СоответствиеВидовНоменклатурыСекциямНомерСекции" id="22">
+									<DataPath>Объект.СоответствиеВидовНоменклатурыСекциям.НомерСекции</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>11</Width>
+									<ContextMenu name="СоответствиеВидовНоменклатурыСекциямНомерСекцииКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="СоответствиеВидовНоменклатурыСекциямНомерСекцииРасширеннаяПодсказка" id="24"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<LabelDecoration name="Описание" id="38">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Можно указать соответствие вида номенклатуры номеру секции. 
+Если для вида номенклатуры не указано соответствие, будет использован 
+номер секции по умолчанию.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОписаниеКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="40"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДоговорыПлатежныхАгентов" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Секции по договорам платежных агентов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа договоры платежных агентов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаДоговорыПлатежныхАгентовРасширеннаяПодсказка" id="54"/>
+					<ChildItems>
+						<Table name="СоответствиеДоговоровПлатежныхАгентовСекциям" id="55">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.СоответствиеДоговоровПлатежныхАгентовСекциям</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СоответствиеДоговоровПлатежныхАгентовСекциямКонтекстноеМеню" id="56"/>
+							<AutoCommandBar name="СоответствиеДоговоровПлатежныхАгентовСекциямКоманднаяПанель" id="57"/>
+							<ExtendedTooltip name="СоответствиеДоговоровПлатежныхАгентовСекциямРасширеннаяПодсказка" id="58"/>
+							<SearchStringAddition name="СоответствиеДоговоровПлатежныхАгентовСекциямСтрокаПоиска" id="80">
+								<AdditionSource>
+									<Item>СоответствиеДоговоровПлатежныхАгентовСекциям</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СоответствиеДоговоровПлатежныхАгентовСекциямСтрокаПоискаКонтекстноеМеню" id="81"/>
+								<ExtendedTooltip name="СоответствиеДоговоровПлатежныхАгентовСекциямСтрокаПоискаРасширеннаяПодсказка" id="82"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СоответствиеДоговоровПлатежныхАгентовСекциямСостояниеПросмотра" id="83">
+								<AdditionSource>
+									<Item>СоответствиеДоговоровПлатежныхАгентовСекциям</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СоответствиеДоговоровПлатежныхАгентовСекциямСостояниеПросмотраКонтекстноеМеню" id="84"/>
+								<ExtendedTooltip name="СоответствиеДоговоровПлатежныхАгентовСекциямСостояниеПросмотраРасширеннаяПодсказка" id="85"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СоответствиеДоговоровПлатежныхАгентовСекциямУправлениеПоиском" id="86">
+								<AdditionSource>
+									<Item>СоответствиеДоговоровПлатежныхАгентовСекциям</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СоответствиеДоговоровПлатежныхАгентовСекциямУправлениеПоискомКонтекстноеМеню" id="87"/>
+								<ExtendedTooltip name="СоответствиеДоговоровПлатежныхАгентовСекциямУправлениеПоискомРасширеннаяПодсказка" id="88"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="СоответствиеДоговоровПлатежныхАгентовСекциямДоговорПлатежногоАгента" id="62">
+									<DataPath>Объект.СоответствиеДоговоровПлатежныхАгентовСекциям.ДоговорПлатежногоАгента</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоответствиеДоговоровПлатежныхАгентовСекциямДоговорПлатежногоАгентаКонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="СоответствиеДоговоровПлатежныхАгентовСекциямДоговорПлатежногоАгентаРасширеннаяПодсказка" id="64"/>
+								</InputField>
+								<InputField name="СоответствиеДоговоровПлатежныхАгентовСекциямНомерСекции" id="65">
+									<DataPath>Объект.СоответствиеДоговоровПлатежныхАгентовСекциям.НомерСекции</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>11</Width>
+									<ContextMenu name="СоответствиеДоговоровПлатежныхАгентовСекциямНомерСекцииКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="СоответствиеДоговоровПлатежныхАгентовСекциямНомерСекцииРасширеннаяПодсказка" id="67"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<LabelDecoration name="ОписаниеДоговоров" id="68">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Можно указать соответствие договора платежного агента номеру секции. 
+Если для договора платежного агента не указано соответствие, будет использован 
+номер секции для вида номенклатуры или номер секции по умолчанию
+(если для вида номенклатуры не задано соответствие).</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОписаниеДоговоровКонтекстноеМеню" id="69"/>
+							<ExtendedTooltip name="ОписаниеДоговоровРасширеннаяПодсказка" id="70"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.НастройкиРаспределенияВыручкиПоСекциямФР</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

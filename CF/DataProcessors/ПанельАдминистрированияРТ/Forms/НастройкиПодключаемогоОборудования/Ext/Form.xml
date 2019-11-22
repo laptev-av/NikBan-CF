@@ -1,0 +1,785 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаФЗ54" id="2329">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменения 54-ФЗ</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<Group>Horizontal</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаФЗ54РасширеннаяПодсказка" id="2330"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПодключитьККТ" id="2335">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа подключить ККТ</v8:content>
+						</v8:item>
+					</Title>
+					<Width>38</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПодключитьККТРасширеннаяПодсказка" id="2336"/>
+					<ChildItems>
+						<Button name="ПодключитьКассыКОператоруФискальныхДанных" id="2333">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ПодключитьКассыКОператоруФискальныхДанных</CommandName>
+							<Font ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ПодключитьКассыКОператоруФискальныхДанныхРасширеннаяПодсказка" id="2334"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОписаниеФЗ54" id="2337">
+					<Width>39</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОписаниеФЗ54РасширеннаяПодсказка" id="2338"/>
+					<ChildItems>
+						<Button name="ВсеО54ФЗ" id="2331">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ВсеО54ФЗ</CommandName>
+							<Font ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ВсеО54ФЗРасширеннаяПодсказка" id="2332"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЗаголовок" id="2253">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаголовокExtendedTooltip" id="2258"/>
+			<ChildItems>
+				<LabelDecoration name="ОписаниеРаздела6" id="1555">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка сканеров штрихкодов, считывателей магнитных карт, фискальных регистраторов и иного оборудования. </v8:content>
+						</v8:item>
+					</Title>
+					<VerticalAlign>Top</VerticalAlign>
+					<ContextMenu name="ОписаниеРаздела6КонтекстноеМеню" id="1556"/>
+					<ExtendedTooltip name="ОписаниеРаздела6ExtendedTooltip" id="2259"/>
+				</LabelDecoration>
+				<CommandBar name="ГруппаСправка" id="2256">
+					<ExtendedTooltip name="ГруппаСправкаExtendedTooltip" id="2261"/>
+					<ChildItems>
+						<Button name="Справка" id="2257">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<ExtendedTooltip name="СправкаExtendedTooltip" id="2262"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРабочиеМеста" id="1118">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа рабочие места</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРабочиеМестаExtendedTooltip" id="2270"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаОткрытьРабочиеМеста" id="2158">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа открыть рабочие места</v8:content>
+						</v8:item>
+					</Title>
+					<Width>39</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОткрытьРабочиеМестаExtendedTooltip" id="2271"/>
+					<ChildItems>
+						<Button name="ОткрытьРабочиеМеста" id="1117">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьРабочиеМеста</CommandName>
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьРабочиеМестаExtendedTooltip" id="2272">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Рабочие места с подключенным оборудованием.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВыбратьРабочееМестоТекущегоСеанса" id="2157">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа выбрать рабочее место текущего сеанса</v8:content>
+						</v8:item>
+					</Title>
+					<Width>39</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВыбратьРабочееМестоТекущегоСеансаРасширеннаяПодсказка" id="2274"/>
+					<ChildItems>
+						<Button name="ВыбратьРабочееМестоТекущегоСеанса" id="2252">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ВыбратьРМТекущегоСеанса</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ВыбратьРабочееМестоТекущегоСеансаРасширеннаяПодсказка" id="2275">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Выбор рабочего места, подключение и настройка оборудования которого, производились ранее.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаУправлениеПодключаемымОборудованием" id="1099">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа управление подключаемым оборудованием</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаУправлениеПодключаемымОборудованиемExtendedTooltip" id="2263"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИспользоватьПодключаемоеОборудование" id="1096">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа использовать подключаемое оборудование</v8:content>
+						</v8:item>
+					</Title>
+					<Width>39</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИспользоватьПодключаемоеОборудованиеExtendedTooltip" id="2264"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="2327">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="2328"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьПодключаемоеОборудование" id="268">
+									<DataPath>НаборКонстант.ИспользоватьПодключаемоеОборудование</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьПодключаемоеОборудованиеКонтекстноеМеню" id="269"/>
+									<ExtendedTooltip name="ИспользоватьПодключаемоеОборудованиеExtendedTooltip" id="2265">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Использование внешнего оборудования - электронные весы, сканеры штрихкода, эквайринговые терминалы и т.д.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьПодключаемоеОборудованиеПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<PictureDecoration name="ДекорацияКомментарийИспользоватьПО" id="2321">
+									<Width>2</Width>
+									<Height>1</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация комментарий использовать ПО</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Невозможно отключить использование подключаемого оборудования, так как включен "Обмен с подключаемым оборудованием Offline"</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Hyperlink>true</Hyperlink>
+									<Picture>
+										<xr:Ref>CommonPicture.ИнформацияПоНедоступнымПолям</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияКомментарийИспользоватьПОКонтекстноеМеню" id="2322"/>
+									<ExtendedTooltip name="ДекорацияКомментарийИспользоватьПОРасширеннаяПодсказка" id="2323"/>
+									<Events>
+										<Event name="Click">ДекорацияКомментарийИспользоватьПОНажатие</Event>
+									</Events>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОткрытьПодключаемоеОборудование" id="1105">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа открыть подключаемое оборудование</v8:content>
+						</v8:item>
+					</Title>
+					<Width>39</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОткрытьПодключаемоеОборудованиеExtendedTooltip" id="2267"/>
+					<ChildItems>
+						<Button name="ОткрытьПодключаемоеОборудование" id="2251">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьПодключаемоеОборудование</CommandName>
+							<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьПодключаемоеОборудованиеExtendedTooltip" id="2268">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Подключение и настройка оборудования.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВерхШаблоны" id="2291">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа верх шаблоны</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВерхШаблоныРасширеннаяПодсказка" id="2292"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаОткрытьШаблоныРаботыДисплеяПокупателя" id="2077">
+					<Width>39</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОткрытьШаблоныРаботыДисплеяПокупателяExtendedTooltip" id="2278"/>
+					<ChildItems>
+						<Button name="ОткрытьШаблоныРаботыДисплеяПокупателя" id="2074">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьШаблоныРаботыДисплеяПокупателя</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьШаблоныРаботыДисплеяПокупателяExtendedTooltip" id="2279">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Шаблоны для формирования текста дисплея покупателя, при работе в режиме РМК.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОткрытьШаблоныРегистрацииНовыхКарт" id="2078">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа открыть шаблоны регистрации новых карт</v8:content>
+						</v8:item>
+					</Title>
+					<Width>39</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОткрытьШаблоныРегистрацииНовыхКартExtendedTooltip" id="2281"/>
+					<ChildItems>
+						<Button name="ОткрытьШаблоныРегистрацииНовыхКарт" id="2166">
+							<Type>Hyperlink</Type>
+							<CommandName>InformationRegister.ШаблоныРегистрацииНовыхКарт.StandardCommand.OpenList</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьШаблоныРегистрацииНовыхКартExtendedTooltip" id="2282">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Шаблон создания новых дисконтных карт при считывании магнитного кода или штрихкода.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНизШаблоны" id="2293">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа низ шаблоны</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНизШаблоныРасширеннаяПодсказка" id="2294"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаФорматыЗаписиКодовМагнитныхКарт" id="2295">
+					<Width>39</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаФорматыЗаписиКодовМагнитныхКартРасширеннаяПодсказка" id="2296"/>
+					<ChildItems>
+						<Button name="ФорматыЗаписиКодовМагнитныхКарт" id="2297">
+							<Type>Hyperlink</Type>
+							<CommandName>InformationRegister.ФорматыЗаписиКодовМагнитныхКарт.Command.ОткрытьФорматыЗаписиКодовМагнитныхКодов</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ФорматыЗаписиКодовМагнитныхКартРасширеннаяПодсказка" id="2298">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Информация о формате кодов всех видов магнитных карт, применяемых в магазине. </v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНастройкиРаспределенияВыручкиПоСекциямФР" id="2302">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки распределения выручки по секциям ФР</v8:content>
+						</v8:item>
+					</Title>
+					<Width>39</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкиРаспределенияВыручкиПоСекциямФРРасширеннаяПодсказка" id="2303"/>
+					<ChildItems>
+						<Button name="ОткрытьНастройкиРаспределенияВыручкиПоСекциямФР" id="2304">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОткрытьНастройкиРаспределенияВыручкиПоСекциямФР</CommandName>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьНастройкиРаспределенияВыручкиПоСекциямФРРасширеннаяПодсказка" id="2305">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Информация о распределении выручки по секциям фискального регистратора используемых при формировании фискальных документов.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаУправлениеОбменомСПодключаемымОборудованием" id="1100">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Офлайн оборудование</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<United>false</United>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="ГруппаУправлениеОбменомСПодключаемымОборудованиемExtendedTooltip" id="2284"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаУправлениеОбменомСПодключаемымОборудованиемПерваяСтрока" id="2309">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа управление обменом с подключаемым оборудованием первая строка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаУправлениеОбменомСПодключаемымОборудованиемПерваяСтрокаРасширеннаяПодсказка" id="2310"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаУправлениеОбменомСПодключаемымОборудованием1" id="1101">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа управление обменом с подключаемым оборудованием</v8:content>
+								</v8:item>
+							</Title>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУправлениеОбменомСПодключаемымОборудованием1ExtendedTooltip" id="2285"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьОбменСПодключаемымОборудованием" id="586">
+									<DataPath>НаборКонстант.ИспользоватьОбменСПодключаемымОборудованием</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обмен с офлайн оборудованием</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьОбменСПодключаемымОборудованиемКонтекстноеМеню" id="587"/>
+									<ExtendedTooltip name="ИспользоватьОбменСПодключаемымОборудованиемРасширеннаяПодсказка" id="2286">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Использование правил обмена с оборудованием. 
+Необходимо для использования касс ККМ, весов с печатью этикеток.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ИспользоватьОбменСПодключаемымОборудованиемПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУправлениеОбменомСПодключаемымОборудованием2" id="1109">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа управление обменом с подключаемым оборудованием</v8:content>
+								</v8:item>
+							</Title>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУправлениеОбменомСПодключаемымОборудованием2ExtendedTooltip" id="2288"/>
+							<ChildItems>
+								<Button name="ОткрытьПравилаОбменаСПодключаемымОборудованием" id="1108">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьПравилаОбменаСПодключаемымОборудованием</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьПравилаОбменаСПодключаемымОборудованиемExtendedTooltip" id="2289">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Правила для выгрузки информации о товарах в весы и кассы ККМ.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаУправлениеОбменомСПодключаемымОборудованиемВтораяСтрока" id="2311">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа управление обменом с подключаемым оборудованием вторая строка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаУправлениеОбменомСПодключаемымОборудованиемВтораяСтрокаРасширеннаяПодсказка" id="2312"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаУправлениеОбменомСПодключаемымОборудованиемВтораяСтрокаЛево" id="2313">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа управление обменом с подключаемым оборудованием вторая строка лево</v8:content>
+								</v8:item>
+							</Title>
+							<Width>39</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<United>false</United>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУправлениеОбменомСПодключаемымОборудованиемВтораяСтрокаЛевоРасширеннаяПодсказка" id="2314"/>
+							<ChildItems>
+								<Button name="ОткрытьСоответствиеВидовОплатыСККМOffline" id="2315">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ОткрытьСоответствиеВидовОплатыСККМOffline</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ОткрытьСоответствиеВидовОплатыСККМOfflineРасширеннаяПодсказка" id="2316">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Правила подстановки вида оплаты при загрузке данных из ККМ Офлайн.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>НаборКонстант.SKUУстанавливаетсяВГлавномУзлеРИБ</Field>
+				<Field>НаборКонстант.ДополнительнаяКолонкаПечатныхФормДокументов</Field>
+				<Field>НаборКонстант.ЕдиницаИзмеренияВеса</Field>
+				<Field>НаборКонстант.ЕдиницаИзмеренияОбъема</Field>
+				<Field>НаборКонстант.ИспользоватьДополнительныеОтчеты</Field>
+				<Field>НаборКонстант.ИспользоватьОплатуБанковскимиКредитами</Field>
+				<Field>НаборКонстант.ИспользоватьОплатуПлатежнымиКартами</Field>
+				<Field>НаборКонстант.ИспользоватьСинхронизациюДанных</Field>
+				<Field>НаборКонстант.ПрефиксВнутреннегоШтрихкодаВесовогоТовара</Field>
+				<Field>НаборКонстант.ПрефиксВнутреннегоШтрихкодаШтучногоТовара</Field>
+				<Field>НаборКонстант.ПрефиксШтрихкодаУзлаРИБ</Field>
+				<Field>НаборКонстант.СебестоимостьВключаетНДС</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="РежимРаботы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НижняяГраницаSKUВесовыхТоваров</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НаборКонстант.НижняяГраницаДиапазонаSKUВесовогоТовара</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">99999</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ВерхняяГраницаSKUВесовыхТоваров</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НаборКонстант.ВерхняяГраницаДиапазонаSKUВесовогоТовара</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">99999</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ВыбратьРМТекущегоСеанса" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рабочее место текущего сеанса</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыбратьРМТекущегоСеанса</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьПодключаемоеОборудование" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключаемое оборудование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть подключаемое оборудование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьПодключаемоеОборудование</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьРабочиеМеста" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рабочие места</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть рабочие места</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьРабочиеМеста</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьШаблоныРаботыДисплеяПокупателя" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблоны работы дисплея покупателя</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть шаблоны работы дисплея покупателя</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьШаблоныРаботыДисплеяПокупателя</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьПравилаОбменаСПодключаемымОборудованием" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правила обмена с оборудованием</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьПравилаОбменаСПодключаемымОборудованием</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьНастройкиРаспределенияВыручкиПоСекциямФР" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки распределения выручки по секциям ФР</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть настройки распределения выручки по секциям ФР</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьНастройкиРаспределенияВыручкиПоСекциямФР</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьСоответствиеВидовОплатыСККМOffline" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Соответствие видов оплаты с ККМ Офлайн</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть соответствие видов оплаты c ККМ Офлайн</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьСоответствиеВидовОплатыСККМOffline</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПодключитьКассыКОператоруФискальныхДанных" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить кассы к оператору фискальных данных</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервис  «1С-ОФД» обеспечит удобное подключение ваших касс к оператору фискальных данных без наценок к официальной стоимости услуг ОФД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодключитьКассыКОператоруФискальныхДанных</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВсеО54ФЗ" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все о 54-ФЗ и переходе на онлайн-ККТ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>С 1 июля 2017 года можно будет использовать только те ККТ, которые передают данные о продажах в ФНС через оператора фискальных данных (Федеральный закон 54-ФЗ).</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВсеО54ФЗ</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

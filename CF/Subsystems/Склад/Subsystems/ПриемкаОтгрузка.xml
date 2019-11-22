@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Subsystem uuid="0cefecf8-5787-4df9-8af2-a6f7c4da8f57">
+		<Properties>
+			<Name>ПриемкаОтгрузка</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приемка и отгрузка</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ТоварыКОтгрузке</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПечатьТранспортнойНакладной</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПечатьТТН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПроверкаКоличестваТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">6bd20ec9-99a5-47d8-857e-493adce7c7e1</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьПередачиТоваровМеждуОрганизациями</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПодсистемаСкладПриемкаОтгрузка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.РасхожденияПриПриемкеТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПомощникПриемкиОтгрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">dde5f34e-1790-49da-bc81-1f7e75bea3e8</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СохраненныеДанныеПомощникаПриемкиОтгрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">981b386b-6fd8-411e-935e-041752d3f6a4</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВариантыРаспределенияТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкиВариантовРаспределенияТоваров</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>ПриемкаОтгрузкаОрдернаяСхема</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

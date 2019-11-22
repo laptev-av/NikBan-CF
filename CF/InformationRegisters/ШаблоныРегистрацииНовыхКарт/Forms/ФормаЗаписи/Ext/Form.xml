@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПроверитьПересечения" id="20">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПроверитьПересечения</CommandName>
+				<ExtendedTooltip name="ФормаПроверитьПересеченияExtendedTooltip" id="21"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="НаименованиеШаблона" id="15">
+			<DataPath>Запись.НаименованиеШаблона</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="НаименованиеШаблонаКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="НаименованиеШаблонаExtendedTooltip" id="22"/>
+		</InputField>
+		<UsualGroup name="ГруппыПоискаИСоздания" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группы поиска и создания</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группы поиска и создания</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппыПоискаИСозданияExtendedTooltip" id="23"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПоиска" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные поиска</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные поиска</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<United>false</United>
+					<ExtendedTooltip name="ГруппаПоискаExtendedTooltip" id="24"/>
+					<ChildItems>
+						<InputField name="ВидКарты" id="1">
+							<DataPath>Запись.ВидКарты</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ВидКартыКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ВидКартыExtendedTooltip" id="25"/>
+						</InputField>
+						<InputField name="ДлинаКода" id="3">
+							<DataPath>Запись.ДлинаКода</DataPath>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<ContextMenu name="ДлинаКодаКонтекстноеМеню" id="4"/>
+							<ExtendedTooltip name="ДлинаКодаExtendedTooltip" id="26"/>
+						</InputField>
+						<InputField name="НачалоДиапазона" id="5">
+							<DataPath>Запись.НачалоДиапазона</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="НачалоДиапазонаКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="НачалоДиапазонаExtendedTooltip" id="27"/>
+						</InputField>
+						<InputField name="КонецДиапазона" id="7">
+							<DataPath>Запись.КонецДиапазона</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="КонецДиапазонаКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="КонецДиапазонаExtendedTooltip" id="28"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСоздания" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные создания карты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные создания карты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<United>false</United>
+					<ExtendedTooltip name="ГруппаСозданияExtendedTooltip" id="29"/>
+					<ChildItems>
+						<InputField name="ВидДисконтнойКарты" id="11">
+							<DataPath>Запись.ВидДисконтнойКарты</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ВидДисконтнойКартыКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ВидДисконтнойКартыExtendedTooltip" id="30"/>
+						</InputField>
+						<InputField name="ГруппаКарты" id="13">
+							<DataPath>Запись.ГруппаКарты</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ChoiceFoldersAndItems>Folders</ChoiceFoldersAndItems>
+							<ContextMenu name="ГруппаКартыКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ГруппаКартыExtendedTooltip" id="31"/>
+						</InputField>
+						<CheckBoxField name="ПроводитьОпросВладельцаПриРегистрации" id="9">
+							<DataPath>Запись.ПроводитьОпросВладельцаПриРегистрации</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПроводитьОпросВладельцаПриРегистрацииКонтекстноеМеню" id="10"/>
+							<ExtendedTooltip name="ПроводитьОпросВладельцаПриРегистрацииExtendedTooltip" id="32"/>
+							<Events>
+								<Event name="OnChange">ПроводитьОпросВладельцаПриРегистрацииПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="ГруппаВладельцаКарты" id="36">
+							<DataPath>Запись.ГруппаВладельцаКарты</DataPath>
+							<ContextMenu name="ГруппаВладельцаКартыКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="ГруппаВладельцаКартыРасширеннаяПодсказка" id="38"/>
+						</InputField>
+						<InputField name="БонуснаяПрограммаЛояльности" id="33">
+							<DataPath>Запись.БонуснаяПрограммаЛояльности</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="БонуснаяПрограммаЛояльностиКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="БонуснаяПрограммаЛояльностиРасширеннаяПодсказка" id="35"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ШаблоныРегистрацииНовыхКарт</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПроверитьПересечения" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить пересечения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить пересечения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьПересечения</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

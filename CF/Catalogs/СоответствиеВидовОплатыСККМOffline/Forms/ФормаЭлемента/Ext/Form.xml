@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаписать" id="26">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="27"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<Table name="СоответствиеВидовОплаты" id="4">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.СоответствиеВидовОплаты</DataPath>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поддерживаемые типы оплаты при загрузке из ККМ: Наличные, Платежная карта, Банковский кредит.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СоответствиеВидовОплатыКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="СоответствиеВидовОплатыКоманднаяПанель" id="6">
+				<ChildItems>
+					<Button name="СоответствиеВидовОплатыДобавитьВсеВидыОплаты" id="28">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ДобавитьВсеВидыОплаты</CommandName>
+						<ExtendedTooltip name="СоответствиеВидовОплатыДобавитьВсеВидыОплатыРасширеннаяПодсказка" id="29"/>
+					</Button>
+					<Button name="СоответствиеВидовОплатыЗаполнитьВидамиОплатыИИдентификаторами" id="30">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗаполнитьКодыВидовОплатыККМOfflineИдентификаторами</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СоответствиеВидовОплатыЗаполнитьВидамиОплатыИИдентификаторамиРасширеннаяПодсказка" id="31"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СоответствиеВидовОплатыРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="СоответствиеВидовОплатыСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>СоответствиеВидовОплаты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СоответствиеВидовОплатыСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СоответствиеВидовОплатыСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СоответствиеВидовОплатыСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>СоответствиеВидовОплаты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СоответствиеВидовОплатыСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СоответствиеВидовОплатыСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СоответствиеВидовОплатыУправлениеПоиском" id="14">
+				<AdditionSource>
+					<Item>СоответствиеВидовОплаты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СоответствиеВидовОплатыУправлениеПоискомКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="СоответствиеВидовОплатыУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СоответствиеВидовОплатыНомерСтроки" id="17">
+					<DataPath>Объект.СоответствиеВидовОплаты.LineNumber</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СоответствиеВидовОплатыНомерСтрокиКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="СоответствиеВидовОплатыНомерСтрокиРасширеннаяПодсказка" id="19"/>
+				</LabelField>
+				<InputField name="СоответствиеВидовОплатыВидОплатыККМOffline" id="20">
+					<DataPath>Объект.СоответствиеВидовОплаты.КодВидаОплатыККМOffline</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>25</Width>
+					<ContextMenu name="СоответствиеВидовОплатыВидОплатыККМOfflineКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СоответствиеВидовОплатыВидОплатыККМOfflineРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="СоответствиеВидовОплатыВидОплаты" id="23">
+					<DataPath>Объект.СоответствиеВидовОплаты.ВидОплаты</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СоответствиеВидовОплатыВидОплатыКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="СоответствиеВидовОплатыВидОплатыРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<LabelField name="СоответствиеВидовОплатыВидОплатыТипОплаты" id="35">
+					<DataPath>Объект.СоответствиеВидовОплаты.ВидОплаты.ТипОплаты</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СоответствиеВидовОплатыВидОплатыТипОплатыКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="СоответствиеВидовОплатыВидОплатыТипОплатыРасширеннаяПодсказка" id="37"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<InputField name="ВидЭлектроннойОплаты" id="38">
+			<DataPath>Объект.ВидЭлектроннойОплатыПоУмолчанию</DataPath>
+			<ContextMenu name="ВидЭлектроннойОплатыКонтекстноеМеню" id="39"/>
+			<ExtendedTooltip name="ВидЭлектроннойОплатыРасширеннаяПодсказка" id="40"/>
+		</InputField>
+		<LabelDecoration name="ИнфоНадпись" id="32">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<TextColor>style:ПоясняющийТекст</TextColor>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Если при загрузке данных вид оплаты не определен, то используется значение по умолчанию: Наличные.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ИнфоНадписьКонтекстноеМеню" id="33"/>
+			<ExtendedTooltip name="ИнфоНадписьРасширеннаяПодсказка" id="34"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.СоответствиеВидовОплатыСККМOffline</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьВсеВидыОплаты" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить все виды оплаты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить все виды оплаты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьВсеВидыОплаты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьКодыВидовОплатыККМOfflineИдентификаторами" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить коды видов оплаты ККМ Offline идентификаторами</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить коды видов оплаты ККМOffline идентификаторами</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьКодыВидовОплатыККМOfflineИдентификаторами</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>
