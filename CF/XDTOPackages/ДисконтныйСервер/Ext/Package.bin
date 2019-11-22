@@ -1,0 +1,66 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://localhost/rt2discountservice">
+	<objectType name="СтрокаРезультатаЗапросаОНакоплениях">
+		<property name="СуммаНакопления" type="xs:decimal"/>
+		<property name="КоличествоНакопления" type="xs:decimal"/>
+	</objectType>
+	<objectType name="РезультатЗапросаОНакоплениях">
+		<property xmlns:d3p1="http://localhost/rt2discountservice" name="РезультатЗапроса" type="d3p1:СтрокаРезультатаЗапросаОНакоплениях" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="СтрокаРезультатаЗапросаОПоследнейПокупке">
+		<property name="ДатаПокупки" type="xs:dateTime"/>
+		<property name="СуммаНакопления" type="xs:decimal"/>
+		<property name="КоличествоНакопления" type="xs:decimal"/>
+	</objectType>
+	<objectType name="РезультатЗапросаОПоследнейПокупке">
+		<property xmlns:d3p1="http://localhost/rt2discountservice" name="РезультатЗапроса" type="d3p1:СтрокаРезультатаЗапросаОПоследнейПокупке" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="СтрокаРезультатаЗапросаОБонусах">
+		<property name="ДатаОперации" type="xs:dateTime"/>
+		<property name="КоличествоБаллов" type="xs:decimal"/>
+	</objectType>
+	<objectType name="РезультатЗапросаОБонусах">
+		<property xmlns:d3p1="http://localhost/rt2discountservice" name="РезультатЗапроса" type="d3p1:СтрокаРезультатаЗапросаОБонусах" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="СтрокаРезультатаЗапросаОБонусахРасширенного">
+		<property name="ПредставлениеПериода" type="xs:string"/>
+		<property name="КоличествоБаллов" type="xs:decimal"/>
+		<property name="Изменение" type="xs:decimal"/>
+		<property name="ТекущийОстаток" type="xs:boolean"/>
+	</objectType>
+	<objectType name="РезультатЗапросаОБонусахРасширенный">
+		<property xmlns:d3p1="http://localhost/rt2discountservice" name="РезультатЗапроса" type="d3p1:СтрокаРезультатаЗапросаОБонусахРасширенного" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="СтрокаТаблицыПродаж">
+		<property name="Период" type="xs:dateTime"/>
+		<property name="ИдентификаторКарты" type="xs:string" nillable="true"/>
+		<property name="ИдентификаторНоменклатуры" type="xs:string" nillable="true"/>
+		<property name="ИдентификаторХарактеристики" type="xs:string" nillable="true"/>
+		<property name="Сумма" type="xs:decimal" nillable="true"/>
+		<property name="Количество" type="xs:decimal" nillable="true"/>
+	</objectType>
+	<objectType name="ТаблицаПродаж">
+		<property xmlns:d3p1="http://localhost/rt2discountservice" name="СтрокиТаблицы" type="d3p1:СтрокаТаблицыПродаж" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="СтрокаТаблицыБонусов">
+		<property name="Период" type="xs:dateTime"/>
+		<property name="ВидДвижения" type="xs:decimal"/>
+		<property name="ИдентификаторБонуснойПрограммы" type="xs:string" nillable="true"/>
+		<property name="ИдентификаторКарты" type="xs:string" nillable="true"/>
+		<property name="Начислено" type="xs:decimal" nillable="true"/>
+		<property name="КСписанию" type="xs:decimal" nillable="true"/>
+	</objectType>
+	<objectType name="ТаблицаБонусов">
+		<property xmlns:d3p1="http://localhost/rt2discountservice" name="СтрокиТаблицы" type="d3p1:СтрокаТаблицыБонусов" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="СтрокаТаблицыКупонов">
+		<property name="Период" type="xs:dateTime"/>
+		<property name="ИдентификаторСкидки" type="xs:string" nillable="true"/>
+		<property name="КодКупона" type="xs:string" nillable="true"/>
+		<property name="Состояние" type="xs:string" nillable="true"/>
+		<property name="ИдентификаторМагазина" type="xs:string" nillable="true"/>
+		<property name="ПериодДействия" type="xs:dateTime"/>
+	</objectType>
+	<objectType name="ТаблицаКупонов">
+		<property xmlns:d3p1="http://localhost/rt2discountservice" name="СтрокиТаблицы" type="d3p1:СтрокаТаблицыКупонов" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+</package>
